@@ -41,7 +41,12 @@ def start(message):
         )
     )
 	
-
+	bot.send_message(
+        "Welcome to the questionnaire!\n\n"
+		"Read the situation below and choose the response "
+		"you think is best."
+    )
+	
     # Download the image
     try:
         response = requests.get(
@@ -73,6 +78,9 @@ def start(message):
             f"Could not load the image.\n\nError: {e}"
         )
         return
+		
+		
+		
 
     # Send question and buttons
     bot.send_message(
@@ -104,6 +112,7 @@ def question_1_answer(call):
         call.message.chat.id,
         f"You selected:\n\n{answer}"
     )
+	
 
 
 print("Bot is running...")
