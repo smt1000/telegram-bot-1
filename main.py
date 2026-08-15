@@ -13,6 +13,11 @@ if not TOKEN:
     raise ValueError("TELEGRAM_BOT_TOKEN is missing from your .env file")
 
 bot = telebot.TeleBot(TOKEN)
+	bot.send_message(
+        "Welcome to the questionnaire!\n\n"
+		"Read the situation below and choose the response "
+		"you think is best."
+    )
 
 IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
 
