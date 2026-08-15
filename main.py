@@ -291,6 +291,10 @@ ALL_SCORES = {
     4: QUESTION_4_SCORES,
 }
 
+for question_number in range(5, 99):
+    ALL_SCORES[question_number] = {}
+
+
 
 # ============================================================
 # USER SCORES
