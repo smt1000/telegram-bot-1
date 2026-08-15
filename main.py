@@ -1218,6 +1218,18 @@ def question_1_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}"
+		
+		f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
     # --------------------------------------------------------
@@ -1372,6 +1384,18 @@ def question_2_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}"
+		
+		f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
     # --------------------------------------------------------
@@ -1523,6 +1547,18 @@ def question_3_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}"
+		
+		f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
     # --------------------------------------------------------
@@ -1541,6 +1577,311 @@ def question_3_answer(call):
 
     send_question_4(call.message.chat.id)
 
+#سؤال  4
+# ============================================================
+# QUESTION 4
+# ============================================================
+
+def send_question_4(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 4
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "The conversation continues after Daniel talks "
+        "with Grace.\n\n"
+        "Charlotte asks Daniel what he would do when "
+        "faced with an important decision."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 4 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd ask someone I trust for advice.",
+            callback_data="q4_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd make the decision myself.",
+            callback_data="q4_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd think carefully before deciding.",
+            callback_data="q4_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd consider what everyone else thinks.",
+            callback_data="q4_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 4 IMAGE
+    # --------------------------------------------------------
+
+    # You can replace this with a different URL later.
+    QUESTION_4_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_4_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        photo = BytesIO(response.content)
+        photo.name = "question4.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 4 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 4 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Charlotte asks Daniel what he would do when "
+        "faced with an important decision.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 4 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q4_")
+)
+def question_4_answer(call):
+
+    answers = {
+        "q4_1": "I'd ask someone I trust for advice.",
+        "q4_2": "I'd make the decision myself.",
+        "q4_3": "I'd think carefully before deciding.",
+        "q4_4": "I'd consider what everyone else thinks."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 4 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_4_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 4
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Charlotte thinks about Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    # Uncomment this when Question 5 is ready:
+    #
+    # send_question_5(call.message.chat.id)
+
+#سؤال 5
+# ============================================================
+# QUESTION 5
+# ============================================================
+
+def send_question_5(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 5
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "After speaking with Charlotte, Daniel continues "
+        "the conversation with Emily.\n\n"
+        "Emily asks Daniel how he would react if a friend "
+        "needed his help with a difficult problem."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 5 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd help them right away.",
+            callback_data="q5_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd help if I had enough time.",
+            callback_data="q5_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd encourage them to solve it themselves.",
+            callback_data="q5_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd ask what kind of help they need first.",
+            callback_data="q5_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 5 IMAGE
+    # --------------------------------------------------------
+
+    # You can replace this with a different URL later.
+    QUESTION_5_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_5_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        photo = BytesIO(response.content)
+        photo.name = "question5.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 5 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 5 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel how he would react if a friend "
+        "needed his help with a difficult problem.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 5 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q5_")
+)
+def question_5_answer(call):
+
+    answers = {
+        "q5_1": "I'd help them right away.",
+        "q5_2": "I'd help if I had enough time.",
+        "q5_3": "I'd encourage them to solve it themselves.",
+        "q5_4": "I'd ask what kind of help they need first."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 5 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_5_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 5
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily appreciates Daniel's answer.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    # Uncomment this when Question 6 is ready:
+    #
+    # send_question_6(call.message.chat.id)
 
 # ============================================================
 # START BOT
