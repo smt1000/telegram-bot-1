@@ -44,11 +44,13 @@ def start(message):
             callback_data="q1_4"
         )
     )
+	
 	bot.send_photo(
-    message.chat.id,
-    "https://media.craiyon.com/2025-09-07/v8JpBBNGTG6Y56xQ6zuWow.webp",
-    
-)
+        message.chat.id,
+        "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+		caption="Emily asks whether Daniel wants to join the student council.",
+		reply_markup=keyboard
+    )
 
 
     bot.send_message(
