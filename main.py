@@ -13,8 +13,39 @@ if not TOKEN:
     raise ValueError("TELEGRAM_BOT_TOKEN is missing from your .env file")
 
 bot = telebot.TeleBot(TOKEN)
-# Scores for Question 1
+
+
+# ============================================================
+# IMAGE
+# ============================================================
+
+IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+
+
+# ============================================================
+# SCORE CATEGORIES
+# ============================================================
+
+CATEGORIES = [
+    "Emily",
+    "Sophie",
+    "Grace",
+    "Charlotte",
+    "Honest",
+    "Independence",
+    "ECompatibility",
+    "SCompatibility",
+    "GCompatibility",
+    "CCompatibility"
+]
+
+
+# ============================================================
+# QUESTION 1 SCORES
+# ============================================================
+
 QUESTION_1_SCORES = {
+
     "q1_1": {
         "Emily": 1,
         "Sophie": 0,
@@ -68,11 +99,225 @@ QUESTION_1_SCORES = {
     }
 }
 
-IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
 
+# ============================================================
+# QUESTION 2 SCORES
+# ============================================================
+
+QUESTION_2_SCORES = {
+
+    "q2_1": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q2_2": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q2_3": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q2_4": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    }
+}
+
+
+# ============================================================
+# QUESTION 3 SCORES
+# ============================================================
+
+QUESTION_3_SCORES = {
+
+    "q3_1": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q3_2": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q3_3": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q3_4": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    }
+}
+
+
+# ============================================================
+# QUESTION 4 SCORES
+# ============================================================
+
+QUESTION_4_SCORES = {
+
+    "q4_1": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q4_2": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q4_3": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    },
+
+    "q4_4": {
+        "Emily": 0,
+        "Sophie": 0,
+        "Grace": 0,
+        "Charlotte": 0,
+        "Honest": 0,
+        "Independence": 0,
+        "ECompatibility": 0,
+        "SCompatibility": 0,
+        "GCompatibility": 0,
+        "CCompatibility": 0,
+    }
+}
+
+
+# ============================================================
+# ALL QUESTION SCORES
+# ============================================================
+
+ALL_SCORES = {
+    1: QUESTION_1_SCORES,
+    2: QUESTION_2_SCORES,
+    3: QUESTION_3_SCORES,
+    4: QUESTION_4_SCORES,
+}
+
+
+# ============================================================
+# USER SCORES
+# ============================================================
+
+user_scores = {}
+
+
+def create_new_score():
+    """Create a new score dictionary with all categories at 0."""
+
+    return {
+        category: 0
+        for category in CATEGORIES
+    }
+
+
+# ============================================================
+# QUESTION 1
+# ============================================================
 
 @bot.message_handler(commands=["start"])
 def start(message):
+
+    # Create/reset user's scores
+    user_id = message.from_user.id
+    user_scores[user_id] = create_new_score()
 
     keyboard = types.InlineKeyboardMarkup(row_width=1)
 
@@ -113,7 +358,6 @@ def start(message):
         photo = BytesIO(response.content)
         photo.name = "question1.jpg"
 
-        # Send image
         bot.send_photo(
             message.chat.id,
             photo
@@ -121,13 +365,15 @@ def start(message):
 
     except Exception as e:
         print("IMAGE ERROR:", e)
+
         bot.send_message(
             message.chat.id,
             f"Could not load the image.\n\nError: {e}"
         )
+
         return
 
-    # Send question and buttons
+    # Question text
     bot.send_message(
         message.chat.id,
         "Emily asks whether Daniel wants to join the student council.\n\n"
@@ -135,6 +381,10 @@ def start(message):
         reply_markup=keyboard
     )
 
+
+# ============================================================
+# QUESTION 1 ANSWER
+# ============================================================
 
 @bot.callback_query_handler(
     func=lambda call: call.data.startswith("q1_")
@@ -150,29 +400,14 @@ def question_1_answer(call):
 
     answer = answers.get(call.data)
 
-    # Get user's Telegram ID
     user_id = call.from_user.id
 
-    # Create score storage for this user
-    if user_id not in user_scores:
-        user_scores[user_id] = {
-            "Emily": 0,
-            "Sophie": 0,
-            "Grace": 0,
-            "Charlotte": 0,
-            "Honest": 0,
-            "Independence": 0,
-            "ECompatibility": 0,
-            "SCompatibility": 0,
-            "GCompatibility": 0,
-            "CCompatibility": 0
-        }
-
-    # Get points for the selected answer
+    # Get the score dictionary for this answer
     points = QUESTION_1_SCORES.get(call.data)
 
     if points:
-        # Add points to each category
+
+        # Add each category's points
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -180,9 +415,9 @@ def question_1_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        f"Your answer:\n\n"
+        f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Your current scores:\n\n"
+        f"Current scores:\n\n"
         f"Emily: {user_scores[user_id]['Emily']}\n"
         f"Sophie: {user_scores[user_id]['Sophie']}\n"
         f"Grace: {user_scores[user_id]['Grace']}\n"
@@ -196,22 +431,9 @@ def question_1_answer(call):
     )
 
 
-    answers = {
-        "q1_1": "I’d like to help.",
-        "q1_2": "I’m not really a leadership person.",
-        "q1_3": "I’ll try it once.",
-        "q1_4": "Why do you want me there?"
-    }
-
-    answer = answers.get(call.data)
-
-    bot.answer_callback_query(call.id)
-
-    bot.send_message(
-        call.message.chat.id,
-        f"You selected:\n\n{answer}"
-    )
-
+# ============================================================
+# START BOT
+# ============================================================
 
 print("Bot is running...")
 
