@@ -1057,7 +1057,7 @@ for question_number in range(5, 99):
 
 
 
-#1060
+#سؤال 1
 
 # ============================================================
 # USER SCORES
@@ -1238,6 +1238,308 @@ def question_1_answer(call):
     #
     # send_question_2(call.message.chat.id)
 
+#سؤال 2
+
+# ============================================================
+# QUESTION 2
+# ============================================================
+
+def send_question_2(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 2
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "A little later, Sophie joins the conversation.\n\n"
+        "She asks Daniel what he thinks about helping "
+        "with an upcoming school event."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 2 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Sure, I can help.",
+            callback_data="q2_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I think someone else should do it.",
+            callback_data="q2_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'll help if you need me.",
+            callback_data="q2_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. What exactly would I have to do?",
+            callback_data="q2_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 2 IMAGE
+    # --------------------------------------------------------
+
+    # If Question 2 has a different image, put its URL here.
+    QUESTION_2_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_2_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        photo = BytesIO(response.content)
+        photo.name = "question2.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 2 IMAGE ERROR:", e)
+
+        # Don't stop the questionnaire if the image fails.
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 2 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Sophie asks Daniel whether he would help "
+        "with the school event.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 2 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q2_")
+)
+def question_2_answer(call):
+
+    answers = {
+        "q2_1": "Sure, I can help.",
+        "q2_2": "I think someone else should do it.",
+        "q2_3": "I'll help if you need me.",
+        "q2_4": "What exactly would I have to do?"
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 2 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_2_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 2
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Sophie considers Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    # send_question_3(call.message.chat.id)
+
+#سؤال 3
+
+# ============================================================
+# QUESTION 3
+# ============================================================
+
+def send_question_3(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 3
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "The conversation continues after the school event.\n\n"
+        "Grace asks Daniel how he feels about working with "
+        "other students on a difficult project."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 3 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I enjoy working with other people.",
+            callback_data="q3_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd rather work on my own.",
+            callback_data="q3_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I can work with a team if necessary.",
+            callback_data="q3_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd like to know more about the project first.",
+            callback_data="q3_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 3 IMAGE
+    # --------------------------------------------------------
+
+    # You can replace this with a different URL later.
+    QUESTION_3_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_3_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        photo = BytesIO(response.content)
+        photo.name = "question3.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 3 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 3 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Grace asks Daniel how he feels about working "
+        "with other students on a difficult project.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 3 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q3_")
+)
+def question_3_answer(call):
+
+    answers = {
+        "q3_1": "I enjoy working with other people.",
+        "q3_2": "I'd rather work on my own.",
+        "q3_3": "I can work with a team if necessary.",
+        "q3_4": "I'd like to know more about the project first."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 3 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_3_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 3
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Grace thinks about Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_4(call.message.chat.id)
 
 
 # ============================================================
