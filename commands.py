@@ -1,5 +1,6 @@
 from telebot import TeleBot
 from telebot.types import BotCommand
+python -m pip install requests
 
 def register_commands(bot: TeleBot):
     """
