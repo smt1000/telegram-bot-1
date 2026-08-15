@@ -1218,18 +1218,6 @@ def question_1_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}"
-		
-		f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
     # --------------------------------------------------------
@@ -1248,10 +1236,7 @@ def question_1_answer(call):
 
     # Example:
     #
-     
-	send_question_2(call.message.chat.id)
-#سؤال 2
-
+    # send_question_2(call.message.chat.id)
 
 
 
