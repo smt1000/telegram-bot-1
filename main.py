@@ -14,7 +14,6 @@ if not TOKEN:
 
 bot = telebot.TeleBot(TOKEN)
 
-
 IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
 
 
@@ -41,17 +40,6 @@ def start(message):
             callback_data="q1_4"
         )
     )
-	#كتابة نص
-	bot.send_message(
-        message.chat.id,
-       "Welcome to the questionnaire!\n\n"
-    "Read the situation below and choose the response "
-    "you think is best."
-    )
-	
-	
-	
-	
 
     # Download the image
     try:
@@ -84,7 +72,7 @@ def start(message):
             f"Could not load the image.\n\nError: {e}"
         )
         return
-	
+
     # Send question and buttons
     bot.send_message(
         message.chat.id,
