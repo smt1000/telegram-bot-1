@@ -1298,7 +1298,6 @@ def send_question_2(chat_id):
     # QUESTION 2 IMAGE
     # --------------------------------------------------------
 
-    # If Question 2 has a different image, put its URL here.
     QUESTION_2_IMAGE_URL = IMAGE_URL
 
     try:
@@ -1323,7 +1322,6 @@ def send_question_2(chat_id):
     except Exception as e:
         print("QUESTION 2 IMAGE ERROR:", e)
 
-        # Don't stop the questionnaire if the image fails.
         bot.send_message(
             chat_id,
             "The question image could not be loaded, "
@@ -1370,7 +1368,6 @@ def question_2_answer(call):
     points = QUESTION_2_SCORES.get(call.data)
 
     if points:
-
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -1384,18 +1381,6 @@ def question_2_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}"
-		
-		f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
     # --------------------------------------------------------
@@ -1412,9 +1397,8 @@ def question_2_answer(call):
     # NEXT QUESTION
     # --------------------------------------------------------
 
-     send_question_3(call.message.chat.id)
+    send_question_3(call.message.chat.id)
 
-#سؤال 3
 
 # ============================================================
 # QUESTION 3
@@ -1462,7 +1446,6 @@ def send_question_3(chat_id):
     # QUESTION 3 IMAGE
     # --------------------------------------------------------
 
-    # You can replace this with a different URL later.
     QUESTION_3_IMAGE_URL = IMAGE_URL
 
     try:
@@ -1533,7 +1516,6 @@ def question_3_answer(call):
     points = QUESTION_3_SCORES.get(call.data)
 
     if points:
-
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -1547,18 +1529,6 @@ def question_3_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}"
-		
-		f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
     # --------------------------------------------------------
@@ -1577,7 +1547,7 @@ def question_3_answer(call):
 
     send_question_4(call.message.chat.id)
 
-#سؤال  4
+
 # ============================================================
 # QUESTION 4
 # ============================================================
@@ -1625,7 +1595,6 @@ def send_question_4(chat_id):
     # QUESTION 4 IMAGE
     # --------------------------------------------------------
 
-    # You can replace this with a different URL later.
     QUESTION_4_IMAGE_URL = IMAGE_URL
 
     try:
@@ -1696,7 +1665,6 @@ def question_4_answer(call):
     points = QUESTION_4_SCORES.get(call.data)
 
     if points:
-
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -1726,11 +1694,9 @@ def question_4_answer(call):
     # NEXT QUESTION
     # --------------------------------------------------------
 
-    # Uncomment this when Question 5 is ready:
-    #
     send_question_5(call.message.chat.id)
 
-#سؤال 5
+
 # ============================================================
 # QUESTION 5
 # ============================================================
@@ -1778,7 +1744,6 @@ def send_question_5(chat_id):
     # QUESTION 5 IMAGE
     # --------------------------------------------------------
 
-    # You can replace this with a different URL later.
     QUESTION_5_IMAGE_URL = IMAGE_URL
 
     try:
@@ -1849,7 +1814,6 @@ def question_5_answer(call):
     points = QUESTION_5_SCORES.get(call.data)
 
     if points:
-
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -1879,9 +1843,159 @@ def question_5_answer(call):
     # NEXT QUESTION
     # --------------------------------------------------------
 
-    # Uncomment this when Question 6 is ready:
-    #
     send_question_6(call.message.chat.id)
+
+
+# ============================================================
+# QUESTION 6
+# ============================================================
+
+def send_question_6(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 6
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "The conversation continues as Daniel talks "
+        "with Sophie.\n\n"
+        "Sophie asks Daniel what he would do if he "
+        "disagreed with a close friend."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 6 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd tell them honestly what I think.",
+            callback_data="q6_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd avoid arguing about it.",
+            callback_data="q6_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd try to find a compromise.",
+            callback_data="q6_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd ask them why they feel that way.",
+            callback_data="q6_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 6 IMAGE
+    # --------------------------------------------------------
+
+    QUESTION_6_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_6_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        photo = BytesIO(response.content)
+        photo.name = "question6.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 6 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 6 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Sophie asks Daniel what he would do if he "
+        "disagreed with a close friend.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 6 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q6_")
+)
+def question_6_answer(call):
+
+    answers = {
+        "q6_1": "I'd tell them honestly what I think.",
+        "q6_2": "I'd avoid arguing about it.",
+        "q6_3": "I'd try to find a compromise.",
+        "q6_4": "I'd ask them why they feel that way."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 6 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_6_SCORES.get(call.data)
+
+    if points:
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 6
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Sophie thinks about Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    # Question 7 will go here later:
+    #
+    # send_question_7(call.message.chat.id)
+
 
 # ============================================================
 # START BOT
