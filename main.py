@@ -40,6 +40,15 @@ def start(message):
             callback_data="q1_4"
         )
     )
+	
+	bot.send_message(
+        message.chat.id,
+       "Welcome to the questionnaire!\n\n"
+    "Read the situation below and choose the response "
+    "you think is best."
+    )
+	
+	
 
     # Download the image
     try:
@@ -73,13 +82,6 @@ def start(message):
         )
         return
 	
-	
-    bot.send_message(
-        message.chat.id,
-       "Welcome to the questionnaire!\n\n"
-    "Read the situation below and choose the response "
-    "you think is best."
-    )
     # Send question and buttons
     bot.send_message(
         message.chat.id,
