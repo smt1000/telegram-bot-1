@@ -40,11 +40,7 @@ def start(message):
             callback_data="q1_4"
         )
     )
-	bot.send_message(
-        "Welcome to the questionnaire!\n\n"
-		"Read the situation below and choose the response "
-		"you think is best."
-    )
+	
 
     # Download the image
     try:
