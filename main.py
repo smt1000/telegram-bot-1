@@ -41,12 +41,15 @@ def start(message):
         )
     )
 	
-	bot.send_message(
-        "Welcome to the questionnaire!\n\n"
-		"Read the situation below and choose the response "
-		"you think is best."
-    )
 	
+	bot.send_message(
+	message.chat.id,
+    "Welcome to the questionnaire!\n\n"
+    "Read the situation below and choose the response "
+    "you think is best."
+)
+
+
     # Download the image
     try:
         response = requests.get(
@@ -88,6 +91,12 @@ def start(message):
         "Emily asks whether Daniel wants to join the student council.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
+    )
+	
+	bot.send_message(
+        "Welcome to the questionnaire!\n\n"
+		"Read the situation below and choose the response "
+		"you think is best."
     )
 	
 
