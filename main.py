@@ -15,12 +15,6 @@ if not TOKEN:
 bot = telebot.TeleBot(TOKEN)
 
 
-# ============================================================
-# IMAGE
-# ============================================================
-
-IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
-
 
 # ============================================================
 # SCORE CATEGORIES
@@ -1062,6 +1056,9 @@ for question_number in range(5, 99):
 
 
 
+
+#1060
+
 # ============================================================
 # USER SCORES
 # ============================================================
@@ -1077,6 +1074,12 @@ def create_new_score():
         for category in CATEGORIES
     }
 
+# ============================================================
+# IMAGE
+# ============================================================
+
+IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+
 
 # ============================================================
 # QUESTION 1
@@ -1088,6 +1091,21 @@ def start(message):
     # Create/reset user's scores
     user_id = message.from_user.id
     user_scores[user_id] = create_new_score()
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 1
+    # --------------------------------------------------------
+
+    bot.send_message(
+        message.chat.id,
+        "Emily and Daniel are talking after school.\n\n"
+        "Emily wants to know if Daniel would be interested "
+        "in joining the student council."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 1 BUTTONS
+    # --------------------------------------------------------
 
     keyboard = types.InlineKeyboardMarkup(row_width=1)
 
@@ -1110,7 +1128,10 @@ def start(message):
         )
     )
 
-    # Download the image
+    # --------------------------------------------------------
+    # QUESTION 1 IMAGE
+    # --------------------------------------------------------
+
     try:
         response = requests.get(
             IMAGE_URL,
@@ -1143,10 +1164,14 @@ def start(message):
 
         return
 
-    # Question text
+    # --------------------------------------------------------
+    # QUESTION 1 TEXT
+    # --------------------------------------------------------
+
     bot.send_message(
         message.chat.id,
-        "Emily asks whether Daniel wants to join the student council.\n\n"
+        "Emily asks whether Daniel wants to join "
+        "the student council.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -1172,33 +1197,47 @@ def question_1_answer(call):
 
     user_id = call.from_user.id
 
-    # Get the score dictionary for this answer
+    # --------------------------------------------------------
+    # ADD POINTS
+    # --------------------------------------------------------
+
     points = QUESTION_1_SCORES.get(call.data)
 
     if points:
 
-        # Add each category's points
         for category, value in points.items():
             user_scores[user_id][category] += value
 
     bot.answer_callback_query(call.id)
 
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER
+    # --------------------------------------------------------
+
     bot.send_message(
         call.message.chat.id,
         f"You selected:\n\n"
-        f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+        f"{answer}"
     )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 1
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily listens carefully to Daniel's answer.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION WILL GO HERE
+    # --------------------------------------------------------
+
+    # Example:
+    #
+    # send_question_2(call.message.chat.id)
+
 
 
 # ============================================================
