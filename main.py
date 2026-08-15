@@ -3,6 +3,11 @@ import telebot
 from telebot import types
 from dotenv import load_dotenv
 load_dotenv()
+import requests
+import json
+import time
+
+
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
@@ -44,7 +49,14 @@ def start(message):
         )
     )
 	
+	bot.send_message(
+        message.chat.id,
+        "Emily asks whether Daniel wants to join the student council.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
 	
+	time.sleep(5)
 
 
     bot.send_message(
