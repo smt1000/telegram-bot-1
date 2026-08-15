@@ -40,15 +40,6 @@ def start(message):
             callback_data="q1_4"
         )
     )
-	
-	
-	bot.send_message(
-	message.chat.id,
-    "Welcome to the questionnaire!\n\n"
-    "Read the situation below and choose the response "
-    "you think is best."
-)
-
 
     # Download the image
     try:
@@ -81,9 +72,6 @@ def start(message):
             f"Could not load the image.\n\nError: {e}"
         )
         return
-		
-		
-		
 
     # Send question and buttons
     bot.send_message(
@@ -92,16 +80,6 @@ def start(message):
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
-	
-	bot.send_message(
-        message.chat.id,
-        "Welcome to the questionnaire!\n\n"
-		"Read the situation below and choose the response "
-		"you think is best."
-
-    )
-	
-	
 
 
 @bot.callback_query_handler(
@@ -124,7 +102,6 @@ def question_1_answer(call):
         call.message.chat.id,
         f"You selected:\n\n{answer}"
     )
-	
 
 
 print("Bot is running...")
