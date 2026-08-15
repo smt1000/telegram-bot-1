@@ -1248,7 +1248,7 @@ def question_1_answer(call):
 
     # Example:
     #
-    # send_question_2(call.message.chat.id)
+     send_question_2(call.message.chat.id)
 
 #سؤال 2
 
@@ -1412,7 +1412,7 @@ def question_2_answer(call):
     # NEXT QUESTION
     # --------------------------------------------------------
 
-    # send_question_3(call.message.chat.id)
+     send_question_3(call.message.chat.id)
 
 #سؤال 3
 
@@ -1728,7 +1728,7 @@ def question_4_answer(call):
 
     # Uncomment this when Question 5 is ready:
     #
-    # send_question_5(call.message.chat.id)
+    send_question_5(call.message.chat.id)
 
 #سؤال 5
 # ============================================================
@@ -1881,7 +1881,7 @@ def question_5_answer(call):
 
     # Uncomment this when Question 6 is ready:
     #
-    # send_question_6(call.message.chat.id)
+    send_question_6(call.message.chat.id)
 
 # ============================================================
 # START BOT
