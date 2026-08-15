@@ -41,6 +41,13 @@ def start(message):
         )
     )
 	
+	bot.send_message(
+        message.chat.id,
+        "Emily asks whether Daniel wants to join the student council.\n\n"
+		"Emily asks whether Daniel wants to join the student council.\n\n"
+		"Emily asks whether Daniel wants to join the student council.\n\n"
+        
+    )
 
     # Download the image
     try:
