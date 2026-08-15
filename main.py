@@ -44,6 +44,13 @@ def start(message):
             callback_data="q1_4"
         )
     )
+	bot.send_photo(
+    message.chat.id,
+    "https://media.craiyon.com/2025-09-07/v8JpBBNGTG6Y56xQ6zuWow.webp",
+    caption="Emily asks whether Daniel wants to join the student council.",
+    reply_markup=keyboard
+)
+
 
     bot.send_message(
         message.chat.id,
