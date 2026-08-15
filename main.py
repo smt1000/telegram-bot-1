@@ -84,16 +84,6 @@ def start(message):
     )
 	
 	
-	
-	
-	
-	bot.send_message(
-        message.chat.id,
-        "Welcome to the questionnaire!\n\n"
-		"Read the situation below and choose the response "
-		"you think is best."
-    )
-	
 
 
 @bot.callback_query_handler(
