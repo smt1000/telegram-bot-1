@@ -2,8 +2,6 @@ import os
 import telebot
 from telebot import types
 from dotenv import load_dotenv
-import requests
-from io import BytesIO
 load_dotenv()
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -45,20 +43,8 @@ def start(message):
             callback_data="q1_4"
         )
     )
-	image_url = https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
-
-	response = requests.get(image_url)
-	response.raise_for_status()
-
-	photo = BytesIO(response.content)
-	photo.name = "question1.jpg"
-
-
-	bot.send_photo(
-        message.chat.id,
-        "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
-		
-    )
+	
+	
 
 
     bot.send_message(
