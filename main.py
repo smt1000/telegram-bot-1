@@ -92,14 +92,6 @@ def start(message):
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
-	
-	bot.send_message(
-        "Welcome to the questionnaire!\n\n"
-		"Read the situation below and choose the response "
-		"you think is best."
-    )
-	
-
 
 @bot.callback_query_handler(
     func=lambda call: call.data.startswith("q1_")
