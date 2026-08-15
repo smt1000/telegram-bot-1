@@ -12,7 +12,7 @@ TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 if not TOKEN:
     raise ValueError("TELEGRAM_BOT_TOKEN is missing from your .env file")
 
-
+bot = telebot.TeleBot(TOKEN)
 
 IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
 
@@ -39,14 +39,6 @@ def start(message):
             "4. Why do you want me there?",
             callback_data="q1_4"
         )
-    )
-	
-	bot.send_message(
-        message.chat.id,
-        "Emily asks whether Daniel wants to join the student council.\n\n"
-		"Emily asks whether Daniel wants to join the student council.\n\n"
-		"Emily asks whether Daniel wants to join the student council.\n\n"
-        
     )
 
     # Download the image
@@ -80,8 +72,7 @@ def start(message):
             f"Could not load the image.\n\nError: {e}"
         )
         return
-	 
-    
+
     # Send question and buttons
     bot.send_message(
         message.chat.id,
@@ -89,8 +80,6 @@ def start(message):
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
-	
-	
 
 
 @bot.callback_query_handler(
