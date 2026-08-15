@@ -19,28 +19,7 @@ bot = telebot.TeleBot(TOKEN)
 # IMAGE
 # ============================================================
 
-IMAGE_URL = "YOUR_IMAGE_URL"
-
-
-# =========================
-# TEXT BETWEEN QUESTIONS
-# =========================
-
-QUESTION_1_INTRO = (
-    "Welcome to the questionnaire!\n\n"
-    "Read the situation carefully and choose the response "
-    "you think is most appropriate."
-)
-
-QUESTION_1_AFTER = (
-    "Thank you for your answer!\n\n"
-    "Let's continue to the next situation."
-)
-
-QUESTION_2_INTRO = (
-    "Now let's look at another situation.\n\n"
-    "Think carefully before choosing your answer."
-)
+IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
 
 
 # ============================================================
@@ -312,10 +291,6 @@ ALL_SCORES = {
     4: QUESTION_4_SCORES,
 }
 
-for question_number in range(5, 99):
-    ALL_SCORES[question_number] = {}
-
-
 
 # ============================================================
 # USER SCORES
@@ -397,21 +372,14 @@ def start(message):
         )
 
         return
-		
 
     # Question text
-	bot.send_message(
-        message.chat.id,
-        
-		QUESTION_1_INTRO
-    )
     bot.send_message(
         message.chat.id,
         "Emily asks whether Daniel wants to join the student council.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
-	
 
 
 # ============================================================
