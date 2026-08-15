@@ -72,7 +72,12 @@ def start(message):
             f"Could not load the image.\n\nError: {e}"
         )
         return
-
+	 
+    bot.send_message(
+        "Welcome to the questionnaire!\n\n"
+		"Read the situation below and choose the response "
+		"you think is best."
+    )
     # Send question and buttons
     bot.send_message(
         message.chat.id,
