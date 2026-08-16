@@ -1078,7 +1078,7 @@ def create_new_score():
 # IMAGE
 # ============================================================
 
-IMAGE_URL = "https://i.ibb.co/Jjp6nm43/Emily-2.jpg"
+IMAGE_URL = "https://i.ibb.co/BKPbsjXF/Emily.jpg"
 
 
 # ============================================================
@@ -1371,7 +1371,7 @@ def send_question_2(chat_id):
     # --------------------------------------------------------
     # QUESTION 2 IMAGE
     # --------------------------------------------------------
-IMAGE_URL = "https://i.ibb.co/qM7vXkX3/Sophie-2.jpg"
+
     try:
         response = requests.get(
             IMAGE_URL,
