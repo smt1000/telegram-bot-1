@@ -1646,7 +1646,7 @@ def question_3_answer(call):
     bot.send_message(
         call.message.chat.id,
         "Grace thinks about Daniel's response.\n\n"
-        "The conversation continues..."
+        
     )
 
     # --------------------------------------------------------
@@ -1669,9 +1669,8 @@ def send_question_4(chat_id):
 
     bot.send_message(
         chat_id,
-        "The conversation continues after Daniel talks "
-        "with Grace.\n\n"
-        "Charlotte joins the conversation and asks Daniel "
+        "Next Morning..\n\n"
+        "Charlotte, who spoke with Danial two or three times, left her table and asked Danial"
         "what he would do when faced with an important decision."
     )
 
@@ -1700,13 +1699,14 @@ def send_question_4(chat_id):
         )
     )
 
+    IMAGE_URL4 = "https://i.ibb.co/BH22kYWK/Charlotte-2.jpg"
     # --------------------------------------------------------
     # QUESTION 4 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL4,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
