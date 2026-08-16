@@ -1812,7 +1812,7 @@ def question_4_answer(call):
     bot.send_message(
         call.message.chat.id,
         "Charlotte thinks about Daniel's response.\n\n"
-        "The conversation continues..."
+        "Later..."
     )
 
     # --------------------------------------------------------
@@ -1836,8 +1836,7 @@ def send_question_5(chat_id):
         chat_id,
         "After speaking with Charlotte, Daniel continues "
         "the conversation with Emily.\n\n"
-        "Emily asks Daniel how he would react if a friend "
-        "needed his help with a difficult problem."
+        "Daniel discovers that Emily stayed at school late. "
     )
 
     # --------------------------------------------------------
@@ -1848,30 +1847,31 @@ def send_question_5(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd help them right away.",
+            "1. Ask whether she’s okay.",
             callback_data="q5_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd help if I had enough time.",
+            "2. Leave her alone.",
             callback_data="q5_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd encourage them to solve it themselves.",
+            "3. Offer to help.",
             callback_data="q5_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd ask what kind of help they need first.",
+            "4. Ask why she feels responsible for everything.",
             callback_data="q5_4"
         )
     )
 
+    IMAGE_URL5 = "https://i.ibb.co/BKPbsjXF/Emily.jpg"
     # --------------------------------------------------------
     # QUESTION 5 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL5,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -1909,8 +1909,7 @@ def send_question_5(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel how he would react if a friend "
-        "needed his help with a difficult problem.\n\n"
+        "Daniel discovers that Emily stayed at school late.  "
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -1926,10 +1925,10 @@ def send_question_5(chat_id):
 def question_5_answer(call):
 
     answers = {
-        "q5_1": "I'd help them right away.",
-        "q5_2": "I'd help if I had enough time.",
-        "q5_3": "I'd encourage them to solve it themselves.",
-        "q5_4": "I'd ask what kind of help they need first."
+        "q5_1": "Ask whether she’s okay.",
+        "q5_2": "Leave her alone.",
+        "q5_3": "Offer to help.",
+        "q5_4": "Ask why she feels responsible for everything."
     }
 
     answer = answers.get(call.data)
