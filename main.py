@@ -1367,7 +1367,7 @@ def send_question_2(chat_id):
             callback_data="q2_4"
         )
     )
-
+IMAGE_URL = "https://i.ibb.co/qM7vXkX3/Sophie-2.jpg"
     # --------------------------------------------------------
     # QUESTION 2 IMAGE
     # --------------------------------------------------------
