@@ -2244,6 +2244,7 @@ def question_7_answer(call):
 
 
 #سؤال 8 
+
 # ============================================================
 # QUESTION 8
 # ============================================================
@@ -2256,11 +2257,10 @@ def send_question_8(chat_id):
 
     bot.send_message(
         chat_id,
-        "The conversation continues after Daniel talks "
-        "with Sophie.\n\n"
-        "Grace asks Daniel how he would react if he had "
-        "to choose between helping a friend and finishing "
-        "an important responsibility."
+        "After talking with Grace, Daniel continues "
+        "the conversation with Charlotte.\n\n"
+        "Charlotte asks Daniel what he would do if "
+        "a friend came to him with a difficult problem."
     )
 
     # --------------------------------------------------------
@@ -2271,19 +2271,19 @@ def send_question_8(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd help my friend first.",
+            "1. I'd help them right away.",
             callback_data="q8_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd finish my responsibility first.",
+            "2. I'd encourage them to solve it themselves.",
             callback_data="q8_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd try to find a way to do both.",
+            "3. I'd help them if I had enough time.",
             callback_data="q8_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd ask my friend how urgent the problem is.",
+            "4. I'd ask what kind of help they need first.",
             callback_data="q8_4"
         )
     )
@@ -2292,11 +2292,9 @@ def send_question_8(chat_id):
     # QUESTION 8 IMAGE
     # --------------------------------------------------------
 
-    QUESTION_8_IMAGE_URL = IMAGE_URL
-
     try:
         response = requests.get(
-            QUESTION_8_IMAGE_URL,
+            IMAGE_URL,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2305,11 +2303,7 @@ def send_question_8(chat_id):
 
         response.raise_for_status()
 
-        print(
-            "Question 8 image status:",
-            response.status_code
-        )
-
+        print("Question 8 image status:", response.status_code)
         print(
             "Question 8 image type:",
             response.headers.get("Content-Type")
@@ -2338,9 +2332,8 @@ def send_question_8(chat_id):
 
     bot.send_message(
         chat_id,
-        "Grace asks Daniel what he would do if he had "
-        "to choose between helping a friend and finishing "
-        "an important responsibility.\n\n"
+        "Charlotte asks Daniel what he would do if "
+        "a friend came to him with a difficult problem.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -2356,10 +2349,10 @@ def send_question_8(chat_id):
 def question_8_answer(call):
 
     answers = {
-        "q8_1": "I'd help my friend first.",
-        "q8_2": "I'd finish my responsibility first.",
-        "q8_3": "I'd try to find a way to do both.",
-        "q8_4": "I'd ask my friend how urgent the problem is."
+        "q8_1": "I'd help them right away.",
+        "q8_2": "I'd encourage them to solve it themselves.",
+        "q8_3": "I'd help them if I had enough time.",
+        "q8_4": "I'd ask what kind of help they need first."
     }
 
     answer = answers.get(call.data)
@@ -2373,6 +2366,7 @@ def question_8_answer(call):
     points = QUESTION_8_SCORES.get(call.data)
 
     if points:
+
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -2405,7 +2399,7 @@ def question_8_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Grace thinks about Daniel's response.\n\n"
+        "Charlotte thinks about Daniel's response.\n\n"
         "The conversation continues..."
     )
 
@@ -2413,9 +2407,8 @@ def question_8_answer(call):
     # NEXT QUESTION
     # --------------------------------------------------------
 
-    # Uncomment when Question 9 is ready:
-    #
-    # send_question_9(call.message.chat.id)
+    send_question_9(call.message.chat.id)
+
 #سؤال 9
 
 # ============================================================
@@ -2430,10 +2423,10 @@ def send_question_9(chat_id):
 
     bot.send_message(
         chat_id,
-        "The conversation continues after Daniel talks "
-        "with Grace.\n\n"
-        "Charlotte asks Daniel what he would do if he "
-        "noticed that a friend was making a mistake."
+        "After talking with Charlotte, Daniel continues "
+        "the conversation with Emily.\n\n"
+        "Emily asks Daniel what he would do if he noticed "
+        "that someone was being treated unfairly."
     )
 
     # --------------------------------------------------------
@@ -2444,19 +2437,19 @@ def send_question_9(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd tell them honestly about the mistake.",
+            "1. I'd speak up and say something.",
             callback_data="q9_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd let them figure it out themselves.",
+            "2. I'd stay out of it.",
             callback_data="q9_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd help them fix it without judging them.",
+            "3. I'd try to help the person privately.",
             callback_data="q9_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd ask them if they want my advice first.",
+            "4. I'd first find out what happened.",
             callback_data="q9_4"
         )
     )
@@ -2465,11 +2458,9 @@ def send_question_9(chat_id):
     # QUESTION 9 IMAGE
     # --------------------------------------------------------
 
-    QUESTION_9_IMAGE_URL = IMAGE_URL
-
     try:
         response = requests.get(
-            QUESTION_9_IMAGE_URL,
+            IMAGE_URL,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2478,11 +2469,7 @@ def send_question_9(chat_id):
 
         response.raise_for_status()
 
-        print(
-            "Question 9 image status:",
-            response.status_code
-        )
-
+        print("Question 9 image status:", response.status_code)
         print(
             "Question 9 image type:",
             response.headers.get("Content-Type")
@@ -2511,8 +2498,8 @@ def send_question_9(chat_id):
 
     bot.send_message(
         chat_id,
-        "Charlotte asks Daniel what he would do if he "
-        "noticed that a friend was making a mistake.\n\n"
+        "Emily asks Daniel what he would do if he noticed "
+        "that someone was being treated unfairly.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -2528,10 +2515,10 @@ def send_question_9(chat_id):
 def question_9_answer(call):
 
     answers = {
-        "q9_1": "I'd tell them honestly about the mistake.",
-        "q9_2": "I'd let them figure it out themselves.",
-        "q9_3": "I'd help them fix it without judging them.",
-        "q9_4": "I'd ask them if they want my advice first."
+        "q9_1": "I'd speak up and say something.",
+        "q9_2": "I'd stay out of it.",
+        "q9_3": "I'd try to help the person privately.",
+        "q9_4": "I'd first find out what happened."
     }
 
     answer = answers.get(call.data)
@@ -2545,6 +2532,7 @@ def question_9_answer(call):
     points = QUESTION_9_SCORES.get(call.data)
 
     if points:
+
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -2577,7 +2565,7 @@ def question_9_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Charlotte thinks about Daniel's response.\n\n"
+        "Emily thinks about Daniel's response.\n\n"
         "The conversation continues..."
     )
 
@@ -2585,11 +2573,11 @@ def question_9_answer(call):
     # NEXT QUESTION
     # --------------------------------------------------------
 
-    # Uncomment when Question 10 is ready:
-    #
-    # send_question_10(call.message.chat.id)
+    send_question_10(call.message.chat.id)
+
 
 #سؤال 10
+
 # ============================================================
 # QUESTION 10
 # ============================================================
@@ -2602,10 +2590,10 @@ def send_question_10(chat_id):
 
     bot.send_message(
         chat_id,
-        "The conversation continues after Daniel talks "
-        "with Charlotte.\n\n"
-        "Emily asks Daniel what he would do if he were "
-        "given responsibility for an important school task."
+        "After talking with Charlotte, Daniel continues "
+        "the conversation with Emily.\n\n"
+        "Emily asks Daniel how he would react if he made "
+        "a mistake while working on something important."
     )
 
     # --------------------------------------------------------
@@ -2616,19 +2604,19 @@ def send_question_10(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd take responsibility and do my best.",
+            "1. I'd admit the mistake and try to fix it.",
             callback_data="q10_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd ask someone else to handle it.",
+            "2. I'd try to fix it on my own first.",
             callback_data="q10_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd make a plan before getting started.",
+            "3. I'd ask someone I trust for advice.",
             callback_data="q10_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd ask for help if I needed it.",
+            "4. I'd think carefully about what went wrong.",
             callback_data="q10_4"
         )
     )
@@ -2637,11 +2625,9 @@ def send_question_10(chat_id):
     # QUESTION 10 IMAGE
     # --------------------------------------------------------
 
-    QUESTION_10_IMAGE_URL = IMAGE_URL
-
     try:
         response = requests.get(
-            QUESTION_10_IMAGE_URL,
+            IMAGE_URL,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2650,11 +2636,7 @@ def send_question_10(chat_id):
 
         response.raise_for_status()
 
-        print(
-            "Question 10 image status:",
-            response.status_code
-        )
-
+        print("Question 10 image status:", response.status_code)
         print(
             "Question 10 image type:",
             response.headers.get("Content-Type")
@@ -2683,8 +2665,8 @@ def send_question_10(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he would do if he were "
-        "given responsibility for an important school task.\n\n"
+        "Emily asks Daniel how he would react if he made "
+        "a mistake while working on something important.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -2700,10 +2682,10 @@ def send_question_10(chat_id):
 def question_10_answer(call):
 
     answers = {
-        "q10_1": "I'd take responsibility and do my best.",
-        "q10_2": "I'd ask someone else to handle it.",
-        "q10_3": "I'd make a plan before getting started.",
-        "q10_4": "I'd ask for help if I needed it."
+        "q10_1": "I'd admit the mistake and try to fix it.",
+        "q10_2": "I'd try to fix it on my own first.",
+        "q10_3": "I'd ask someone I trust for advice.",
+        "q10_4": "I'd think carefully about what went wrong."
     }
 
     answer = answers.get(call.data)
@@ -2717,6 +2699,7 @@ def question_10_answer(call):
     points = QUESTION_10_SCORES.get(call.data)
 
     if points:
+
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -2749,17 +2732,16 @@ def question_10_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily appreciates Daniel's response.\n\n"
-        "The questionnaire continues..."
+        "Emily thinks about Daniel's response.\n\n"
+        "The conversation continues..."
     )
 
     # --------------------------------------------------------
     # NEXT QUESTION
     # --------------------------------------------------------
 
-    # Uncomment when Question 11 is ready:
-    #
-    # send_question_11(call.message.chat.id)
+    #send_question_11(call.message.chat.id)
+
 
 
 # ============================================================
