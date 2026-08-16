@@ -1841,32 +1841,30 @@ def send_question_5(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Ask whether she’s okay.",
+            "1. I'd help them right away.",
             callback_data="q5_1"
         ),
         types.InlineKeyboardButton(
-            "2. Leave her alone.",
+            "2. I'd help if I had enough time.",
             callback_data="q5_2"
         ),
         types.InlineKeyboardButton(
-            "3. Offer to help.",
+            "3. I'd encourage them to solve it themselves.",
             callback_data="q5_3"
         ),
         types.InlineKeyboardButton(
-            "4. Ask why she feels responsible for everything.",
+            "4. I'd ask what kind of help they need first.",
             callback_data="q5_4"
         )
     )
 
-
-    IMAGE_URL5 = "https://i.ibb.co/BKPbsjXF/Emily.jpg"
     # --------------------------------------------------------
     # QUESTION 5 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL5,
+            IMAGE_URL,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -1919,10 +1917,10 @@ def send_question_5(chat_id):
 def question_5_answer(call):
 
     answers = {
-        "q5_1": "Ask whether she’s okay.",
-        "q5_2": "Leave her alone.",
-        "q5_3": "Offer to help.",
-        "q5_4": "Ask why she feels responsible for everything."
+        "q5_1": "I'd help them right away.",
+        "q5_2": "I'd help if I had enough time.",
+        "q5_3": "I'd encourage them to solve it themselves.",
+        "q5_4": "I'd ask what kind of help they need first."
     }
 
     answer = answers.get(call.data)
