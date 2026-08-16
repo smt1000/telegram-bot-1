@@ -1096,87 +1096,13 @@ def start(message):
     # TEXT BEFORE QUESTION 1
     # --------------------------------------------------------
 
-    @bot.message_handler(commands=['start'])
-def start(message):
-    bot.send_message(
-        message.chat.id,
-        "Daniel Carter is seventeen and has just transferred to Westbridge High "
-        "after his family moved to the area.\n\n"
-        "He isn’t particularly popular, athletic, or academically brilliant. "
-        "What makes him unusual is that he listens carefully to people.\n\n"
-        "Unfortunately, Daniel also has a habit of avoiding difficult decisions. "
-        "His greatest fear isn’t failure. It’s choosing something—and discovering "
-        "later that he chose wrong.\n\n"
-        "You play as Daniel."
-    )
-
-    bot.send_message(
-        message.chat.id,
-        "Daniel arrived at Westbridge High on a rainy Monday morning.\n"
-        "He stood outside the main entrance holding a piece of paper with his classroom\n"
-        "number.\n"
-        "The paper was already wet.\n"
-        "“Brilliant.”\n"
-        "Someone behind him laughed.\n"
-        "Daniel turned.\n"
-        "A girl with blonde hair was standing beneath an umbrella.\n"
-        "“First day?”\n"
-        "“Is it that obvious?”\n"
-        "“You’re holding the map upside down.”\n"
-        "Daniel looked down.\n"
-        "She was right.\n"
-        "“Oh.”\n"
-        "She smiled.\n"
-        "“Sophie Williams.”\n"
-        "“Daniel Carter.”\n"
-        "“Come on, Daniel Carter. I’ll show you where you’re going.”\n"
-        "Before Daniel could respond, another girl approached.\n"
-        "“You’re Daniel, aren’t you?”\n"
-        "She was carrying several folders.\n"
-        "“Emily Parker. Student council.”\n"
-        "Daniel nodded.\n"
-        "“Yes.”\n"
-        "“Good. I was told to make sure you know where everything is.”\n"
-        "Sophie raised an eyebrow.\n"
-        "“I already found him.”\n"
-        "Emily smiled politely.\n"
-        "“Then you’ve saved me a job.”\n"
-        "A third girl walked past them carrying several books.\n"
-        "One slipped from her hands.\n"
-        "Daniel picked it up.\n"
-        "“Thanks.”\n"
-        "She looked at the cover.\n"
-        "“That’s mine.”\n"
-        "“Sorry.”\n"
-        "“It’s okay.”\n"
-        "She took it.\n"
-        "“Grace Bennett.”\n"
-        "Then she disappeared into the building.\n"
-        "Daniel watched her leave.\n"
-        "Sophie waved a hand in front of his face.\n"
-        "“Earth to Daniel.”\n"
-        "“What?”\n"
-        "“You’re going to be fine here.”\n"
-        "A fourth girl walked through the entrance.\n"
-        "Charlotte Reed.\n"
-        "She glanced at the group.\n"
-        "“You’re blocking the doorway.”\n"
-        "Sophie laughed.\n"
-        "“Good morning to you too, Charlotte.”\n"
-        "Charlotte sighed.\n"
-        "“Good morning.”\n"
-        "Then she walked inside.\n"
-        "Daniel looked at the four girls.\n"
-        "He had been at Westbridge High for less than ten minutes.\n"
-        "Already, he suspected the year would be complicated."
-    )
-
     bot.send_message(
         message.chat.id,
         "Emily and Daniel are talking after school.\n\n"
         "Emily wants to know if Daniel would be interested "
         "in joining the student council."
     )
+
     # --------------------------------------------------------
     # QUESTION 1 BUTTONS
     # --------------------------------------------------------
