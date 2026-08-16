@@ -11220,7 +11220,1509 @@ def question_61_answer(call):
     # NEXT QUESTION
     # --------------------------------------------------------
 
-    #send_question_62(call.message.chat.id)
+    send_question_62(call.message.chat.id)
+
+#سؤال 62
+
+# ============================================================
+# QUESTION 62
+# ============================================================
+
+def send_question_62(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 62
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily smiles at Daniel as the conversation continues.\n\n"
+        "She asks him what he thinks is the best way to keep "
+        "a relationship meaningful over time."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 62 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Keep being honest about your feelings and never take each other for granted.",
+            callback_data="q62_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Give each other freedom to grow while maintaining your own interests.",
+            callback_data="q62_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Continue making an effort and showing that you care through your actions.",
+            callback_data="q62_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Keep communicating, listening, and discovering new things about each other.",
+            callback_data="q62_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 62 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 62 image status:", response.status_code)
+        print(
+            "Question 62 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question62.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 62 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 62 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks is the best way to "
+        "keep a relationship meaningful over time.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 62 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q62_")
+)
+def question_62_answer(call):
+
+    answers = {
+        "q62_1": "Keep being honest about your feelings and never take each other for granted.",
+        "q62_2": "Give each other freedom to grow while maintaining your own interests.",
+        "q62_3": "Continue making an effort and showing that you care through your actions.",
+        "q62_4": "Keep communicating, listening, and discovering new things about each other."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 62 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_62_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 62
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily smiles warmly.\n\n"
+        "She feels that Daniel understands that keeping a "
+        "relationship meaningful takes honesty, effort, freedom, "
+        "and genuine interest in each other."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_63(call.message.chat.id)
+
+#سؤال 63
+
+# ============================================================
+# QUESTION 63
+# ============================================================
+
+def send_question_63(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 63
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily looks at Daniel with a gentle smile.\n\n"
+        "She asks him what he thinks is most important when "
+        "two people are trying to build a relationship based on trust."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 63 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Being honest, even when the truth is uncomfortable.",
+            callback_data="q63_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Respecting each other's choices and personal boundaries.",
+            callback_data="q63_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Keeping promises and being dependable when it matters.",
+            callback_data="q63_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Listening carefully and making sure both people feel understood.",
+            callback_data="q63_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 63 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 63 image status:", response.status_code)
+        print(
+            "Question 63 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question63.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 63 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 63 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks is most important "
+        "when two people are trying to build a relationship "
+        "based on trust.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 63 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q63_")
+)
+def question_63_answer(call):
+
+    answers = {
+        "q63_1": "Being honest, even when the truth is uncomfortable.",
+        "q63_2": "Respecting each other's choices and personal boundaries.",
+        "q63_3": "Keeping promises and being dependable when it matters.",
+        "q63_4": "Listening carefully and making sure both people feel understood."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 63 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_63_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 63
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily nods thoughtfully.\n\n"
+        "She feels that Daniel understands that trust is built "
+        "through honesty, respect, reliability, and genuine understanding."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_64(call.message.chat.id)
+
+
+#سؤال 64
+
+# ============================================================
+# QUESTION 64
+# ============================================================
+
+def send_question_64(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 64
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily smiles at Daniel as they continue talking.\n\n"
+        "She asks him what he thinks is the best way to keep "
+        "a relationship healthy when life becomes unpredictable."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 64 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Be honest about what is happening and how you feel.",
+            callback_data="q64_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Stay flexible and give each other room to adapt.",
+            callback_data="q64_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Stay loyal and support each other when things get difficult.",
+            callback_data="q64_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Talk things through and try to understand how the changes affect both people.",
+            callback_data="q64_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 64 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 64 image status:", response.status_code)
+        print(
+            "Question 64 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question64.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 64 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 64 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks is the best way to keep "
+        "a relationship healthy when life becomes unpredictable.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 64 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q64_")
+)
+def question_64_answer(call):
+
+    answers = {
+        "q64_1": "Be honest about what is happening and how you feel.",
+        "q64_2": "Stay flexible and give each other room to adapt.",
+        "q64_3": "Stay loyal and support each other when things get difficult.",
+        "q64_4": "Talk things through and try to understand how the changes affect both people."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 64 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_64_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 64
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily nods with a thoughtful smile.\n\n"
+        "She feels that Daniel understands that unexpected "
+        "changes are easier to handle when two people remain "
+        "honest, flexible, supportive, and willing to communicate."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_65(call.message.chat.id)
+
+#سؤال 65
+
+# ============================================================
+# QUESTION 65
+# ============================================================
+
+def send_question_65(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 65
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily smiles at Daniel and pauses for a moment.\n\n"
+        "She asks him what he thinks makes someone feel "
+        "comfortable enough to open up about their worries."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 65 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Knowing they can speak honestly without being judged.",
+            callback_data="q65_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Knowing they can talk when they are ready without pressure.",
+            callback_data="q65_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Knowing someone will stay beside them and offer support.",
+            callback_data="q65_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Knowing someone will listen carefully and try to understand.",
+            callback_data="q65_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 65 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 65 image status:", response.status_code)
+        print(
+            "Question 65 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question65.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 65 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 65 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks makes someone feel "
+        "comfortable enough to open up about their worries.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 65 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q65_")
+)
+def question_65_answer(call):
+
+    answers = {
+        "q65_1": "Knowing they can speak honestly without being judged.",
+        "q65_2": "Knowing they can talk when they are ready without pressure.",
+        "q65_3": "Knowing someone will stay beside them and offer support.",
+        "q65_4": "Knowing someone will listen carefully and try to understand."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 65 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_65_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 65
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily smiles warmly.\n\n"
+        "She appreciates Daniel's answer and feels that he "
+        "understands how important trust, patience, support, "
+        "and understanding are when someone is opening up."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_66(call.message.chat.id)
+
+
+#سؤال 66
+
+# ============================================================
+# QUESTION 66
+# ============================================================
+
+def send_question_66(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 66
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily looks at Daniel with a warm smile.\n\n"
+        "She asks him what he thinks is most important when "
+        "two people disagree about something that really matters."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 66 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Be honest about your opinion while remaining respectful.",
+            callback_data="q66_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Give each person time and space to think independently.",
+            callback_data="q66_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Focus on finding a solution that supports both people.",
+            callback_data="q66_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Listen carefully and try to understand why the other person feels that way.",
+            callback_data="q66_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 66 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 66 image status:", response.status_code)
+        print(
+            "Question 66 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question66.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 66 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 66 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks is most important "
+        "when two people disagree about something that really matters.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 66 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q66_")
+)
+def question_66_answer(call):
+
+    answers = {
+        "q66_1": "Be honest about your opinion while remaining respectful.",
+        "q66_2": "Give each person time and space to think independently.",
+        "q66_3": "Focus on finding a solution that supports both people.",
+        "q66_4": "Listen carefully and try to understand why the other person feels that way."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 66 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_66_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 66
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily nods thoughtfully.\n\n"
+        "She feels that Daniel understands that disagreements "
+        "do not have to create distance when both people are "
+        "willing to communicate with honesty and respect."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_67(call.message.chat.id)
+
+#سؤال 67
+
+# ============================================================
+# QUESTION 67
+# ============================================================
+
+def send_question_67(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 67
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily smiles at Daniel as the conversation continues.\n\n"
+        "She asks him what he thinks makes a relationship feel "
+        "safe and comfortable over the long term."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 67 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Knowing that both people can always be honest with each other.",
+            callback_data="q67_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Knowing that both people can maintain their independence and boundaries.",
+            callback_data="q67_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Knowing that both people will be dependable and supportive.",
+            callback_data="q67_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Knowing that both people can talk openly and feel understood.",
+            callback_data="q67_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 67 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 67 image status:", response.status_code)
+        print(
+            "Question 67 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question67.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 67 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 67 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks makes a relationship "
+        "feel safe and comfortable over the long term.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 67 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q67_")
+)
+def question_67_answer(call):
+
+    answers = {
+        "q67_1": "Knowing that both people can always be honest with each other.",
+        "q67_2": "Knowing that both people can maintain their independence and boundaries.",
+        "q67_3": "Knowing that both people will be dependable and supportive.",
+        "q67_4": "Knowing that both people can talk openly and feel understood."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 67 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_67_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 67
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily smiles warmly.\n\n"
+        "She feels that Daniel understands that a lasting "
+        "relationship needs honesty, independence, reliability, "
+        "and open communication."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_68(call.message.chat.id)
+
+#سؤال 68
+
+# ============================================================
+# QUESTION 68
+# ============================================================
+
+def send_question_68(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 68
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily looks at Daniel with a curious smile.\n\n"
+        "She asks him what he thinks is the best way to show "
+        "someone that their feelings are important to you."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 68 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Tell them honestly that their feelings matter to you.",
+            callback_data="q68_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Respect their feelings even when you see things differently.",
+            callback_data="q68_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Show through your actions that you are there for them.",
+            callback_data="q68_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Listen carefully and give them your full attention.",
+            callback_data="q68_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 68 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 68 image status:", response.status_code)
+        print(
+            "Question 68 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question68.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 68 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 68 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks is the best way to "
+        "show someone that their feelings are important to you.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 68 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q68_")
+)
+def question_68_answer(call):
+
+    answers = {
+        "q68_1": "Tell them honestly that their feelings matter to you.",
+        "q68_2": "Respect their feelings even when you see things differently.",
+        "q68_3": "Show through your actions that you are there for them.",
+        "q68_4": "Listen carefully and give them your full attention."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 68 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_68_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 68
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily smiles and nods.\n\n"
+        "She appreciates Daniel's answer and feels that he "
+        "understands how important it is to make another person "
+        "feel heard, respected, and cared for."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_69(call.message.chat.id)
+
+
+#سؤال 69
+
+# ============================================================
+# QUESTION 69
+# ============================================================
+
+def send_question_69(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 69
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily looks at Daniel thoughtfully.\n\n"
+        "She asks him what he thinks helps two people stay "
+        "close when they have very different personalities."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 69 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Being honest about your differences and accepting each other.",
+            callback_data="q69_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Giving each other enough freedom to be yourselves.",
+            callback_data="q69_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Focusing on the things you enjoy doing together.",
+            callback_data="q69_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Talking openly and trying to understand each other's perspective.",
+            callback_data="q69_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 69 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 69 image status:", response.status_code)
+        print(
+            "Question 69 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question69.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 69 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 69 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks helps two people stay "
+        "close when they have very different personalities.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 69 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q69_")
+)
+def question_69_answer(call):
+
+    answers = {
+        "q69_1": "Being honest about your differences and accepting each other.",
+        "q69_2": "Giving each other enough freedom to be yourselves.",
+        "q69_3": "Focusing on the things you enjoy doing together.",
+        "q69_4": "Talking openly and trying to understand each other's perspective."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 69 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_69_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 69
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily smiles warmly.\n\n"
+        "She feels that Daniel understands that differences "
+        "do not have to create distance when two people respect "
+        "each other and make an effort to understand one another."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_70(call.message.chat.id)
+
+
+#سؤال 70
+
+# ============================================================
+# QUESTION 70
+# ============================================================
+
+def send_question_70(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 70
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily smiles at Daniel as they continue their conversation.\n\n"
+        "She asks him what he thinks is most important when "
+        "two people want to build a lasting relationship together."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 70 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Being completely honest about your feelings and intentions.",
+            callback_data="q70_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. Respecting each other's independence and personal goals.",
+            callback_data="q70_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. Being dependable and supporting each other through difficult times.",
+            callback_data="q70_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. Communicating openly and making sure both people feel understood.",
+            callback_data="q70_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 70 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 70 image status:", response.status_code)
+        print(
+            "Question 70 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question70.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 70 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 70 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he thinks is most important "
+        "when two people want to build a lasting relationship together.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 70 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q70_")
+)
+def question_70_answer(call):
+
+    answers = {
+        "q70_1": "Being completely honest about your feelings and intentions.",
+        "q70_2": "Respecting each other's independence and personal goals.",
+        "q70_3": "Being dependable and supporting each other through difficult times.",
+        "q70_4": "Communicating openly and making sure both people feel understood."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 70 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_70_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 70
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily smiles warmly.\n\n"
+        "She feels that Daniel understands that a lasting "
+        "relationship requires honesty, independence, support, "
+        "and meaningful communication."
+    )
+
 
 
 
