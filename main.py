@@ -12847,7 +12847,7 @@ def question_70_answer(call):
         f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
-    # --------------------------------------------------------
+        # --------------------------------------------------------
     # TEXT AFTER QUESTION 70
     # --------------------------------------------------------
 
@@ -12859,27 +12859,33 @@ def question_70_answer(call):
         "relationship requires honesty, independence, support, "
         "and meaningful communication."
     )
-	
-	# ============================================================
-# FIND FINAL WINNER
-# ============================================================
 
+    # ============================================================
+    # FIND FINAL WINNER
+    # ============================================================
 
-winner = choose_final_character(user_id)
+    winner = choose_final_character(user_id)
 
-if winner:
+    # ============================================================
+    # SHOW FINAL WINNER
+    # ============================================================
 
-    bot.send_message(
-        call.message.chat.id,
-        f"🎉 Your final match is {winner}!"
-    )
+    if winner:
 
-else:
+        bot.send_message(
+            call.message.chat.id,
+            f"🎉 Your final match is {winner}!\n\n"
+            f"Your strongest connection is with {winner}."
+        )
 
-    bot.send_message(
-        call.message.chat.id,
-        "No character qualified."
-    )
+    else:
+
+        bot.send_message(
+            call.message.chat.id,
+            "No character qualified based on the final "
+            "score requirements."
+        )
+
 
 # ============================================================
 # START BOT
@@ -12889,3 +12895,4 @@ print("Bot is running...")
 
 bot.delete_webhook(drop_pending_updates=True)
 bot.infinity_polling()
+
