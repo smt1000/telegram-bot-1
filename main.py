@@ -12705,26 +12705,31 @@ def choose_final_character(user_id):
         return "No Friends or New Beginning"
 
     # ============================================================
+    # BACKUP RULE 3
+    #
+    # ANY CHARACTER ABOVE 45
+    #
+    # Choose ALL characters above 45.
+    #
+    # Example:
+    #
+    # Emily = 50
+    # Sophie = 60
+    # Grace = 40
+    # Charlotte = 55
+    #
+    # Result:
+    # Emily + Sophie + Charlotte Close Friends
     # ============================================================
-	# BACKUP RULE 3
-	#
-	# ANY CHARACTER ABOVE 45
-	#
-	# Choose ALL characters above 45.
-	# ============================================================
 
-	characters_above_45 = [
-    character
-    for character, score in character_scores.items()
-    if score > 45
-	]
+    characters_above_45 = [
+        character
+        for character, score in character_scores.items()
+        if score > 45
+    ]
 
-	if characters_above_45:
-
-    return " + ".join(
-        characters_above_45
-    ) + " Close Friends"
-
+    if characters_above_45:
+        return " + ".join(characters_above_45) + " Close Friends"
 
     # ============================================================
     # BACKUP RULE 4
@@ -12779,6 +12784,7 @@ def choose_final_character(user_id):
     # ============================================================
 
     return "Solo End"
+
 
 
 #سؤال 70
