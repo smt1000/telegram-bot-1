@@ -1175,14 +1175,6 @@ bot.send_message(
     "Emily wants to know if Daniel would be interested "
     "in joining the student council."
 )
-    )
-	bot.send_message(
-        message.chat.id,
-        "Emily and Daniel are talking after school.\n\n"
-        "Emily wants to know if Daniel would be interested "
-        "in joining the student council."
-    )
-
     # --------------------------------------------------------
     # QUESTION 1 BUTTONS
     # --------------------------------------------------------
