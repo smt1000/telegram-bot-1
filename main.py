@@ -1218,6 +1218,17 @@ def question_1_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}"
+		f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
     # --------------------------------------------------------
@@ -1230,13 +1241,173 @@ def question_1_answer(call):
         "The conversation continues..."
     )
 
+#سؤال 2
+
+# ============================================================
+# QUESTION 2
+# ============================================================
+
+def send_question_2(chat_id):
+
     # --------------------------------------------------------
-    # NEXT QUESTION WILL GO HERE
+    # TEXT BEFORE QUESTION 2
     # --------------------------------------------------------
 
-    # Example:
-    #
-    # send_question_2(call.message.chat.id)
+    bot.send_message(
+        chat_id,
+        "A little later, Sophie joins the conversation.\n\n"
+        "She asks Daniel what he thinks about helping "
+        "with an upcoming school event."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 2 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. Sure, I can help.",
+            callback_data="q2_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I think someone else should do it.",
+            callback_data="q2_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'll help if you need me.",
+            callback_data="q2_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. What exactly would I have to do?",
+            callback_data="q2_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 2 IMAGE
+    # --------------------------------------------------------
+
+    QUESTION_2_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_2_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 2 image status:", response.status_code)
+        print(
+            "Question 2 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question2.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 2 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 2 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Sophie asks Daniel whether he would help "
+        "with the school event.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 2 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q2_")
+)
+def question_2_answer(call):
+
+    answers = {
+        "q2_1": "Sure, I can help.",
+        "q2_2": "I think someone else should do it.",
+        "q2_3": "I'll help if you need me.",
+        "q2_4": "What exactly would I have to do?"
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 2 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_2_SCORES.get(call.data)
+
+    if points:
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 2
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Sophie considers Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_3(call.message.chat.id)
+
+#سؤال 3
 
 
 
