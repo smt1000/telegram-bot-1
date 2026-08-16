@@ -3657,19 +3657,19 @@ def send_question_16(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd be honest about my opinion, but stay respectful.",
+            "1. Accept.",
             callback_data="q16_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd give them space and let them have their own opinion.",
+            "2. Refuse.",
             callback_data="q16_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd try to find a compromise that works for both of us.",
+            "3. Accept despite knowing she’ll win.",
             callback_data="q16_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd listen carefully and try to understand their point of view.",
+            "4. Ask why she suddenly wants to compete.",
             callback_data="q16_4"
         )
     )
@@ -3718,8 +3718,6 @@ def send_question_16(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he would do if someone he cared "
-        "about disagreed strongly with him.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -3735,10 +3733,10 @@ def send_question_16(chat_id):
 def question_16_answer(call):
 
     answers = {
-        "q16_1": "I'd be honest about my opinion, but stay respectful.",
-        "q16_2": "I'd give them space and let them have their own opinion.",
-        "q16_3": "I'd try to find a compromise that works for both of us.",
-        "q16_4": "I'd listen carefully and try to understand their point of view."
+        "q16_1": "Accept.",
+        "q16_2": "Refuse.",
+        "q16_3": "Accept despite knowing she’ll win.",
+        "q16_4": "Ask why she suddenly wants to compete."
     }
 
     answer = answers.get(call.data)
@@ -3785,12 +3783,11 @@ def question_16_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily listens carefully to Daniel's answer.\n\n"
-        "She appreciates the way he thinks about disagreements "
-        "and what they can reveal about two people."
+        "That girl was very fast\n\n"
+        "That's what I remember from those days.."
     )
 
-    # --------------------------------------------------------
+    # ----------------------------------------t----------------
     # NEXT QUESTION
     # --------------------------------------------------------
 
@@ -3810,9 +3807,9 @@ def send_question_17(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily smiles and continues the conversation.\n\n"
-        "She asks Daniel what kind of moment makes him feel "
-        "most connected to someone."
+        "Danial : I went to the school too early today. \n\n"
+        "I meet Grace in front of her class"
+        "Grace asks Daniel to read one of her stories."
     )
 
     # --------------------------------------------------------
@@ -3823,30 +3820,30 @@ def send_question_17(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. When we can speak honestly about anything.",
+            "1. Read it immediately.",
             callback_data="q17_1"
         ),
         types.InlineKeyboardButton(
-            "2. When we can enjoy being together without feeling restricted.",
+            "2. Ask whether she’s sure.",
             callback_data="q17_2"
         ),
         types.InlineKeyboardButton(
-            "3. When we help and support each other.",
+            "3. Read it and give honest feedback.",
             callback_data="q17_3"
         ),
         types.InlineKeyboardButton(
-            "4. When we have a deep conversation and really understand each other.",
+            "4. Tell her you’ll read it whenever she’s ready.",
             callback_data="q17_4"
         )
     )
-
+    IMAGE_URL17 = "https://i.ibb.co/9Hs8vKZL/Grace.jpg"
     # --------------------------------------------------------
     # QUESTION 17 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL17,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -3884,8 +3881,6 @@ def send_question_17(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what kind of moment makes him feel "
-        "most connected to someone.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -3901,10 +3896,10 @@ def send_question_17(chat_id):
 def question_17_answer(call):
 
     answers = {
-        "q17_1": "When we can speak honestly about anything.",
-        "q17_2": "When we can enjoy being together without feeling restricted.",
-        "q17_3": "When we help and support each other.",
-        "q17_4": "When we have a deep conversation and really understand each other."
+        "q17_1": "Read it immediately.",
+        "q17_2": "Ask whether she’s sure.",
+        "q17_3": "Read it and give honest feedback.",
+        "q17_4": "Tell her you’ll read it whenever she’s ready."
     }
 
     answer = answers.get(call.data)
@@ -3951,9 +3946,8 @@ def question_17_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily looks thoughtful after hearing Daniel's answer.\n\n"
-        "She feels that she is getting closer to understanding "
-        "what kind of connection Daniel is looking for."
+        "Grace  looks thoughtful after hearing Daniel's answer.\n"
+
     )
 
     # --------------------------------------------------------
@@ -3975,10 +3969,8 @@ def send_question_18(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily has enjoyed getting to know Daniel through their "
-        "conversation.\n\n"
-        "She asks him what he would do if someone he cared about "
-        "needed help with an important problem."
+        "Charlotte is following Danial after class/n"
+        "After a conversation about our teachers. She asks him what he thinks success means."
     )
 
     # --------------------------------------------------------
@@ -3989,30 +3981,30 @@ def send_question_18(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd be honest with them and tell them what I really think.",
+            "1. Money.",
             callback_data="q18_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd encourage them to handle it themselves if they can.",
+            "2. Achievement.",
             callback_data="q18_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd offer my help and stay by their side.",
+            "3. Happiness.",
             callback_data="q18_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd listen carefully and help them think through the problem.",
+            "4. Being able to choose your own life.",
             callback_data="q18_4"
         )
     )
-
+    IMAGE_URL18 = "https://i.ibb.co/0pyy5z4V/Charlotte-2.jpg"
     # --------------------------------------------------------
     # QUESTION 18 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL18,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -4050,8 +4042,6 @@ def send_question_18(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he would do if someone he cared "
-        "about needed help with an important problem.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -4067,10 +4057,10 @@ def send_question_18(chat_id):
 def question_18_answer(call):
 
     answers = {
-        "q18_1": "I'd be honest with them and tell them what I really think.",
-        "q18_2": "I'd encourage them to handle it themselves if they can.",
-        "q18_3": "I'd offer my help and stay by their side.",
-        "q18_4": "I'd listen carefully and help them think through the problem."
+        "q18_1": "Money.",
+        "q18_2": "Achievement.",
+        "q18_3": "Happiness.",
+        "q18_4": "Being able to choose your own life."
     }
 
     answer = answers.get(call.data)
