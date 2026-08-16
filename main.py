@@ -1832,7 +1832,13 @@ def send_question_5(chat_id):
     # TEXT BEFORE QUESTION 5
     # --------------------------------------------------------
 
-    
+    bot.send_message(
+        chat_id,
+        "After speaking with Charlotte, Daniel continues "
+        "the conversation with Emily.\n\n"
+        "Emily asks Daniel how he would react if a friend "
+        "needed his help with a difficult problem."
+    )
 
     # --------------------------------------------------------
     # QUESTION 5 BUTTONS
