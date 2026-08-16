@@ -1812,7 +1812,7 @@ def question_4_answer(call):
     bot.send_message(
         call.message.chat.id,
         "Charlotte thinks about Daniel's response.\n\n"
-        "Later..."
+        "The conversation continues..."
     )
 
     # --------------------------------------------------------
