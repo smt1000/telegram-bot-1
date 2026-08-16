@@ -504,10 +504,10 @@ QUESTION_25_SCORES = {
 # ============================================================
 
 QUESTION_26_SCORES = {
-    "q26_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q26_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q26_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q26_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q26_1": {"Emily": 2, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q26_2": {"Emily": 2, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 1, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q26_3": {"Emily": 3, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q26_4": {"Emily": 4, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 2, "ECompatibility": 15, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
 }
 
 
@@ -516,10 +516,10 @@ QUESTION_26_SCORES = {
 # ============================================================
 
 QUESTION_27_SCORES = {
-    "q27_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q27_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q27_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q27_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q27_1": {"Emily": 0, "Sophie": 2, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q27_2": {"Emily": 0, "Sophie": 3, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q27_3": {"Emily": 0, "Sophie": 3, "Grace": 0, "Charlotte": 0, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q27_4": {"Emily": 0, "Sophie": 4, "Grace": 0, "Charlotte": 0, "Honest": 3, "Independence": 0, "ECompatibility": 0, "SCompatibility": 15, "GCompatibility": 0, "CCompatibility": 0},
 }
 
 
@@ -528,10 +528,10 @@ QUESTION_27_SCORES = {
 # ============================================================
 
 QUESTION_28_SCORES = {
-    "q28_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q28_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q28_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q28_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q28_1": {"Emily": 0, "Sophie": 0, "Grace": 1, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q28_2": {"Emily": 0, "Sophie": 0, "Grace": 3, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q28_3": {"Emily": 0, "Sophie": 0, "Grace": 3, "Charlotte": 0, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q28_4": {"Emily": 0, "Sophie": 0, "Grace": 4, "Charlotte": 0, "Honest": 3, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 15, "CCompatibility": 0},
 }
 
 
@@ -540,10 +540,10 @@ QUESTION_28_SCORES = {
 # ============================================================
 
 QUESTION_29_SCORES = {
-    "q29_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q29_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q29_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q29_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q29_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 1, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q29_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 2, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q29_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 3, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q29_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 4, "Honest": 0, "Independence": 3, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 15},
 }
 
 
@@ -552,10 +552,10 @@ QUESTION_29_SCORES = {
 # ============================================================
 
 QUESTION_30_SCORES = {
-    "q30_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q30_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q30_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q30_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q30_1": {"Emily": 4, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 10, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q30_2": {"Emily": 0, "Sophie": 4, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 10, "GCompatibility": 0, "CCompatibility": 0},
+    "q30_3": {"Emily": 0, "Sophie": 0, "Grace": 4, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 10, "CCompatibility": 0},
+    "q30_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 4, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 10},
 }
 
 
@@ -564,10 +564,10 @@ QUESTION_30_SCORES = {
 # ============================================================
 
 QUESTION_31_SCORES = {
-    "q31_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q31_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q31_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q31_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q31_1": {"Emily": 0, "Sophie": 3, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 10, "GCompatibility": 0, "CCompatibility": 0},
+    "q31_2": {"Emily": 0, "Sophie": 1, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q31_3": {"Emily": 0, "Sophie": 3, "Grace": 0, "Charlotte": 0, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q31_4": {"Emily": 0, "Sophie": 4, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 3, "ECompatibility": 0, "SCompatibility": 20, "GCompatibility": 0, "CCompatibility": 0},
 }
 
 
@@ -576,10 +576,10 @@ QUESTION_31_SCORES = {
 # ============================================================
 
 QUESTION_32_SCORES = {
-    "q32_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q32_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q32_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q32_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q32_1": {"Emily": 0, "Sophie": 0, "Grace": 3, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q32_2": {"Emily": 0, "Sophie": 0, "Grace": 1, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q32_3": {"Emily": 0, "Sophie": 0, "Grace": 3, "Charlotte": 0, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q32_4": {"Emily": 0, "Sophie": 0, "Grace": 4, "Charlotte": 0, "Honest": 3, "Independence": 0, "ECompatibility": 0, "SCompatibility": 20, "GCompatibility": 0, "CCompatibility": 0},
 }
 
 
@@ -588,10 +588,10 @@ QUESTION_32_SCORES = {
 # ============================================================
 
 QUESTION_33_SCORES = {
-    "q33_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q33_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q33_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q33_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q33_1": {"Emily": 1, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q33_2": {"Emily": 2, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q33_3": {"Emily": 3, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 2, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q33_4": {"Emily": 4, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 3, "ECompatibility": 20, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
 }
 
 
@@ -600,10 +600,10 @@ QUESTION_33_SCORES = {
 # ============================================================
 
 QUESTION_34_SCORES = {
-    "q34_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q34_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q34_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q34_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q34_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 3, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q34_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 1, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q34_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 3, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q34_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 4, "Honest": 0, "Independence": 3, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 20},
 }
 
 
@@ -612,10 +612,10 @@ QUESTION_34_SCORES = {
 # ============================================================
 
 QUESTION_35_SCORES = {
-    "q35_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q35_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q35_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q35_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q35_1": {"Emily": 1, "Sophie": 1, "Grace": 1, "Charlotte": 1, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q35_2": {"Emily": 1, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 1, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q35_3": {"Emily": 2, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q35_4": {"Emily": 2, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 3, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
 }
 
 
@@ -624,10 +624,10 @@ QUESTION_35_SCORES = {
 # ============================================================
 
 QUESTION_36_SCORES = {
-    "q36_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q36_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q36_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q36_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q36_1": {"Emily": 0, "Sophie": 3, "Grace": 0, "Charlotte": 0, "Honest": 2, "Independence": -1, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q36_2": {"Emily": 0, "Sophie": 1, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": -2, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q36_3": {"Emily": 0, "Sophie": 3, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 3, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q36_4": {"Emily": 0, "Sophie": 4, "Grace": 0, "Charlotte": 0, "Honest": 3, "Independence": 4, "ECompatibility": 0, "SCompatibility": 20, "GCompatibility": 0, "CCompatibility": 0},
 }
 
 
@@ -636,10 +636,10 @@ QUESTION_36_SCORES = {
 # ============================================================
 
 QUESTION_37_SCORES = {
-    "q37_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q37_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q37_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q37_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q37_1": {"Emily": 0, "Sophie": 0, "Grace": 2, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q37_2": {"Emily": 0, "Sophie": 0, "Grace": 1, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q37_3": {"Emily": 0, "Sophie": 0, "Grace": 3, "Charlotte": 0, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q37_4": {"Emily": 0, "Sophie": 0, "Grace": 4, "Charlotte": 0, "Honest": 3, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 20, "CCompatibility": 0},
 }
 
 
@@ -648,10 +648,10 @@ QUESTION_37_SCORES = {
 # ============================================================
 
 QUESTION_38_SCORES = {
-    "q38_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q38_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q38_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q38_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q38_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 3, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q38_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 1, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q38_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 3, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q38_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 4, "Honest": 0, "Independence": 3, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 20},
 }
 
 
@@ -660,10 +660,10 @@ QUESTION_38_SCORES = {
 # ============================================================
 
 QUESTION_39_SCORES = {
-    "q39_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q39_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q39_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q39_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q39_1": {"Emily": 1, "Sophie": 1, "Grace": 1, "Charlotte": 1, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q39_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": -2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q39_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 2, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q39_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 3, "Independence": 2, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
 }
 
 
@@ -672,10 +672,10 @@ QUESTION_39_SCORES = {
 # ============================================================
 
 QUESTION_40_SCORES = {
-    "q40_1": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q40_2": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q40_3": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
-    "q40_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q40_1": {"Emily": 4, "Sophie": 0, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 15, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 0},
+    "q40_2": {"Emily": 0, "Sophie": 4, "Grace": 0, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 15, "GCompatibility": 0, "CCompatibility": 0},
+    "q40_3": {"Emily": 0, "Sophie": 0, "Grace": 4, "Charlotte": 0, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 15, "CCompatibility": 0},
+    "q40_4": {"Emily": 0, "Sophie": 0, "Grace": 0, "Charlotte": 4, "Honest": 0, "Independence": 0, "ECompatibility": 0, "SCompatibility": 0, "GCompatibility": 0, "CCompatibility": 15},
 }
 
 
