@@ -1367,14 +1367,14 @@ def send_question_2(chat_id):
             callback_data="q2_4"
         )
     )
-
+IMAGE_URL2 = "https://i.ibb.co/qM7vXkX3/Sophie-2.jpg"
     # --------------------------------------------------------
     # QUESTION 2 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL2,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
