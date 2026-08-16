@@ -1078,7 +1078,7 @@ def create_new_score():
 # IMAGE
 # ============================================================
 
-IMAGE_URL = "https://images.steamusercontent.com/ugc/965355694153811922/DF6B86B28B17363E7529D2980F1580D221B2B96D/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+IMAGE_URL = "https://i.ibb.co/BKPbsjXF/Emily.jpg"
 
 
 # ============================================================
@@ -1117,7 +1117,7 @@ def start(message):
         "“Brilliant.”\n"
         "Someone behind him laughed.\n"
         "Daniel turned.\n"
-        "A girl with blonde hair was standing beneath an umbrella.\n"
+        "A girl was standing beneath an umbrella.\n"
         "“First day?”\n"
         "“Is it that obvious?”\n"
         "“You’re holding the map upside down.”\n"
