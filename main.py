@@ -3644,6 +3644,7 @@ def send_question_16(chat_id):
 
     bot.send_message(
         chat_id,
+		"Danial walks and meets Sophie.\n\n"
         "Sophie is actually very happy this time.\n\n"
         "Sophie challenges Daniel to a race."
     )
