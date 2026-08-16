@@ -2799,7 +2799,6 @@ def question_10_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        call.message.chat.id,
         "The autumn term becomes busier.\n\n"
         "The school announces its annual Winter Gala.\n\n"
         "Each girl becomes involved.\n\n"
