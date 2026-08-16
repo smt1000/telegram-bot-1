@@ -1744,6 +1744,1022 @@ def question_4_answer(call):
 
     send_question_5(call.message.chat.id)
 
+#سؤال 5
+# ============================================================
+# QUESTION 5
+# ============================================================
+
+def send_question_5(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 5
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "After speaking with Charlotte, Daniel continues "
+        "the conversation with Emily.\n\n"
+        "Emily asks Daniel how he would react if a friend "
+        "needed his help with a difficult problem."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 5 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd help them right away.",
+            callback_data="q5_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd help if I had enough time.",
+            callback_data="q5_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd encourage them to solve it themselves.",
+            callback_data="q5_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd ask what kind of help they need first.",
+            callback_data="q5_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 5 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 5 image status:", response.status_code)
+        print(
+            "Question 5 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question5.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 5 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 5 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel how he would react if a friend "
+        "needed his help with a difficult problem.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 5 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q5_")
+)
+def question_5_answer(call):
+
+    answers = {
+        "q5_1": "I'd help them right away.",
+        "q5_2": "I'd help if I had enough time.",
+        "q5_3": "I'd encourage them to solve it themselves.",
+        "q5_4": "I'd ask what kind of help they need first."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 5 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_5_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 5
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily appreciates Daniel's answer.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_6(call.message.chat.id)
+
+
+#سؤال 6
+
+# ============================================================
+# QUESTION 6
+# ============================================================
+
+def send_question_6(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 6
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "The conversation continues as Daniel talks "
+        "with Sophie.\n\n"
+        "Sophie asks Daniel what he would do if he "
+        "disagreed with a close friend."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 6 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd tell them honestly what I think.",
+            callback_data="q6_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd avoid arguing about it.",
+            callback_data="q6_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd try to find a compromise.",
+            callback_data="q6_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd ask them why they feel that way.",
+            callback_data="q6_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 6 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 6 image status:", response.status_code)
+        print(
+            "Question 6 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question6.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 6 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 6 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Sophie asks Daniel what he would do if he "
+        "disagreed with a close friend.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 6 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q6_")
+)
+def question_6_answer(call):
+
+    answers = {
+        "q6_1": "I'd tell them honestly what I think.",
+        "q6_2": "I'd avoid arguing about it.",
+        "q6_3": "I'd try to find a compromise.",
+        "q6_4": "I'd ask them why they feel that way."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 6 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_6_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 6
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Sophie thinks about Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_7(call.message.chat.id)
+
+#سؤال 7
+
+# ============================================================
+# QUESTION 7
+# ============================================================
+
+def send_question_7(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 7
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "After talking with Sophie, Daniel continues "
+        "the conversation with Grace.\n\n"
+        "Grace asks Daniel how he would react if he "
+        "had to take responsibility for an important task."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 7 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd take responsibility and get started.",
+            callback_data="q7_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd ask someone else to handle it.",
+            callback_data="q7_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd do it, but I'd want some guidance.",
+            callback_data="q7_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd first make sure I understood everything.",
+            callback_data="q7_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 7 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 7 image status:", response.status_code)
+        print(
+            "Question 7 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question7.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 7 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 7 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Grace asks Daniel how he would react if he "
+        "had to take responsibility for an important task.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 7 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q7_")
+)
+def question_7_answer(call):
+
+    answers = {
+        "q7_1": "I'd take responsibility and get started.",
+        "q7_2": "I'd ask someone else to handle it.",
+        "q7_3": "I'd do it, but I'd want some guidance.",
+        "q7_4": "I'd first make sure I understood everything."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 7 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_7_SCORES.get(call.data)
+
+    if points:
+
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 7
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Grace thinks about Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_8(call.message.chat.id)
+
+
+#سؤال 8 
+# ============================================================
+# QUESTION 8
+# ============================================================
+
+def send_question_8(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 8
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "The conversation continues after Daniel talks "
+        "with Sophie.\n\n"
+        "Grace asks Daniel how he would react if he had "
+        "to choose between helping a friend and finishing "
+        "an important responsibility."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 8 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd help my friend first.",
+            callback_data="q8_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd finish my responsibility first.",
+            callback_data="q8_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd try to find a way to do both.",
+            callback_data="q8_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd ask my friend how urgent the problem is.",
+            callback_data="q8_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 8 IMAGE
+    # --------------------------------------------------------
+
+    QUESTION_8_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_8_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print(
+            "Question 8 image status:",
+            response.status_code
+        )
+
+        print(
+            "Question 8 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question8.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 8 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 8 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Grace asks Daniel what he would do if he had "
+        "to choose between helping a friend and finishing "
+        "an important responsibility.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 8 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q8_")
+)
+def question_8_answer(call):
+
+    answers = {
+        "q8_1": "I'd help my friend first.",
+        "q8_2": "I'd finish my responsibility first.",
+        "q8_3": "I'd try to find a way to do both.",
+        "q8_4": "I'd ask my friend how urgent the problem is."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 8 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_8_SCORES.get(call.data)
+
+    if points:
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 8
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Grace thinks about Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    # Uncomment when Question 9 is ready:
+    #
+    # send_question_9(call.message.chat.id)
+#سؤال 9
+
+# ============================================================
+# QUESTION 9
+# ============================================================
+
+def send_question_9(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 9
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "The conversation continues after Daniel talks "
+        "with Grace.\n\n"
+        "Charlotte asks Daniel what he would do if he "
+        "noticed that a friend was making a mistake."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 9 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd tell them honestly about the mistake.",
+            callback_data="q9_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd let them figure it out themselves.",
+            callback_data="q9_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd help them fix it without judging them.",
+            callback_data="q9_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd ask them if they want my advice first.",
+            callback_data="q9_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 9 IMAGE
+    # --------------------------------------------------------
+
+    QUESTION_9_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_9_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print(
+            "Question 9 image status:",
+            response.status_code
+        )
+
+        print(
+            "Question 9 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question9.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 9 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 9 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Charlotte asks Daniel what he would do if he "
+        "noticed that a friend was making a mistake.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 9 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q9_")
+)
+def question_9_answer(call):
+
+    answers = {
+        "q9_1": "I'd tell them honestly about the mistake.",
+        "q9_2": "I'd let them figure it out themselves.",
+        "q9_3": "I'd help them fix it without judging them.",
+        "q9_4": "I'd ask them if they want my advice first."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 9 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_9_SCORES.get(call.data)
+
+    if points:
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 9
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Charlotte thinks about Daniel's response.\n\n"
+        "The conversation continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    # Uncomment when Question 10 is ready:
+    #
+    # send_question_10(call.message.chat.id)
+
+#سؤال 10
+# ============================================================
+# QUESTION 10
+# ============================================================
+
+def send_question_10(chat_id):
+
+    # --------------------------------------------------------
+    # TEXT BEFORE QUESTION 10
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "The conversation continues after Daniel talks "
+        "with Charlotte.\n\n"
+        "Emily asks Daniel what he would do if he were "
+        "given responsibility for an important school task."
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 10 BUTTONS
+    # --------------------------------------------------------
+
+    keyboard = types.InlineKeyboardMarkup(row_width=1)
+
+    keyboard.add(
+        types.InlineKeyboardButton(
+            "1. I'd take responsibility and do my best.",
+            callback_data="q10_1"
+        ),
+        types.InlineKeyboardButton(
+            "2. I'd ask someone else to handle it.",
+            callback_data="q10_2"
+        ),
+        types.InlineKeyboardButton(
+            "3. I'd make a plan before getting started.",
+            callback_data="q10_3"
+        ),
+        types.InlineKeyboardButton(
+            "4. I'd ask for help if I needed it.",
+            callback_data="q10_4"
+        )
+    )
+
+    # --------------------------------------------------------
+    # QUESTION 10 IMAGE
+    # --------------------------------------------------------
+
+    QUESTION_10_IMAGE_URL = IMAGE_URL
+
+    try:
+        response = requests.get(
+            QUESTION_10_IMAGE_URL,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print(
+            "Question 10 image status:",
+            response.status_code
+        )
+
+        print(
+            "Question 10 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question10.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 10 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
+
+    # --------------------------------------------------------
+    # QUESTION 10 TEXT
+    # --------------------------------------------------------
+
+    bot.send_message(
+        chat_id,
+        "Emily asks Daniel what he would do if he were "
+        "given responsibility for an important school task.\n\n"
+        "Choose Daniel's response:",
+        reply_markup=keyboard
+    )
+
+
+# ============================================================
+# QUESTION 10 ANSWER
+# ============================================================
+
+@bot.callback_query_handler(
+    func=lambda call: call.data.startswith("q10_")
+)
+def question_10_answer(call):
+
+    answers = {
+        "q10_1": "I'd take responsibility and do my best.",
+        "q10_2": "I'd ask someone else to handle it.",
+        "q10_3": "I'd make a plan before getting started.",
+        "q10_4": "I'd ask for help if I needed it."
+    }
+
+    answer = answers.get(call.data)
+
+    user_id = call.from_user.id
+
+    # --------------------------------------------------------
+    # ADD QUESTION 10 POINTS
+    # --------------------------------------------------------
+
+    points = QUESTION_10_SCORES.get(call.data)
+
+    if points:
+        for category, value in points.items():
+            user_scores[user_id][category] += value
+
+    bot.answer_callback_query(call.id)
+
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+    )
+
+    # --------------------------------------------------------
+    # TEXT AFTER QUESTION 10
+    # --------------------------------------------------------
+
+    bot.send_message(
+        call.message.chat.id,
+        "Emily appreciates Daniel's response.\n\n"
+        "The questionnaire continues..."
+    )
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    # Uncomment when Question 11 is ready:
+    #
+    # send_question_11(call.message.chat.id)
 
 
 # ============================================================
