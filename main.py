@@ -12565,6 +12565,54 @@ def question_69_answer(call):
 #سؤال 70
 
 # ============================================================
+# QUESTION 70 POINTS
+# ============================================================
+
+QUESTION_70_SCORES = {
+
+    # --------------------------------------------------------
+    # ANSWER 1 - HONESTY
+    # --------------------------------------------------------
+
+    "q70_1": {
+        "Emily": 3,
+        "Honest": 5,
+        "ECompatibility": 3
+    },
+
+    # --------------------------------------------------------
+    # ANSWER 2 - INDEPENDENCE
+    # --------------------------------------------------------
+
+    "q70_2": {
+        "Sophie": 3,
+        "Independence": 5,
+        "SCompatibility": 3
+    },
+
+    # --------------------------------------------------------
+    # ANSWER 3 - SUPPORT / DEPENDABILITY
+    # --------------------------------------------------------
+
+    "q70_3": {
+        "Grace": 3,
+        "GCompatibility": 3,
+        "Honest": 2
+    },
+
+    # --------------------------------------------------------
+    # ANSWER 4 - COMMUNICATION / UNDERSTANDING
+    # --------------------------------------------------------
+
+    "q70_4": {
+        "Charlotte": 3,
+        "CCompatibility": 3,
+        "Honest": 2
+    }
+}
+
+
+# ============================================================
 # QUESTION 70
 # ============================================================
 
@@ -12636,6 +12684,7 @@ def send_question_70(chat_id):
         )
 
     except Exception as e:
+
         print("QUESTION 70 IMAGE ERROR:", e)
 
         bot.send_message(
@@ -12667,10 +12716,18 @@ def send_question_70(chat_id):
 def question_70_answer(call):
 
     answers = {
-        "q70_1": "Being completely honest about your feelings and intentions.",
-        "q70_2": "Respecting each other's independence and personal goals.",
-        "q70_3": "Being dependable and supporting each other through difficult times.",
-        "q70_4": "Communicating openly and making sure both people feel understood."
+
+        "q70_1":
+            "Being completely honest about your feelings and intentions.",
+
+        "q70_2":
+            "Respecting each other's independence and personal goals.",
+
+        "q70_3":
+            "Being dependable and supporting each other through difficult times.",
+
+        "q70_4":
+            "Communicating openly and making sure both people feel understood."
     }
 
     answer = answers.get(call.data)
@@ -12686,184 +12743,79 @@ def question_70_answer(call):
     if points:
 
         for category, value in points.items():
+
             user_scores[user_id][category] += value
 
     bot.answer_callback_query(call.id)
-	# ============================================================
-# GET USER ID
-# ============================================================
 
-user_id = call.from_user.id
-
-
-# ============================================================
-# CALCULATE FINAL WINNER
-# ============================================================
-
-winner = choose_final_character(user_id)
-
-
-# ============================================================
-# SHOW FINAL SCORES
-# ============================================================
-
-scores = user_scores[user_id]
-
-bot.send_message(
-    call.message.chat.id,
-    f"🏆 Final Results\n\n"
-    f"Emily: {scores['Emily']}\n"
-    f"Sophie: {scores['Sophie']}\n"
-    f"Grace: {scores['Grace']}\n"
-    f"Charlotte: {scores['Charlotte']}\n\n"
-    f"Honest: {scores['Honest']}\n"
-    f"Independence: {scores['Independence']}\n\n"
-    f"ECompatibility: {scores['ECompatibility']}\n"
-    f"SCompatibility: {scores['SCompatibility']}\n"
-    f"GCompatibility: {scores['GCompatibility']}\n"
-    f"CCompatibility: {scores['CCompatibility']}"
-)
-
-
-# ============================================================
-# SHOW FINAL WINNER
-# ============================================================
-
-if winner:
+    # --------------------------------------------------------
+    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # --------------------------------------------------------
 
     bot.send_message(
         call.message.chat.id,
-        f"🎉 Your final match is {winner}!\n\n"
-        f"Congratulations! 💖"
+
+        f"You selected:\n\n"
+        f"{answer}\n\n"
+
+        f"Current scores:\n\n"
+
+        f"Emily: {user_scores[user_id]['Emily']}\n"
+        f"Sophie: {user_scores[user_id]['Sophie']}\n"
+        f"Grace: {user_scores[user_id]['Grace']}\n"
+        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
+
+        f"Honest: {user_scores[user_id]['Honest']}\n"
+        f"Independence: {user_scores[user_id]['Independence']}\n\n"
+
+        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
+        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
+        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
+        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
-
-else:
-
-    bot.send_message(
-        call.message.chat.id,
-        "❌ No character qualified based on your final "
-        "score requirements."
-    )
-
 
     # --------------------------------------------------------
     # TEXT AFTER QUESTION 70
     # --------------------------------------------------------
-   # ============================================================
-# FINAL CHARACTER SELECTION
-# ============================================================
 
-def choose_final_character(user_id):
+    bot.send_message(
+        call.message.chat.id,
 
-    scores = user_scores[user_id]
-
-    # --------------------------------------------------------
-    # CHARACTER SCORES
-    # --------------------------------------------------------
-
-    character_scores = {
-        "Emily": scores["Emily"],
-        "Sophie": scores["Sophie"],
-        "Grace": scores["Grace"],
-        "Charlotte": scores["Charlotte"]
-    }
-
-    # --------------------------------------------------------
-    # FIND HIGHEST AND SECOND HIGHEST SCORE
-    # --------------------------------------------------------
-
-    sorted_scores = sorted(
-        character_scores.items(),
-        key=lambda x: x[1],
-        reverse=True
+        "Emily smiles warmly.\n\n"
+        "She feels that Daniel understands that a lasting "
+        "relationship requires honesty, independence, support, "
+        "and meaningful communication."
     )
 
-    highest_character = sorted_scores[0][0]
-    highest_score = sorted_scores[0][1]
-    second_highest_score = sorted_scores[1][1]
-
-    difference = highest_score - second_highest_score
-
     # --------------------------------------------------------
-    # HIGHEST SCORE MUST BE > 65
-    # AND DIFFERENCE MUST BE > 4
+    # CALCULATE FINAL WINNER
     # --------------------------------------------------------
 
-    if highest_score <= 65 or difference <= 4:
-        return None
+    winner = choose_final_character(user_id)
 
     # --------------------------------------------------------
-    # EMILY
-    # Highest character score
-    # AND ECompatibility > 75
-    # AND Honest >= 60
-    # AND Independence > 50
+    # SHOW FINAL RESULT
     # --------------------------------------------------------
 
-    if (
-        highest_character == "Emily"
-        and scores["ECompatibility"] > 75
-        and scores["Honest"] >= 60
-        and scores["Independence"] > 50
-    ):
-        return "Emily"
+    if winner:
 
-    # --------------------------------------------------------
-    # SOPHIE
-    # Highest character score
-    # AND SCompatibility > 75
-    # AND Honest >= 55
-    # AND Independence > 60
-    # --------------------------------------------------------
+        bot.send_message(
+            call.message.chat.id,
 
-    if (
-        highest_character == "Sophie"
-        and scores["SCompatibility"] > 75
-        and scores["Honest"] >= 55
-        and scores["Independence"] > 60
-    ):
-        return "Sophie"
+            f"🎉 Your final match is {winner}!\n\n"
+            f"After considering all of your answers, "
+            f"{winner} has the strongest connection with you."
+        )
 
-    # --------------------------------------------------------
-    # GRACE
-    # Highest character score
-    # AND GCompatibility > 75
-    # AND Honest >= 65
-    # AND Independence > 50
-    # --------------------------------------------------------
+    else:
 
-    if (
-        highest_character == "Grace"
-        and scores["GCompatibility"] > 75
-        and scores["Honest"] >= 65
-        and scores["Independence"] > 50
-    ):
-        return "Grace"
+        bot.send_message(
+            call.message.chat.id,
 
-    # --------------------------------------------------------
-    # CHARLOTTE
-    # Highest character score
-    # AND CCompatibility > 75
-    # AND Honest >= 60
-    # AND Independence > 65
-    # --------------------------------------------------------
-
-    if (
-        highest_character == "Charlotte"
-        and scores["CCompatibility"] > 75
-        and scores["Honest"] >= 60
-        and scores["Independence"] > 65
-    ):
-        return "Charlotte"
-
-    # --------------------------------------------------------
-    # NO CHARACTER QUALIFIED
-    # --------------------------------------------------------
-
-    return None
-
-
-
+            "Thank you for completing all 70 questions! 💙\n\n"
+            "Your answers did not meet all of the requirements "
+            "for one specific final match."
+        )
 
 
 
