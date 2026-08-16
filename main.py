@@ -12689,40 +12689,62 @@ def question_70_answer(call):
             user_scores[user_id][category] += value
 
     bot.answer_callback_query(call.id)
-		if winner:
+	# ============================================================
+# GET USER ID
+# ============================================================
+
+user_id = call.from_user.id
+
+
+# ============================================================
+# CALCULATE FINAL WINNER
+# ============================================================
+
+winner = choose_final_character(user_id)
+
+
+# ============================================================
+# SHOW FINAL SCORES
+# ============================================================
+
+scores = user_scores[user_id]
+
+bot.send_message(
+    call.message.chat.id,
+    f"🏆 Final Results\n\n"
+    f"Emily: {scores['Emily']}\n"
+    f"Sophie: {scores['Sophie']}\n"
+    f"Grace: {scores['Grace']}\n"
+    f"Charlotte: {scores['Charlotte']}\n\n"
+    f"Honest: {scores['Honest']}\n"
+    f"Independence: {scores['Independence']}\n\n"
+    f"ECompatibility: {scores['ECompatibility']}\n"
+    f"SCompatibility: {scores['SCompatibility']}\n"
+    f"GCompatibility: {scores['GCompatibility']}\n"
+    f"CCompatibility: {scores['CCompatibility']}"
+)
+
+
+# ============================================================
+# SHOW FINAL WINNER
+# ============================================================
+
+if winner:
 
     bot.send_message(
         call.message.chat.id,
-        f"🎉 Your final match is {winner}!"
+        f"🎉 Your final match is {winner}!\n\n"
+        f"Congratulations! 💖"
     )
 
 else:
 
     bot.send_message(
         call.message.chat.id,
-        "❌ No character qualified."
+        "❌ No character qualified based on your final "
+        "score requirements."
     )
 
-    # --------------------------------------------------------
-    # SHOW SELECTED ANSWER + CURRENT SCORES
-    # --------------------------------------------------------
-
-    bot.send_message(
-        call.message.chat.id,
-        f"You selected:\n\n"
-        f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
-    )
 
     # --------------------------------------------------------
     # TEXT AFTER QUESTION 70
