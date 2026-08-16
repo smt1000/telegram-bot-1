@@ -1374,7 +1374,7 @@ def send_question_2(chat_id):
 
     try:
         response = requests.get(
-            https://i.ibb.co/qM7vXkX3/Sophie-2.jpg,
+            IMAGE_URL,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
