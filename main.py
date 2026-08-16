@@ -12715,13 +12715,119 @@ def question_70_answer(call):
     # TEXT AFTER QUESTION 70
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily smiles warmly.\n\n"
-        "She feels that Daniel understands that a lasting "
-        "relationship requires honesty, independence, support, "
-        "and meaningful communication."
+    # ============================================================
+# FINAL CHARACTER SELECTION
+# ============================================================
+
+def choose_final_character(user_id):
+
+    scores = user_scores[user_id]
+
+    # --------------------------------------------------------
+    # CHARACTER SCORES
+    # --------------------------------------------------------
+
+    character_scores = {
+        "Emily": scores["Emily"],
+        "Sophie": scores["Sophie"],
+        "Grace": scores["Grace"],
+        "Charlotte": scores["Charlotte"]
+    }
+
+    # --------------------------------------------------------
+    # FIND HIGHEST AND SECOND HIGHEST SCORE
+    # --------------------------------------------------------
+
+    sorted_scores = sorted(
+        character_scores.items(),
+        key=lambda x: x[1],
+        reverse=True
     )
+
+    highest_character = sorted_scores[0][0]
+    highest_score = sorted_scores[0][1]
+    second_highest_score = sorted_scores[1][1]
+
+    difference = highest_score - second_highest_score
+
+    # --------------------------------------------------------
+    # HIGHEST SCORE MUST BE > 65
+    # AND DIFFERENCE MUST BE > 4
+    # --------------------------------------------------------
+
+    if highest_score <= 65 or difference <= 4:
+        return None
+
+    # --------------------------------------------------------
+    # EMILY
+    # Highest character score
+    # AND ECompatibility > 75
+    # AND Honest >= 60
+    # AND Independence > 50
+    # --------------------------------------------------------
+
+    if (
+        highest_character == "Emily"
+        and scores["ECompatibility"] > 75
+        and scores["Honest"] >= 60
+        and scores["Independence"] > 50
+    ):
+        return "Emily"
+
+    # --------------------------------------------------------
+    # SOPHIE
+    # Highest character score
+    # AND SCompatibility > 75
+    # AND Honest >= 55
+    # AND Independence > 60
+    # --------------------------------------------------------
+
+    if (
+        highest_character == "Sophie"
+        and scores["SCompatibility"] > 75
+        and scores["Honest"] >= 55
+        and scores["Independence"] > 60
+    ):
+        return "Sophie"
+
+    # --------------------------------------------------------
+    # GRACE
+    # Highest character score
+    # AND GCompatibility > 75
+    # AND Honest >= 65
+    # AND Independence > 50
+    # --------------------------------------------------------
+
+    if (
+        highest_character == "Grace"
+        and scores["GCompatibility"] > 75
+        and scores["Honest"] >= 65
+        and scores["Independence"] > 50
+    ):
+        return "Grace"
+
+    # --------------------------------------------------------
+    # CHARLOTTE
+    # Highest character score
+    # AND CCompatibility > 75
+    # AND Honest >= 60
+    # AND Independence > 65
+    # --------------------------------------------------------
+
+    if (
+        highest_character == "Charlotte"
+        and scores["CCompatibility"] > 75
+        and scores["Honest"] >= 60
+        and scores["Independence"] > 65
+    ):
+        return "Charlotte"
+
+    # --------------------------------------------------------
+    # NO CHARACTER QUALIFIED
+    # --------------------------------------------------------
+
+    return None
+
 
 
 
