@@ -4399,7 +4399,7 @@ def question_20_answer(call):
     # NEXT QUESTION
     # --------------------------------------------------------
 
-    #send_question_21(call.message.chat.id)
+    send_question_21(call.message.chat.id)
 
 #سؤال21
 # ============================================================
