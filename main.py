@@ -2168,10 +2168,10 @@ def send_question_7(chat_id):
 
     bot.send_message(
         chat_id,
-        "After talking with Sophie, Daniel continues "
-        "the conversation with Grace.\n\n"
-        "Grace asks Daniel how he would react if he "
-        "had to take responsibility for an important task."
+        "Grace invited Danial to see the library"
+        "She goes to search for a book\n\n"
+        "Grace accidentally leaves her notebook open."
+        "Daniel sees a story about someone who sounds suspiciously like him."
     )
 
     # --------------------------------------------------------
@@ -2182,19 +2182,19 @@ def send_question_7(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd take responsibility and get started.",
+            "1. Read it.",
             callback_data="q7_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd ask someone else to handle it.",
+            "2. Close the notebook.",
             callback_data="q7_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd do it, but I'd want some guidance.",
+            "3. Ask Grace about it.",
             callback_data="q7_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd first make sure I understood everything.",
+            "4. Pretend not to notice.",
             callback_data="q7_4"
         )
     )
