@@ -1308,10 +1308,16 @@ def question_1_answer(call):
     # --------------------------------------------------------
 
     bot.send_message(
-        call.message.chat.id,
-        "Emily listens carefully to Daniel's answer.\n\n"
-        "The conversation continues..."
-    )
+        message.chat.id,
+        "Emily is the student council president.\n"
+        "She’s intelligent, organized, polite, and seemingly impossible to upset.\n"
+        "Teachers trust her.\n"
+        "Students depend on her.\n"
+        "But Emily has spent years trying to become the person everyone expects her to be.\n"
+        "She secretly wonders what would happen if she stopped being “the responsible one \n"
+       "one.”"
+	)
+    
 
     # --------------------------------------------------------
     # NEXT QUESTION
