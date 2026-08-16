@@ -12561,6 +12561,79 @@ def question_69_answer(call):
 
     send_question_70(call.message.chat.id)
 
+#----------------------------- الحسبة النهائية
+def choose_final_character(user_id):
+
+    scores = user_scores[user_id]
+
+    character_scores = {
+        "Emily": scores["Emily"],
+        "Sophie": scores["Sophie"],
+        "Grace": scores["Grace"],
+        "Charlotte": scores["Charlotte"]
+    }
+
+    # Find highest score
+    highest_character = max(
+        character_scores,
+        key=character_scores.get
+    )
+
+    highest_score = character_scores[highest_character]
+
+    # Find second highest
+    other_scores = [
+        score
+        for character, score in character_scores.items()
+        if character != highest_character
+    ]
+
+    second_highest_score = max(other_scores)
+
+    difference = highest_score - second_highest_score
+
+    # Must be higher than 65
+    # and at least 5 points ahead
+    if highest_score <= 65 or difference <= 4:
+        return None
+
+    # Emily
+    if (
+        highest_character == "Emily"
+        and scores["ECompatibility"] > 75
+        and scores["Honest"] >= 60
+        and scores["Independence"] > 50
+    ):
+        return "Emily"
+
+    # Sophie
+    if (
+        highest_character == "Sophie"
+        and scores["SCompatibility"] > 75
+        and scores["Honest"] >= 55
+        and scores["Independence"] > 60
+    ):
+        return "Sophie"
+
+    # Grace
+    if (
+        highest_character == "Grace"
+        and scores["GCompatibility"] > 75
+        and scores["Honest"] >= 65
+        and scores["Independence"] > 50
+    ):
+        return "Grace"
+
+    # Charlotte
+    if (
+        highest_character == "Charlotte"
+        and scores["CCompatibility"] > 75
+        and scores["Honest"] >= 60
+        and scores["Independence"] > 65
+    ):
+        return "Charlotte"
+
+    return None
 
 #سؤال 70
 
@@ -12786,41 +12859,27 @@ def question_70_answer(call):
         "relationship requires honesty, independence, support, "
         "and meaningful communication."
     )
-
-    # --------------------------------------------------------
-    # CALCULATE FINAL WINNER
-    # --------------------------------------------------------
-
-    winner = choose_final_character(user_id)
-
-    # --------------------------------------------------------
-    # SHOW FINAL RESULT
-    # --------------------------------------------------------
-
-    if winner:
-
-        bot.send_message(
-            call.message.chat.id,
-
-            f"🎉 Your final match is {winner}!\n\n"
-            f"After considering all of your answers, "
-            f"{winner} has the strongest connection with you."
-        )
-
-    else:
-
-        bot.send_message(
-            call.message.chat.id,
-
-            "Thank you for completing all 70 questions! 💙\n\n"
-            "Your answers did not meet all of the requirements "
-            "for one specific final match."
-        )
+	
+	# ============================================================
+# FIND FINAL WINNER
+# ============================================================
 
 
+winner = choose_final_character(user_id)
 
+if winner:
 
+    bot.send_message(
+        call.message.chat.id,
+        f"🎉 Your final match is {winner}!"
+    )
 
+else:
+
+    bot.send_message(
+        call.message.chat.id,
+        "No character qualified."
+    )
 
 # ============================================================
 # START BOT
