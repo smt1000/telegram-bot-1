@@ -12562,9 +12562,17 @@ def question_69_answer(call):
     send_question_70(call.message.chat.id)
 
 #----------------------------- الحسبة النهائية
+# ============================================================
+# FINAL CHARACTER SELECTION
+# ============================================================
+
 def choose_final_character(user_id):
 
     scores = user_scores[user_id]
+
+    # ============================================================
+    # CHARACTER SCORES
+    # ============================================================
 
     character_scores = {
         "Emily": scores["Emily"],
@@ -12573,7 +12581,10 @@ def choose_final_character(user_id):
         "Charlotte": scores["Charlotte"]
     }
 
-    # Find highest score
+    # ============================================================
+    # FIND HIGHEST CHARACTER
+    # ============================================================
+
     highest_character = max(
         character_scores,
         key=character_scores.get
@@ -12581,7 +12592,10 @@ def choose_final_character(user_id):
 
     highest_score = character_scores[highest_character]
 
-    # Find second highest
+    # ============================================================
+    # FIND SECOND HIGHEST SCORE
+    # ============================================================
+
     other_scores = [
         score
         for character, score in character_scores.items()
@@ -12592,48 +12606,180 @@ def choose_final_character(user_id):
 
     difference = highest_score - second_highest_score
 
-    # Must be higher than 65
-    # and at least 5 points ahead
-    if highest_score <= 65 or difference <= 4:
-        return None
+    # ============================================================
+    # MAIN RULES
+    # ============================================================
 
-    # Emily
+    if highest_score > 60 and difference > 4:
+
+        # --------------------------------------------------------
+        # EMILY
+        # --------------------------------------------------------
+
+        if (
+            highest_character == "Emily"
+            and scores["ECompatibility"] > 75
+            and scores["Honest"] >= 60
+            and scores["Independence"] > 50
+        ):
+            return "Emily"
+
+        # --------------------------------------------------------
+        # SOPHIE
+        # --------------------------------------------------------
+
+        if (
+            highest_character == "Sophie"
+            and scores["SCompatibility"] > 75
+            and scores["Honest"] >= 55
+            and scores["Independence"] > 60
+        ):
+            return "Sophie"
+
+        # --------------------------------------------------------
+        # GRACE
+        # --------------------------------------------------------
+
+        if (
+            highest_character == "Grace"
+            and scores["GCompatibility"] > 75
+            and scores["Honest"] >= 65
+            and scores["Independence"] > 50
+        ):
+            return "Grace"
+
+        # --------------------------------------------------------
+        # CHARLOTTE
+        # --------------------------------------------------------
+
+        if (
+            highest_character == "Charlotte"
+            and scores["CCompatibility"] > 75
+            and scores["Honest"] >= 60
+            and scores["Independence"] > 65
+        ):
+            return "Charlotte"
+
+    # ============================================================
+    # BACKUP RULES
+    # ============================================================
+
+    emily = scores["Emily"]
+    sophie = scores["Sophie"]
+    grace = scores["Grace"]
+    charlotte = scores["Charlotte"]
+
+    independence = scores["Independence"]
+    honest = scores["Honest"]
+
+    # ============================================================
+    # BACKUP RULE 1
+    #
+    # ALL FOUR CHARACTERS BETWEEN 30 AND 50
+    #
+    # Winner = "Four Friends"
+    # ============================================================
+
     if (
-        highest_character == "Emily"
-        and scores["ECompatibility"] > 75
-        and scores["Honest"] >= 60
-        and scores["Independence"] > 50
+        30 <= emily <= 50
+        and 30 <= sophie <= 50
+        and 30 <= grace <= 50
+        and 30 <= charlotte <= 50
     ):
-        return "Emily"
+        return "Four Friends"
 
-    # Sophie
+    # ============================================================
+    # BACKUP RULE 2
+    #
+    # ALL FOUR CHARACTERS LESS THAN 40
+    #
+    # Winner = "No Friends or New Beginning"
+    # ============================================================
+
     if (
-        highest_character == "Sophie"
-        and scores["SCompatibility"] > 75
-        and scores["Honest"] >= 55
-        and scores["Independence"] > 60
+        emily < 40
+        and sophie < 40
+        and grace < 40
+        and charlotte < 40
     ):
-        return "Sophie"
+        return "No Friends or New Beginning"
 
-    # Grace
+    # ============================================================
+    # ============================================================
+	# BACKUP RULE 3
+	#
+	# ANY CHARACTER ABOVE 45
+	#
+	# Choose ALL characters above 45.
+	# ============================================================
+
+	characters_above_45 = [
+    character
+    for character, score in character_scores.items()
+    if score > 45
+	]
+
+	if characters_above_45:
+
+    return " + ".join(
+        characters_above_45
+    ) + " Close Friends"
+
+
+    # ============================================================
+    # BACKUP RULE 4
+    #
+    # INDEPENDENCE LESS THAN 40
+    #
+    # Winner = "Missed Opportunities"
+    # ============================================================
+
+    if independence < 40:
+        return "Missed Opportunities"
+
+    # ============================================================
+    # BACKUP RULE 5
+    #
+    # ALL FOUR CHARACTERS LESS THAN 50
+    # AND INDEPENDENCE MORE THAN 75
+    #
+    # Winner = "Independent- Positive"
+    # ============================================================
+
     if (
-        highest_character == "Grace"
-        and scores["GCompatibility"] > 75
-        and scores["Honest"] >= 65
-        and scores["Independence"] > 50
+        emily < 50
+        and sophie < 50
+        and grace < 50
+        and charlotte < 50
+        and independence > 75
     ):
-        return "Grace"
+        return "Independent- Positive"
 
-    # Charlotte
+    # ============================================================
+    # BACKUP RULE 6
+    #
+    # INDEPENDENCE LESS THAN 55
+    # AND HONEST LESS THAN 50
+    #
+    # Winner = "Independent- Positive"
+    # ============================================================
+
     if (
-        highest_character == "Charlotte"
-        and scores["CCompatibility"] > 75
-        and scores["Honest"] >= 60
-        and scores["Independence"] > 65
+        independence < 55
+        and honest < 50
     ):
-        return "Charlotte"
+        return "Independent- Positive"
 
-    return None
+    # ============================================================
+    # FINAL BACKUP
+    #
+    # Anything else
+    #
+    # Winner = "Solo End"
+    # ============================================================
+
+    return "Solo End"
+
 
 #سؤال 70
 
@@ -12895,4 +13041,3 @@ print("Bot is running...")
 
 bot.delete_webhook(drop_pending_updates=True)
 bot.infinity_polling()
-
