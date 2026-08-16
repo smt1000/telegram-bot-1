@@ -1699,7 +1699,7 @@ def send_question_4(chat_id):
         )
     )
 
-    IMAGE_URL4 = "https://i.ibb.co/BH22kYWK/Charlotte-2.jpg"
+    IMAGE_URL4 = "https://i.ibb.co/9Hs8vKZL/Grace.jpg"
     # --------------------------------------------------------
     # QUESTION 4 IMAGE
     # --------------------------------------------------------
@@ -1909,7 +1909,9 @@ def send_question_5(chat_id):
 
     bot.send_message(
         chat_id,
-        "Daniel discovers that Emily stayed at school late. "
+        "Emily asks Daniel how he would react if a friend "
+        "needed his help with a difficult problem.\n\n"
+        "Choose Daniel's response:",
         reply_markup=keyboard
     )
 
