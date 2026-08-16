@@ -2168,9 +2168,9 @@ def send_question_7(chat_id):
 
     bot.send_message(
         chat_id,
-        "Grace invited Danial to see the library"
+        "Grace invited Danial to see the library."
         "She goes to search for a book\n\n"
-        "Grace accidentally leaves her notebook open."
+        "Grace accidentally leaves her notebook open. "
         "Daniel sees a story about someone who sounds suspiciously like him."
     )
 
@@ -2332,10 +2332,10 @@ def send_question_8(chat_id):
 
     bot.send_message(
         chat_id,
-        "After talking with Grace, Daniel continues "
-        "the conversation with Charlotte.\n\n"
+        "After talking with Grace, Daniel meets Charlotte. "
+        "They had a conversation .\n\n"
         "Charlotte asks Daniel what he would do if "
-        "a friend came to him with a difficult problem."
+        "she receives criticism from her parents about her grades."
     )
 
     # --------------------------------------------------------
@@ -2346,30 +2346,30 @@ def send_question_8(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd help them right away.",
+            "1. Tell her to ignore them.",
             callback_data="q8_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd encourage them to solve it themselves.",
+            "2. Ask what she wants.",
             callback_data="q8_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd help them if I had enough time.",
+            "3. Tell her to work harder.",
             callback_data="q8_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd ask what kind of help they need first.",
+            "4. Tell her she doesn’t need to meet everyone’s expectations",
             callback_data="q8_4"
         )
     )
-
+    IMAGE_URL8 = "https://i.ibb.co/60MsTMqD/Charlotte.jpg"
     # --------------------------------------------------------
     # QUESTION 8 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL8,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2424,10 +2424,10 @@ def send_question_8(chat_id):
 def question_8_answer(call):
 
     answers = {
-        "q8_1": "I'd help them right away.",
-        "q8_2": "I'd encourage them to solve it themselves.",
-        "q8_3": "I'd help them if I had enough time.",
-        "q8_4": "I'd ask what kind of help they need first."
+        "q8_1": "Tell her to ignore them.",
+        "q8_2": "Ask what she wants.",
+        "q8_3": "Tell her to work harder.",
+        "q8_4": "Tell her she doesn’t need to meet everyone’s expectations."
     }
 
     answer = answers.get(call.data)
@@ -2475,7 +2475,13 @@ def question_8_answer(call):
     bot.send_message(
         call.message.chat.id,
         "Charlotte thinks about Daniel's response.\n\n"
-        "The conversation continues..."
+		"Charlotte Reed is the daughter of a successful local businessman.\n\n"
+        "She is confident, sophisticated, and determined to attend a prestigious university.\n\n"
+        "Unlike the others, she seems to have her entire future planned.\n\n"
+        "But her plans aren't entirely hers.\n\n"
+        "Her parents have already decided what career she should pursue.\n\n"
+        "Charlotte begins wondering whether the life she is building actually belongs to her."
+        "a few days later..."
     )
 
     # --------------------------------------------------------
@@ -2498,8 +2504,7 @@ def send_question_9(chat_id):
 
     bot.send_message(
         chat_id,
-        "After talking with Charlotte, Daniel continues "
-        "the conversation with Emily.\n\n"
+        "Daniel has free time after school.\n\n"
         "Emily asks Daniel what he would do if he noticed "
         "that someone was being treated unfairly."
     )
