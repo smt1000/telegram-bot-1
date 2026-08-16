@@ -1975,8 +1975,13 @@ def question_5_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily appreciates Daniel's answer.\n\n"
-        "The conversation continues..."
+        "Sophie Williams\n"
+		"Sophie is cheerful, athletic, and extremely competitive.\n"
+        "She plays football for the school and seems to know everyone.\n"
+        "She becomes one of Daniel’s first friends.\n"
+        "She dislikes complicated conversations and tends to turn uncomfortable situations\n"
+        "into jokes.\n"
+        "But beneath her confidence is a fear of being left behind as everyone grows older."
     )
 
     # --------------------------------------------------------
@@ -2002,8 +2007,7 @@ def send_question_6(chat_id):
         chat_id,
         "The conversation continues as Daniel talks "
         "with Sophie.\n\n"
-        "Sophie asks Daniel what he would do if he "
-        "disagreed with a close friend."
+        "Sophie lost an important football match and disagreed with a close friend. "
     )
 
     # --------------------------------------------------------
@@ -2014,30 +2018,30 @@ def send_question_6(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd tell them honestly what I think.",
+            "1. Comfort her.",
             callback_data="q6_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd avoid arguing about it.",
+            "2. Tell her she’ll win next time.",
             callback_data="q6_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd try to find a compromise.",
+            "3. Ask whether she wants to talk.",
             callback_data="q6_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd ask them why they feel that way.",
+            "4. Give her some space.",
             callback_data="q6_4"
         )
     )
-
+    IMAGE_URL6 = "https://i.ibb.co/KcNzCBqs/Sophie-3.jpg"
     # --------------------------------------------------------
     # QUESTION 6 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL6,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2075,8 +2079,7 @@ def send_question_6(chat_id):
 
     bot.send_message(
         chat_id,
-        "Sophie asks Daniel what he would do if he "
-        "disagreed with a close friend.\n\n"
+        "Sophie lost an important football match and disagreed with a close friend."
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -2092,10 +2095,10 @@ def send_question_6(chat_id):
 def question_6_answer(call):
 
     answers = {
-        "q6_1": "I'd tell them honestly what I think.",
-        "q6_2": "I'd avoid arguing about it.",
-        "q6_3": "I'd try to find a compromise.",
-        "q6_4": "I'd ask them why they feel that way."
+        "q6_1": "Comfort her.",
+        "q6_2": "Tell her she’ll win next time.",
+        "q6_3": "Ask whether she wants to talk.",
+        "q6_4": "Give her some space."
     }
 
     answer = answers.get(call.data)
@@ -2142,8 +2145,7 @@ def question_6_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Sophie thinks about Daniel's response.\n\n"
-        "The conversation continues..."
+        "Later..."
     )
 
     # --------------------------------------------------------
