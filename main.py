@@ -1096,7 +1096,7 @@ def start(message):
     # TEXT BEFORE QUESTION 1
     # --------------------------------------------------------
 
-        bot.send_message(
+    bot.send_message(
         message.chat.id,
         "Daniel Carter is seventeen and has just transferred to Westbridge High "
         "after his family moved to the area.\n\n"
@@ -1175,7 +1175,6 @@ def start(message):
         "Emily wants to know if Daniel would be interested "
         "in joining the student council."
     )
-
     # --------------------------------------------------------
     # QUESTION 1 BUTTONS
     # --------------------------------------------------------
