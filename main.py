@@ -2407,8 +2407,6 @@ def send_question_8(chat_id):
 
     bot.send_message(
         chat_id,
-        "Charlotte asks Daniel what he would do if "
-        "a friend came to him with a difficult problem.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -2481,7 +2479,7 @@ def question_8_answer(call):
         "But her plans aren't entirely hers.\n\n"
         "Her parents have already decided what career she should pursue.\n\n"
         "Charlotte begins wondering whether the life she is building actually belongs to her."
-        "a few days later..."
+        
     )
 
     # --------------------------------------------------------
@@ -2504,9 +2502,8 @@ def send_question_9(chat_id):
 
     bot.send_message(
         chat_id,
-        "Daniel has free time after school.\n\n"
-        "Emily asks Daniel what he would do if he noticed "
-        "that someone was being treated unfairly."
+		"a few days later..."
+        "Daniel has some free time after school.\n\n"
     )
 
     # --------------------------------------------------------
@@ -2517,30 +2514,30 @@ def send_question_9(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd speak up and say something.",
+            "1. Visit Emily.",
             callback_data="q9_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd stay out of it.",
+            "2. Watch Sophie train.",
             callback_data="q9_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd try to help the person privately.",
+            "3. Visit Grace in the library.",
             callback_data="q9_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd first find out what happened.",
+            "4. Work with Charlotte.",
             callback_data="q9_4"
         )
     )
-
+    IMAGE_URL9 = "https://i.ibb.co/JWmjm2Yy/Morning.jpg"
     # --------------------------------------------------------
     # QUESTION 9 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL9,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2578,9 +2575,7 @@ def send_question_9(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he would do if he noticed "
-        "that someone was being treated unfairly.\n\n"
-        "Choose Daniel's response:",
+        "What are you going to do?",
         reply_markup=keyboard
     )
 
@@ -2595,10 +2590,10 @@ def send_question_9(chat_id):
 def question_9_answer(call):
 
     answers = {
-        "q9_1": "I'd speak up and say something.",
-        "q9_2": "I'd stay out of it.",
-        "q9_3": "I'd try to help the person privately.",
-        "q9_4": "I'd first find out what happened."
+        "q9_1": "Visit Emily.",
+        "q9_2": "Watch Sophie train.",
+        "q9_3": "Visit Grace in the library.",
+        "q9_4": "Work with Charlotte."
     }
 
     answer = answers.get(call.data)
@@ -2643,11 +2638,6 @@ def question_9_answer(call):
     # TEXT AFTER QUESTION 9
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily thinks about Daniel's response.\n\n"
-        "The conversation continues..."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
@@ -2670,10 +2660,9 @@ def send_question_10(chat_id):
 
     bot.send_message(
         chat_id,
-        "After talking with Charlotte, Daniel continues "
-        "the conversation with Emily.\n\n"
-        "Emily asks Daniel how he would react if he made "
-        "a mistake while working on something important."
+        "You spent a good time that day"
+        "Next week, Danial go to school"
+        "Someone asks Daniel which girl he finds most interesting."
     )
 
     # --------------------------------------------------------
@@ -2684,30 +2673,30 @@ def send_question_10(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd admit the mistake and try to fix it.",
+            "1. Emily.",
             callback_data="q10_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd try to fix it on my own first.",
+            "2. Sophie",
             callback_data="q10_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd ask someone I trust for advice.",
+            "3. Grace.",
             callback_data="q10_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd think carefully about what went wrong.",
+            "4. Charlotte.",
             callback_data="q10_4"
         )
     )
-
+    IMAGE_URL10 = "https://i.ibb.co/JWmjm2Yy/Morning.jpg"
     # --------------------------------------------------------
     # QUESTION 10 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL10,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2745,8 +2734,6 @@ def send_question_10(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel how he would react if he made "
-        "a mistake while working on something important.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -2762,10 +2749,10 @@ def send_question_10(chat_id):
 def question_10_answer(call):
 
     answers = {
-        "q10_1": "I'd admit the mistake and try to fix it.",
-        "q10_2": "I'd try to fix it on my own first.",
-        "q10_3": "I'd ask someone I trust for advice.",
-        "q10_4": "I'd think carefully about what went wrong."
+        "q10_1": "Emily.",
+        "q10_2": "Sophie.",
+        "q10_3": "Grace.",
+        "q10_4": "Charlotte."
     }
 
     answer = answers.get(call.data)
