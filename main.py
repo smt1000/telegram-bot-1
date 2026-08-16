@@ -2660,7 +2660,7 @@ def send_question_10(chat_id):
 
     bot.send_message(
         chat_id,
-        "You spent a good time that day"
+        "You spent a good time that day. \n\n"
         "Next week, Danial go to school"
         "Someone asks Daniel which girl he finds most interesting."
     )
@@ -2799,8 +2799,21 @@ def question_10_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily thinks about Daniel's response.\n\n"
-        "The conversation continues..."
+        call.message.chat.id,
+        "The autumn term becomes busier.\n\n"
+        "The school announces its annual Winter Gala.\n\n"
+        "Each girl becomes involved.\n\n"
+        "Emily organizes it.\n"
+        "Sophie volunteers for the entertainment.\n"
+        "Grace is asked to write the event program.\n"
+        "Charlotte becomes responsible for fundraising.\n\n"
+        "Daniel is asked to help all four.\n\n"
+        "But tensions begin appearing.\n\n"
+        "Emily and Charlotte disagree about how money should be spent.\n"
+        "Sophie feels ignored.\n"
+        "Grace worries that nobody will read her writing.\n"
+        "Daniel realizes that helping everyone isn't always possible."
+		
     )
 
     # --------------------------------------------------------
@@ -2823,9 +2836,7 @@ def send_question_11(chat_id):
 
     bot.send_message(
         chat_id,
-        "The conversation continues with Emily.\n\n"
-        "Emily asks Daniel what he usually does when "
-        "he has to make an important decision."
+        "Emily asks Daniel to take responsibility for an important task.\n\n"
     )
 
     # --------------------------------------------------------
@@ -2836,30 +2847,30 @@ def send_question_11(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I listen to my feelings and trust my instincts.",
+            "1. Accept.",
             callback_data="q11_1"
         ),
         types.InlineKeyboardButton(
-            "2. I prefer to make the decision by myself.",
+            "2. Ask for instructions.",
             callback_data="q11_2"
         ),
         types.InlineKeyboardButton(
-            "3. I talk to someone I trust before deciding.",
+            "3. Ask someone else to help.",
             callback_data="q11_3"
         ),
         types.InlineKeyboardButton(
-            "4. I take my time and carefully consider everything.",
+            "4. Tell Emily she is taking on too much.",
             callback_data="q11_4"
         )
     )
-
+    IMAGE_URL11 = "https://i.ibb.co/Jjp6nm43/Emily-2.jpg"
     # --------------------------------------------------------
     # QUESTION 11 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL11,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2914,10 +2925,10 @@ def send_question_11(chat_id):
 def question_11_answer(call):
 
     answers = {
-        "q11_1": "I listen to my feelings and trust my instincts.",
-        "q11_2": "I prefer to make the decision by myself.",
-        "q11_3": "I talk to someone I trust before deciding.",
-        "q11_4": "I take my time and carefully consider everything."
+        "q11_1": "Accept.",
+        "q11_2": "Ask for instructions.",
+        "q11_3": "Ask someone else to help.",
+        "q11_4": "Tell Emily she is taking on too much."
     }
 
     answer = answers.get(call.data)
@@ -2989,9 +3000,7 @@ def send_question_12(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily smiles and continues talking with Daniel.\n\n"
-        "She asks him what he values most when building "
-        "a close relationship with someone."
+        "Sophie is sad. She said nobody appreciates her work.\n\n"
     )
 
     # --------------------------------------------------------
@@ -3002,30 +3011,30 @@ def send_question_12(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Honesty, even when the truth is difficult.",
+            "1. Tell her they do.",
             callback_data="q12_1"
         ),
         types.InlineKeyboardButton(
-            "2. Having enough freedom to be myself.",
+            "2. Ask why she feels that way.",
             callback_data="q12_2"
         ),
         types.InlineKeyboardButton(
-            "3. Trust and being able to rely on each other.",
+            "3. Tell her to stop worrying.",
             callback_data="q12_3"
         ),
         types.InlineKeyboardButton(
-            "4. Taking time to understand each other deeply.",
+            "4. Tell her that recognition isn’t everything.",
             callback_data="q12_4"
         )
     )
-
+    IMAGE_URL12 = "https://i.ibb.co/KcNzCBqs/Sophie-3.jpg"
     # --------------------------------------------------------
     # QUESTION 12 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL12,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -3063,8 +3072,6 @@ def send_question_12(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he values most when "
-        "building a close relationship with someone.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -3080,10 +3087,10 @@ def send_question_12(chat_id):
 def question_12_answer(call):
 
     answers = {
-        "q12_1": "Honesty, even when the truth is difficult.",
-        "q12_2": "Having enough freedom to be myself.",
-        "q12_3": "Trust and being able to rely on each other.",
-        "q12_4": "Taking time to understand each other deeply."
+        "q12_1": "Tell her they do.",
+        "q12_2": "Ask why she feels that way.",
+        "q12_3": "Tell her to stop worrying.",
+        "q12_4": "Tell her that recognition isn’t everything."
     }
 
     answer = answers.get(call.data)
@@ -3131,8 +3138,6 @@ def question_12_answer(call):
     bot.send_message(
         call.message.chat.id,
         "Emily nods thoughtfully at Daniel's answer.\n\n"
-        "She feels that the conversation is becoming "
-        "more personal."
     )
 
     # --------------------------------------------------------
