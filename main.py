@@ -2198,14 +2198,14 @@ def send_question_7(chat_id):
             callback_data="q7_4"
         )
     )
-
+    IMAGE_URL7 = "https://i.ibb.co/SXfZhq47/Grace-2.jpg"
     # --------------------------------------------------------
     # QUESTION 7 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL7,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -2243,8 +2243,6 @@ def send_question_7(chat_id):
 
     bot.send_message(
         chat_id,
-        "Grace asks Daniel how he would react if he "
-        "had to take responsibility for an important task.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -2260,10 +2258,10 @@ def send_question_7(chat_id):
 def question_7_answer(call):
 
     answers = {
-        "q7_1": "I'd take responsibility and get started.",
-        "q7_2": "I'd ask someone else to handle it.",
-        "q7_3": "I'd do it, but I'd want some guidance.",
-        "q7_4": "I'd first make sure I understood everything."
+        "q7_1": "Read it.",
+        "q7_2": "Close the notebook.",
+        "q7_3": "Ask Grace about it.",
+        "q7_4": "Pretend not to notice."
     }
 
     answer = answers.get(call.data)
@@ -2310,8 +2308,7 @@ def question_7_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Grace thinks about Daniel's response.\n\n"
-        "The conversation continues..."
+        "Grace is watching Daniel.\n\n"
     )
 
     # --------------------------------------------------------
