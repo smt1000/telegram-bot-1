@@ -1315,7 +1315,7 @@ def question_1_answer(call):
         "Students depend on her.\n"
         "But Emily has spent years trying to become the person everyone expects her to be.\n"
         "She secretly wonders what would happen if she stopped being “the responsible one \n"
-       "one.”"
+        "one.”"
 	)
     
 
