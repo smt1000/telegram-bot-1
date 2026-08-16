@@ -1240,6 +1240,8 @@ def question_1_answer(call):
         "Emily listens carefully to Daniel's answer.\n\n"
         "The conversation continues..."
     )
+	send_question_2(call.message.chat.id)
+
 
 #سؤال 2
 
