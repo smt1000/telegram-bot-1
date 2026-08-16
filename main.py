@@ -12826,6 +12826,21 @@ def choose_final_character(user_id):
     # --------------------------------------------------------
 
     return None
+	if winner:
+
+    bot.send_message(
+        call.message.chat.id,
+        f"🎉 Your final match is {winner}!"
+    )
+
+else:
+
+    bot.send_message(
+        call.message.chat.id,
+        "❌ No character qualified."
+    )
+
+
 
 
 
