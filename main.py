@@ -1078,7 +1078,7 @@ def create_new_score():
 # IMAGE
 # ============================================================
 
-IMAGE_URL = "https://i.ibb.co/BKPbsjXF/Emily.jpg"
+IMAGE_URL = "https://i.ibb.co/Jjp6nm43/Emily-2.jpg"
 
 
 # ============================================================
