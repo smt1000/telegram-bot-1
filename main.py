@@ -1217,8 +1217,8 @@ def question_1_answer(call):
     bot.send_message(
         call.message.chat.id,
         f"You selected:\n\n"
-        f"{answer}"
-		f"Current scores:\n\n"
+        f"{answer}\n\n"
+        f"Current scores:\n\n"
         f"Emily: {user_scores[user_id]['Emily']}\n"
         f"Sophie: {user_scores[user_id]['Sophie']}\n"
         f"Grace: {user_scores[user_id]['Grace']}\n"
@@ -1240,7 +1240,12 @@ def question_1_answer(call):
         "Emily listens carefully to Daniel's answer.\n\n"
         "The conversation continues..."
     )
-	send_question_2(call.message.chat.id)
+
+    # --------------------------------------------------------
+    # NEXT QUESTION
+    # --------------------------------------------------------
+
+    send_question_2(call.message.chat.id)
 
 
 #سؤال 2
@@ -1291,11 +1296,9 @@ def send_question_2(chat_id):
     # QUESTION 2 IMAGE
     # --------------------------------------------------------
 
-    QUESTION_2_IMAGE_URL = IMAGE_URL
-
     try:
         response = requests.get(
-            QUESTION_2_IMAGE_URL,
+            IMAGE_URL,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -1367,13 +1370,14 @@ def question_2_answer(call):
     points = QUESTION_2_SCORES.get(call.data)
 
     if points:
+
         for category, value in points.items():
             user_scores[user_id][category] += value
 
     bot.answer_callback_query(call.id)
 
     # --------------------------------------------------------
-    # SHOW SELECTED ANSWER + CURRENT SCORES
+    # SHOW SELECTED ANSWER
     # --------------------------------------------------------
 
     bot.send_message(
@@ -1409,7 +1413,7 @@ def question_2_answer(call):
 
     send_question_3(call.message.chat.id)
 
-#سؤال 3
+
 
 
 
