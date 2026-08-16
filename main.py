@@ -1368,26 +1368,25 @@ def send_question_2(chat_id):
         )
     )
 IMAGE_URL = "https://i.ibb.co/qM7vXkX3/Sophie-2.jpg"
-    # --------------------------------------------------------
-    # QUESTION 2 IMAGE
-    # --------------------------------------------------------
 
-    try:
-        response = requests.get(
-            IMAGE_URL,
-            timeout=20,
-            headers={
-                "User-Agent": "Mozilla/5.0"
-            }
-        )
+# --------------------------------------------------------
+# QUESTION 2 IMAGE
+# --------------------------------------------------------
 
-        response.raise_for_status()
+try:
+    bot.send_photo(
+        chat_id,
+        IMAGE_URL
+    )
 
-        print("Question 2 image status:", response.status_code)
-        print(
-            "Question 2 image type:",
-            response.headers.get("Content-Type")
-        )
+except Exception as e:
+    print("QUESTION 2 IMAGE ERROR:", e)
+
+    bot.send_message(
+        chat_id,
+        "The question image could not be loaded, "
+        "but you can still continue."
+    )
 
         photo = BytesIO(response.content)
         photo.name = "question2.jpg"
