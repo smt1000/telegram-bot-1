@@ -1699,7 +1699,7 @@ def send_question_4(chat_id):
         )
     )
 
-    IMAGE_URL4 = "https://i.ibb.co/9Hs8vKZL/Grace.jpg"
+    IMAGE_URL4 = "https://i.ibb.co/BH22kYWK/Charlotte-2.jpg"
     # --------------------------------------------------------
     # QUESTION 4 IMAGE
     # --------------------------------------------------------
