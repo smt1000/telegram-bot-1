@@ -4449,9 +4449,9 @@ def send_question_21(chat_id):
         "Sophie performs in front of the entire school.\n\n"
         "For one evening, everyone seems happy.\n\n"
         "But after the event, Sophie tells Daniel:\n\n"
-        "Everyone keeps talking about where we're going after school."
+        "\"Everyone keeps talking about where we're going after school.\"\n\n"
         "She looks toward the empty hall.\n\n"
-        "I don't know if I want everything to change.""
+        "\"I don't know if I want everything to change.\""
     )
 
     # --------------------------------------------------------
@@ -4462,22 +4462,24 @@ def send_question_21(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Always telling the truth, even when it is uncomfortable.",
+            "1. Nothing has to change.",
             callback_data="q21_1"
         ),
         types.InlineKeyboardButton(
-            "2. Respecting each other's boundaries and personal space.",
+            "2. Change isn’t necessarily bad.",
             callback_data="q21_2"
         ),
         types.InlineKeyboardButton(
-            "3. Showing through actions that you can be relied on.",
+            "3. I’ll always be your friend.",
             callback_data="q21_3"
         ),
         types.InlineKeyboardButton(
-            "4. Communicating openly and giving each other time to feel comfortable.",
+            "4. What are you actually afraid of?",
             callback_data="q21_4"
         )
     )
+
+    IMAGE_URL21 = "https://i.ibb.co/7m5h3f3/Early-Morning.jpg"
 
     # --------------------------------------------------------
     # QUESTION 21 IMAGE
@@ -4485,7 +4487,7 @@ def send_question_21(chat_id):
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL21,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -4540,10 +4542,10 @@ def send_question_21(chat_id):
 def question_21_answer(call):
 
     answers = {
-        "q21_1": "Always telling the truth, even when it is uncomfortable.",
-        "q21_2": "Respecting each other's boundaries and personal space.",
-        "q21_3": "Showing through actions that you can be relied on.",
-        "q21_4": "Communicating openly and giving each other time to feel comfortable."
+        "q21_1": "Nothing has to change.",
+        "q21_2": "Change isn’t necessarily bad.",
+        "q21_3": "I’ll always be your friend.",
+        "q21_4": "What are you actually afraid of?"
     }
 
     answer = answers.get(call.data)
@@ -4557,7 +4559,6 @@ def question_21_answer(call):
     points = QUESTION_21_SCORES.get(call.data)
 
     if points:
-
         for category, value in points.items():
             user_scores[user_id][category] += value
 
@@ -4590,9 +4591,8 @@ def question_21_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily nods thoughtfully.\n\n"
-        "She realizes that Daniel has a clear idea of what "
-        "trust means to him."
+        "The next day...\n\n"
+        "Daniel meets Emily."
     )
 
     # --------------------------------------------------------
