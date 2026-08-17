@@ -5097,13 +5097,6 @@ def send_question_25(chat_id):
     # TEXT BEFORE QUESTION 25
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily has one more question on her mind.\n\n"
-        "She asks Daniel what would make him feel truly "
-        "comfortable with someone over time."
-    )
-
     # --------------------------------------------------------
     # QUESTION 25 BUTTONS
     # --------------------------------------------------------
@@ -5112,30 +5105,30 @@ def send_question_25(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Knowing that we can always be honest with each other.",
+            "1. Have it immediately.",
             callback_data="q25_1"
         ),
         types.InlineKeyboardButton(
-            "2. Knowing that we respect each other's independence.",
+            "2. Wait for the right moment.",
             callback_data="q25_2"
         ),
         types.InlineKeyboardButton(
-            "3. Knowing that we can always count on each other.",
+            "3. Write a letter.",
             callback_data="q25_3"
         ),
         types.InlineKeyboardButton(
-            "4. Knowing that we can talk openly without being judged.",
+            "4. Ask the person to talk privately.",
             callback_data="q25_4"
         )
     )
-
+    IMAGE_URL25 = "https://i.ibb.co/JWmjm2Yy/Morning.jpg"
     # --------------------------------------------------------
     # QUESTION 25 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL25,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -5173,8 +5166,7 @@ def send_question_25(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what would make him feel truly "
-        "comfortable with someone over time.\n\n"
+        "Daniel realizes he has been avoiding an important conversation. /n "
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -5190,10 +5182,10 @@ def send_question_25(chat_id):
 def question_25_answer(call):
 
     answers = {
-        "q25_1": "Knowing that we can always be honest with each other.",
-        "q25_2": "Knowing that we respect each other's independence.",
-        "q25_3": "Knowing that we can always count on each other.",
-        "q25_4": "Knowing that we can talk openly without being judged."
+        "q25_1": "Have it immediately.",
+        "q25_2": "Wait for the right moment.",
+        "q25_3": "Write a letter.",
+        "q25_4": "Ask the person to talk privately."
     }
 
     answer = answers.get(call.data)
@@ -5238,13 +5230,6 @@ def question_25_answer(call):
     # TEXT AFTER QUESTION 25
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily smiles warmly after Daniel's answer.\n\n"
-        "She feels that their conversation has revealed "
-        "a lot about what matters to him."
-    )
-
     # --------------------------------------------------------
     # NEXT QUESTION
     # --------------------------------------------------------
@@ -5265,9 +5250,8 @@ def send_question_26(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily looks at Daniel with a thoughtful smile.\n\n"
-        "She asks him what he thinks is the best way to "
-        "show someone that they are important to you."
+        "Danial meets Emily. Emily looks at Daniel with a thoughtful smile.\n\n"
+        "She asks him  what he thinks her biggest weakness is"
     )
 
     # --------------------------------------------------------
@@ -5278,23 +5262,23 @@ def send_question_26(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Tell them honestly how much they mean to you.",
+            "1. She worries too much.",
             callback_data="q26_1"
         ),
         types.InlineKeyboardButton(
-            "2. Respect their needs and give them room to be themselves.",
+            "2. She works too hard.",
             callback_data="q26_2"
         ),
         types.InlineKeyboardButton(
-            "3. Be there for them whenever they need support.",
+            "3. She cares too much about others’ opinions.",
             callback_data="q26_3"
         ),
         types.InlineKeyboardButton(
-            "4. Make time to listen and understand what matters to them.",
+            "4. She doesn’t allow herself to make mistakes.",
             callback_data="q26_4"
         )
     )
-
+    IMAGE_URL3 = "https://i.ibb.co/BKPbsjXF/Emily.jpg"
     # --------------------------------------------------------
     # QUESTION 26 IMAGE
     # --------------------------------------------------------
@@ -5339,8 +5323,7 @@ def send_question_26(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks is the best way to "
-        "show someone that they are important to you.\n\n"
+        "Emily asks Daniel what he thinks her biggest weakness is.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -5356,10 +5339,10 @@ def send_question_26(chat_id):
 def question_26_answer(call):
 
     answers = {
-        "q26_1": "Tell them honestly how much they mean to you.",
-        "q26_2": "Respect their needs and give them room to be themselves.",
-        "q26_3": "Be there for them whenever they need support.",
-        "q26_4": "Make time to listen and understand what matters to them."
+        "q26_1": "She worries too much.",
+        "q26_2": "She works too hard.",
+        "q26_3": "She cares too much about others’ opinions.",
+        "q26_4": "She doesn’t allow herself to make mistakes."
     }
 
     answer = answers.get(call.data)
@@ -5407,8 +5390,7 @@ def question_26_answer(call):
     bot.send_message(
         call.message.chat.id,
         "Emily listens carefully and smiles.\n\n"
-        "She feels that Daniel's answer says a lot about "
-        "how he expresses care and affection."
+        "She feels that Daniel's answer says a lot about their relationship. "
     )
 
     # --------------------------------------------------------
