@@ -5748,14 +5748,14 @@ def send_question_29(chat_id):
             callback_data="q29_4"
         )
     )
-    IMAGE_URL3 = "https://i.ibb.co/0pyy5z4V/Charlotte-2.jpg"
+    IMAGE_URL29 = "https://i.ibb.co/0pyy5z4V/Charlotte-2.jpg"
     # --------------------------------------------------------
     # QUESTION 29 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL29,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -5793,7 +5793,7 @@ def send_question_29(chat_id):
 
     bot.send_message(
         chat_id,
-        "When I get back to my classroom.."
+        "When I get back to my classroom."
         "Charlotte asks whether Daniel would choose a safe future or an uncertain one.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
@@ -5908,14 +5908,14 @@ def send_question_30(chat_id):
             callback_data="q30_4"
         )
     )
-    IMAGE_URL3 = "https://i.ibb.co/361jJv2/General-1.jpg"
+    IMAGE_URL30 = "https://i.ibb.co/361jJv2/General-1.jpg"
     # --------------------------------------------------------
     # QUESTION 30 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL30,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -6208,9 +6208,8 @@ def send_question_32(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily looks at Daniel and smiles.\n\n"
-        "She asks him what he thinks helps two people stay "
-        "close when life becomes busy."
+        "Danial meets Grace. \n\n"
+        "Grace is offered publication but worries people will criticize her."
     )
 
     # --------------------------------------------------------
@@ -6221,30 +6220,30 @@ def send_question_32(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Being honest about how you feel, even when you are busy.",
+            "1. Encourage her.",
             callback_data="q32_1"
         ),
         types.InlineKeyboardButton(
-            "2. Giving each other enough space to focus on personal goals.",
+            "2. Tell her not to worry.",
             callback_data="q32_2"
         ),
         types.InlineKeyboardButton(
-            "3. Making time for each other and showing continued support.",
+            "3. Ask what she is afraid of.",
             callback_data="q32_3"
         ),
         types.InlineKeyboardButton(
-            "4. Keeping communication open and making time for meaningful conversations.",
+            "4. Tell her that being understood matters more than being universally liked.",
             callback_data="q32_4"
         )
     )
-
+    IMAGE_URL32 = "https://i.ibb.co/9Hs8vKZL/Grace.jpg"
     # --------------------------------------------------------
     # QUESTION 32 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL32,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -6282,8 +6281,6 @@ def send_question_32(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks helps two people stay "
-        "close when life becomes busy.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -6299,10 +6296,10 @@ def send_question_32(chat_id):
 def question_32_answer(call):
 
     answers = {
-        "q32_1": "Being honest about how you feel, even when you are busy.",
-        "q32_2": "Giving each other enough space to focus on personal goals.",
-        "q32_3": "Making time for each other and showing continued support.",
-        "q32_4": "Keeping communication open and making time for meaningful conversations."
+        "q32_1": "Encourage her.",
+        "q32_2": "Tell her not to worry.",
+        "q32_3": "Ask what she is afraid of.",
+        "q32_4": "Tell her that being understood matters more than being universally liked."
     }
 
     answer = answers.get(call.data)
@@ -6347,13 +6344,6 @@ def question_32_answer(call):
     # TEXT AFTER QUESTION 32
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily nods thoughtfully.\n\n"
-        "She likes hearing how Daniel thinks about balancing "
-        "everyday responsibilities with a meaningful connection."
-    )
-
     # --------------------------------------------------------
     # NEXT QUESTION
     # --------------------------------------------------------
@@ -6375,8 +6365,7 @@ def send_question_33(chat_id):
     bot.send_message(
         chat_id,
         "Emily looks at Daniel with a curious smile.\n\n"
-        "She asks him what he thinks makes someone feel "
-        "truly understood in a relationship."
+        "She asks whether Daniel thinks she is selfish for changing her plans."
     )
 
     # --------------------------------------------------------
@@ -6387,30 +6376,30 @@ def send_question_33(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Being able to speak honestly without hiding your feelings.",
+            "1. Yes.",
             callback_data="q33_1"
         ),
         types.InlineKeyboardButton(
-            "2. Having your personal choices and boundaries respected.",
+            "2. No.",
             callback_data="q33_2"
         ),
         types.InlineKeyboardButton(
-            "3. Knowing that the other person listens and supports you.",
+            "3. Everyone deserves to choose their future.",
             callback_data="q33_3"
         ),
         types.InlineKeyboardButton(
-            "4. Having someone who takes the time to understand your thoughts and feelings.",
+            "4. It depends on how she handles the people affected.",
             callback_data="q33_4"
         )
     )
-
+    IMAGE_URL33 = "https://i.ibb.co/TMLX0df4/Emily-3.jpg"
     # --------------------------------------------------------
     # QUESTION 33 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL33,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -6448,8 +6437,7 @@ def send_question_33(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks makes someone feel "
-        "truly understood in a relationship.\n\n"
+        "Emily asks whether Daniel thinks she is selfish for changing her plans. \n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -6465,10 +6453,10 @@ def send_question_33(chat_id):
 def question_33_answer(call):
 
     answers = {
-        "q33_1": "Being able to speak honestly without hiding your feelings.",
-        "q33_2": "Having your personal choices and boundaries respected.",
-        "q33_3": "Knowing that the other person listens and supports you.",
-        "q33_4": "Having someone who takes the time to understand your thoughts and feelings."
+        "q33_1": "Yes.",
+        "q33_2": "No.",
+        "q33_3": "Everyone deserves to choose their future.",
+        "q33_4": "It depends on how she handles the people affected."
     }
 
     answer = answers.get(call.data)
@@ -6517,7 +6505,7 @@ def question_33_answer(call):
         call.message.chat.id,
         "Emily listens carefully and smiles.\n\n"
         "She feels that Daniel has a thoughtful way of "
-        "looking at emotional connection."
+        "looking at emotional stuff. "
     )
 
     # --------------------------------------------------------
@@ -6537,12 +6525,6 @@ def send_question_34(chat_id):
     # TEXT BEFORE QUESTION 34
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily smiles as she thinks about Daniel's answers.\n\n"
-        "She asks him what he thinks helps a relationship "
-        "remain strong when two people disagree."
-    )
 
     # --------------------------------------------------------
     # QUESTION 34 BUTTONS
@@ -6552,30 +6534,30 @@ def send_question_34(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Being honest about your feelings instead of hiding them.",
+            "1. Support her.",
             callback_data="q34_1"
         ),
         types.InlineKeyboardButton(
-            "2. Respecting each other's opinions and giving each other space.",
+            "2. Stay out of it.",
             callback_data="q34_2"
         ),
         types.InlineKeyboardButton(
-            "3. Remembering that you are on the same team and supporting each other.",
+            "3. Help her prepare.",
             callback_data="q34_3"
         ),
         types.InlineKeyboardButton(
-            "4. Listening carefully and trying to understand each other's point of view.",
+            "4. Tell her the decision has to be hers.",
             callback_data="q34_4"
         )
     )
-
+    IMAGE_URL34 = "https://i.ibb.co/0pyy5z4V/Charlotte-2.jpg"
     # --------------------------------------------------------
     # QUESTION 34 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL34,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -6613,8 +6595,7 @@ def send_question_34(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks helps a relationship "
-        "remain strong when two people disagree.\n\n"
+        "Charlotte finally confronts her parents. "
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -6630,10 +6611,10 @@ def send_question_34(chat_id):
 def question_34_answer(call):
 
     answers = {
-        "q34_1": "Being honest about your feelings instead of hiding them.",
-        "q34_2": "Respecting each other's opinions and giving each other space.",
-        "q34_3": "Remembering that you are on the same team and supporting each other.",
-        "q34_4": "Listening carefully and trying to understand each other's point of view."
+        "q34_1": "Support her.",
+        "q34_2": "Stay out of it.",
+        "q34_3": "Help her prepare.",
+        "q34_4": "Tell her the decision has to be hers."
     }
 
     answer = answers.get(call.data)
@@ -6680,10 +6661,9 @@ def question_34_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily nods thoughtfully at Daniel's answer.\n\n"
+        "Charlotte went to her home and had a conversation with her parents.\n\n"
         "She feels that disagreements do not have to create "
-        "distance when both people are willing to understand "
-        "each other."
+        "distance when they are one family "
     )
 
     # --------------------------------------------------------
