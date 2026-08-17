@@ -4441,9 +4441,17 @@ def send_question_21(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily smiles as the conversation continues.\n\n"
-        "She asks Daniel what he thinks is most important "
-        "when two people are trying to build trust."
+        "The Winter Gala becomes a turning point.\n\n"
+        "Daniel discovers that Grace's writing has been selected for the school magazine. "
+        "She is terrified.\n\n"
+        "Charlotte's fundraising project becomes unexpectedly successful. "
+        "Emily receives praise from the teachers. "
+        "Sophie performs in front of the entire school.\n\n"
+        "For one evening, everyone seems happy.\n\n"
+        "But after the event, Sophie tells Daniel:\n\n"
+        "Everyone keeps talking about where we're going after school."
+        "She looks toward the empty hall.\n\n"
+        "I don't know if I want everything to change.""
     )
 
     # --------------------------------------------------------
