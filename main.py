@@ -3806,7 +3806,7 @@ def send_question_17(chat_id):
     bot.send_message(
         chat_id,
         "Danial : I went to the school too early today. \n\n"
-        "I meet Grace in front of her class"
+        "I meet Grace in front of her class. "
         "Grace asks Daniel to read one of her stories."
     )
 
@@ -6686,9 +6686,7 @@ def send_question_35(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily looks at Daniel with a warm smile.\n\n"
-        "She asks him what he thinks is the best way to "
-        "keep a relationship feeling special after a long time."
+        "Danial: The following week… surprisingly, I was offered a scholarship.\n\n"
     )
 
     # --------------------------------------------------------
@@ -6699,30 +6697,30 @@ def send_question_35(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Keep being honest and never take each other for granted.",
+            "1. Accept immediately.",
             callback_data="q35_1"
         ),
         types.InlineKeyboardButton(
-            "2. Give each other freedom to grow and follow individual interests.",
+            "2. Reject it.",
             callback_data="q35_2"
         ),
         types.InlineKeyboardButton(
-            "3. Keep making memories together and supporting each other's dreams.",
+            "3. Research it carefully.",
             callback_data="q35_3"
         ),
         types.InlineKeyboardButton(
-            "4. Continue having meaningful conversations and learning about each other.",
+            "4. Ask how it fits into his long-term plans.",
             callback_data="q35_4"
         )
     )
-
+    IMAGE_URL35 = "https://i.ibb.co/7m5h3f3/Early-Morning.jpg"
     # --------------------------------------------------------
     # QUESTION 35 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL35,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -6760,8 +6758,7 @@ def send_question_35(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks is the best way to "
-        "keep a relationship feeling special after a long time.\n\n"
+        "Daniel is offered a scholarship. "
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -6777,10 +6774,10 @@ def send_question_35(chat_id):
 def question_35_answer(call):
 
     answers = {
-        "q35_1": "Keep being honest and never take each other for granted.",
-        "q35_2": "Give each other freedom to grow and follow individual interests.",
-        "q35_3": "Keep making memories together and supporting each other's dreams.",
-        "q35_4": "Continue having meaningful conversations and learning about each other."
+        "q35_1": "Accept immediately.",
+        "q35_2": "Reject it.",
+        "q35_3": "Research it carefully.",
+        "q35_4": "Ask how it fits into his long-term plans."
     }
 
     answer = answers.get(call.data)
@@ -6827,10 +6824,8 @@ def question_35_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily smiles and nods.\n\n"
-        "She feels that Daniel understands that a strong "
-        "relationship needs care even after the excitement "
-        "of the beginning has passed."
+        "This probably will be a hard decision. \n\n"
+        "That's what I thought at the time.."
     )
 
     # --------------------------------------------------------
