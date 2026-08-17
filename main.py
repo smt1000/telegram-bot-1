@@ -5550,7 +5550,7 @@ def question_27_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Danial: Today, I decided to go to the library \n\n"
+        "Danial: Today, I decided to go to the library.  \n\n"
 
     )
 
@@ -5641,7 +5641,7 @@ def send_question_28(chat_id):
 
     bot.send_message(
         chat_id,
-        "Grace asks why Daniel keeps visiting the library."
+        "Grace asks why Daniel keeps visiting the library. "
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -5724,13 +5724,6 @@ def send_question_29(chat_id):
     # TEXT BEFORE QUESTION 29
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily pauses and thinks about their conversation.\n\n"
-        "She asks Daniel what he would do to make someone "
-        "he cares about feel secure in their relationship."
-    )
-
     # --------------------------------------------------------
     # QUESTION 29 BUTTONS
     # --------------------------------------------------------
@@ -5739,23 +5732,23 @@ def send_question_29(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd always be honest and never hide important things.",
+            "1. Safe.",
             callback_data="q29_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd respect their independence and never try to control them.",
+            "2. Uncertain.",
             callback_data="q29_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd be dependable and show them they can count on me.",
+            "3. The one that makes me happier.",
             callback_data="q29_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd communicate openly and make sure they feel heard.",
+            "4. The one I chose for myself.",
             callback_data="q29_4"
         )
     )
-
+    IMAGE_URL3 = "https://i.ibb.co/0pyy5z4V/Charlotte-2.jpg"
     # --------------------------------------------------------
     # QUESTION 29 IMAGE
     # --------------------------------------------------------
@@ -5800,8 +5793,8 @@ def send_question_29(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he would do to make someone "
-        "he cares about feel secure in their relationship.\n\n"
+        "When I get back to my classroom.."
+        "Charlotte asks whether Daniel would choose a safe future or an uncertain one.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -5817,10 +5810,10 @@ def send_question_29(chat_id):
 def question_29_answer(call):
 
     answers = {
-        "q29_1": "I'd always be honest and never hide important things.",
-        "q29_2": "I'd respect their independence and never try to control them.",
-        "q29_3": "I'd be dependable and show them they can count on me.",
-        "q29_4": "I'd communicate openly and make sure they feel heard."
+        "q29_1": "Safe.",
+        "q29_2": "Uncertain.",
+        "q29_3": "The one that makes me happier.",
+        "q29_4": "The one I chose for myself."
     }
 
     answer = answers.get(call.data)
@@ -5865,12 +5858,6 @@ def question_29_answer(call):
     # TEXT AFTER QUESTION 29
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily nods thoughtfully after Daniel's answer.\n\n"
-        "She feels that his answer shows what he believes "
-        "makes a relationship feel safe and comfortable."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
@@ -5892,9 +5879,9 @@ def send_question_30(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily smiles as she realizes how much they have talked about.\n\n"
-        "She asks Daniel what he thinks is most important "
-        "for two people who want to build a future together."
+        "The school year reaches its midpoint.\n\n"
+        "Daniel must decide whether to pursue one particular relationship more seriously."
+        "Who should I build a future with?"
     )
 
     # --------------------------------------------------------
@@ -5905,23 +5892,23 @@ def send_question_30(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Being honest about your hopes, feelings, and plans.",
+            "1. Emily.",
             callback_data="q30_1"
         ),
         types.InlineKeyboardButton(
-            "2. Supporting each other's individual goals and dreams.",
+            "2. Sophie.",
             callback_data="q30_2"
         ),
         types.InlineKeyboardButton(
-            "3. Staying loyal and being there for each other.",
+            "3. Grace.",
             callback_data="q30_3"
         ),
         types.InlineKeyboardButton(
-            "4. Communicating openly and making important decisions together.",
+            "4. Charlotte.",
             callback_data="q30_4"
         )
     )
-
+    IMAGE_URL3 = "https://i.ibb.co/361jJv2/General-1.jpg"
     # --------------------------------------------------------
     # QUESTION 30 IMAGE
     # --------------------------------------------------------
@@ -5966,8 +5953,7 @@ def send_question_30(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks is most important "
-        "for two people who want to build a future together.\n\n"
+        "Daniel must decide whether to pursue one particular relationship more seriously. \n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -5983,10 +5969,10 @@ def send_question_30(chat_id):
 def question_30_answer(call):
 
     answers = {
-        "q30_1": "Being honest about your hopes, feelings, and plans.",
-        "q30_2": "Supporting each other's individual goals and dreams.",
-        "q30_3": "Staying loyal and being there for each other.",
-        "q30_4": "Communicating openly and making important decisions together."
+        "q30_1": "Emily",
+        "q30_2": "Sophie.",
+        "q30_3": "Grace.",
+        "q30_4": "Charlotte."
     }
 
     answer = answers.get(call.data)
@@ -6031,12 +6017,6 @@ def question_30_answer(call):
     # TEXT AFTER QUESTION 30
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily becomes quiet for a moment and smiles.\n\n"
-        "She feels that Daniel has shared a lot about "
-        "what he wants from a meaningful relationship."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
@@ -6058,9 +6038,15 @@ def send_question_31(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily looks at Daniel with a warm smile.\n\n"
-        "She asks him what kind of moment would make him "
-        "feel especially happy in a relationship."
+        "Spring arrives.\n\n"
+        "The school begins discussing university applications and future careers. "
+        "The girls start facing difficult decisions.\n\n"
+        "Emily realizes she doesn't actually want the university her parents chose.\n"
+        "Sophie receives an opportunity to join a regional football academy.\n"
+        "Grace is offered a chance to publish her writing.\n"
+        "Charlotte finally tells her parents that she wants a different career.\n\n"
+        "Daniel finds himself wondering what his future holds "
+        "and whether their future has a place for him."
     )
 
     # --------------------------------------------------------
@@ -6071,30 +6057,30 @@ def send_question_31(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Sharing a private moment where we can be completely honest.",
+            "1. Tell her to accept.",
             callback_data="q31_1"
         ),
         types.InlineKeyboardButton(
-            "2. Seeing each other succeed while still following our own dreams.",
+            "2. Tell her to stay.",
             callback_data="q31_2"
         ),
         types.InlineKeyboardButton(
-            "3. Celebrating something special that we achieved together.",
+            "3. Ask what she wants.",
             callback_data="q31_3"
         ),
         types.InlineKeyboardButton(
-            "4. Having a deep conversation that makes us understand each other better.",
+            "4. Tell her not to reject it because she’s afraid of change.",
             callback_data="q31_4"
         )
     )
-
+    IMAGE_URL31 = "https://i.ibb.co/qM7vXkX3/Sophie-2.jpg"
     # --------------------------------------------------------
     # QUESTION 31 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL31,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -6132,8 +6118,7 @@ def send_question_31(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what kind of moment would make him "
-        "feel especially happy in a relationship.\n\n"
+        "Sophie is offered a football opportunity in another city. "
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -6149,10 +6134,10 @@ def send_question_31(chat_id):
 def question_31_answer(call):
 
     answers = {
-        "q31_1": "Sharing a private moment where we can be completely honest.",
-        "q31_2": "Seeing each other succeed while still following our own dreams.",
-        "q31_3": "Celebrating something special that we achieved together.",
-        "q31_4": "Having a deep conversation that makes us understand each other better."
+        "q31_1": "Tell her to accept.",
+        "q31_2": "Tell her to stay.",
+        "q31_3": "Ask what she wants.",
+        "q31_4": "Tell her not to reject it because she’s afraid of change."
     }
 
     answer = answers.get(call.data)
@@ -6199,7 +6184,7 @@ def question_31_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily smiles after hearing Daniel's answer.\n\n"
+        "Sophie smiles after hearing Daniel's answer.\n\n"
         "She feels that the conversation has become something "
         "more meaningful than she expected."
     )
