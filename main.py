@@ -4130,7 +4130,7 @@ def send_question_19(chat_id):
 
     bot.send_message(
         chat_id,
-        ""Danial: What to do now?"\n\n"
+        "Danial: What to do now?\n\n"
     )
 
     # --------------------------------------------------------
