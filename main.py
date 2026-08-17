@@ -7308,7 +7308,7 @@ def question_38_answer(call):
     bot.send_message(
         call.message.chat.id,
         "I answer her that answer. \n\n"
-        "She looks a bit happy after hearing that"
+        "She looks a bit happy after hearing that."
     )
 
     # --------------------------------------------------------
@@ -7331,9 +7331,8 @@ def send_question_39(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily looks at Daniel with a gentle smile.\n\n"
-        "She asks him what he thinks makes a relationship "
-        "feel truly special over the long term."
+        "After few days...\n\n"
+
     )
 
     # --------------------------------------------------------
@@ -7344,30 +7343,30 @@ def send_question_39(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Knowing that you can always be honest with each other.",
+            "1. Correct them.",
             callback_data="q39_1"
         ),
         types.InlineKeyboardButton(
-            "2. Being able to grow together while still being yourselves.",
+            "2. Ignore it.",
             callback_data="q39_2"
         ),
         types.InlineKeyboardButton(
-            "3. Having someone who stays loyal and supports you through life.",
+            "3. Explain himself.",
             callback_data="q39_3"
         ),
         types.InlineKeyboardButton(
-            "4. Feeling deeply understood and comfortable sharing everything.",
+            "4. Ask what they believe he feels.",
             callback_data="q39_4"
         )
     )
-
+    IMAGE_URL39 = "https://i.ibb.co/JWmjm2Yy/Morning.jpg"
     # --------------------------------------------------------
     # QUESTION 39 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL39,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -7405,8 +7404,7 @@ def send_question_39(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks makes a relationship "
-        "feel truly special over the long term.\n\n"
+        "Daniel realizes someone has misunderstood his feelings. "
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -7422,10 +7420,10 @@ def send_question_39(chat_id):
 def question_39_answer(call):
 
     answers = {
-        "q39_1": "Knowing that you can always be honest with each other.",
-        "q39_2": "Being able to grow together while still being yourselves.",
-        "q39_3": "Having someone who stays loyal and supports you through life.",
-        "q39_4": "Feeling deeply understood and comfortable sharing everything."
+        "q39_1": "Correct them.",
+        "q39_2": "Ignore it.",
+        "q39_3": "Explain himself.",
+        "q39_4": "Ask what they believe he feels."
     }
 
     answer = answers.get(call.data)
@@ -7470,12 +7468,6 @@ def question_39_answer(call):
     # TEXT AFTER QUESTION 39
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily smiles thoughtfully at Daniel's answer.\n\n"
-        "She feels that they are getting closer to understanding "
-        "what really matters to him in a lasting connection."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
