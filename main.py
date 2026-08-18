@@ -8746,12 +8746,6 @@ def send_question_48(chat_id):
     # TEXT BEFORE QUESTION 48
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily looks at Daniel with a warm smile.\n\n"
-        "She asks him what he thinks helps two people "
-        "stay close when their lives become very busy."
-    )
 
     # --------------------------------------------------------
     # QUESTION 48 BUTTONS
@@ -8761,30 +8755,30 @@ def send_question_48(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Be honest when you are busy and make sure the other person knows how you feel.",
+            "1. Romance.",
             callback_data="q48_1"
         ),
         types.InlineKeyboardButton(
-            "2. Respect each other's schedules and make time for your own interests too.",
+            "2. Career.",
             callback_data="q48_2"
         ),
         types.InlineKeyboardButton(
-            "3. Make a real effort to stay connected and be there for each other.",
+            "3. Both.",
             callback_data="q48_3"
         ),
         types.InlineKeyboardButton(
-            "4. Keep communicating and share what is happening in your lives.",
+            "4. Neither should require abandoning the other.",
             callback_data="q48_4"
         )
     )
-
+    IMAGE_URL48 = "https://i.ibb.co/Q34Zr43F/Class-1.jpg"
     # --------------------------------------------------------
     # QUESTION 48 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL48,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -8822,8 +8816,7 @@ def send_question_48(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks helps two people "
-        "stay close when their lives become very busy.\n\n"
+        "Daniel must decide whether to prioritize romance or his own future.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -8839,10 +8832,10 @@ def send_question_48(chat_id):
 def question_48_answer(call):
 
     answers = {
-        "q48_1": "Be honest when you are busy and make sure the other person knows how you feel.",
-        "q48_2": "Respect each other's schedules and make time for your own interests too.",
-        "q48_3": "Make a real effort to stay connected and be there for each other.",
-        "q48_4": "Keep communicating and share what is happening in your lives."
+        "q48_1": "Romance.",
+        "q48_2": "Career.",
+        "q48_3": "Both.",
+        "q48_4": "Neither should require abandoning the other."
     }
 
     answer = answers.get(call.data)
@@ -8887,12 +8880,6 @@ def question_48_answer(call):
     # TEXT AFTER QUESTION 48
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily smiles and nods.\n\n"
-        "She feels that Daniel understands that being busy "
-        "doesn't have to mean becoming emotionally distant."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
@@ -8912,12 +8899,7 @@ def send_question_49(chat_id):
     # TEXT BEFORE QUESTION 49
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily looks at Daniel with a thoughtful smile.\n\n"
-        "She asks him what he thinks is the best way to handle "
-        "an important disagreement with someone you care about."
-    )
+
 
     # --------------------------------------------------------
     # QUESTION 49 BUTTONS
@@ -8927,30 +8909,30 @@ def send_question_49(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Be honest about how you feel without hiding the truth.",
+            "1. Loyalty.",
             callback_data="q49_1"
         ),
         types.InlineKeyboardButton(
-            "2. Give each other some space and think independently before responding.",
+            "2. Honesty.",
             callback_data="q49_2"
         ),
         types.InlineKeyboardButton(
-            "3. Try to find a solution that supports both people.",
+            "3. Understanding.",
             callback_data="q49_3"
         ),
         types.InlineKeyboardButton(
-            "4. Listen carefully and try to understand the other person's point of view.",
+            "4. Someone who chooses her own life while allowing me to choose mine.",
             callback_data="q49_4"
         )
     )
-
+    IMAGE_URL49 = "https://i.ibb.co/7m5h3f3/Early-Morning.jpg"
     # --------------------------------------------------------
     # QUESTION 49 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL49,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -8988,8 +8970,7 @@ def send_question_49(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks is the best way to "
-        "handle an important disagreement with someone you care about.\n\n"
+        "Someone asks Daniel what he expects from a future partner.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -9005,10 +8986,10 @@ def send_question_49(chat_id):
 def question_49_answer(call):
 
     answers = {
-        "q49_1": "Be honest about how you feel without hiding the truth.",
-        "q49_2": "Give each other some space and think independently before responding.",
-        "q49_3": "Try to find a solution that supports both people.",
-        "q49_4": "Listen carefully and try to understand the other person's point of view."
+        "q49_1": "Loyalty.",
+        "q49_2": "Honesty.",
+        "q49_3": "Understanding.",
+        "q49_4": "Someone who chooses her own life while allowing me to choose mine."
     }
 
     answer = answers.get(call.data)
@@ -9053,13 +9034,7 @@ def question_49_answer(call):
     # TEXT AFTER QUESTION 49
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily listens carefully and nods.\n\n"
-        "She appreciates Daniel's thoughtful approach and feels "
-        "that he understands that disagreements do not have to "
-        "damage a strong relationship."
-    )
+
 
     # --------------------------------------------------------
     # NEXT QUESTION
