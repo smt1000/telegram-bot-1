@@ -7486,12 +7486,7 @@ def send_question_40(chat_id):
     # TEXT BEFORE QUESTION 40
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily smiles at Daniel as their conversation continues.\n\n"
-        "She asks him what he would want his partner to know "
-        "when he is going through a difficult time."
-    )
+
 
     # --------------------------------------------------------
     # QUESTION 40 BUTTONS
@@ -7501,30 +7496,30 @@ def send_question_40(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. I'd want them to know that I will always be honest about how I feel.",
+            "1. Emily.",
             callback_data="q40_1"
         ),
         types.InlineKeyboardButton(
-            "2. I'd want them to give me some space while still respecting my choices.",
+            "2. Sophie.",
             callback_data="q40_2"
         ),
         types.InlineKeyboardButton(
-            "3. I'd want them to stay by my side and remind me that I am not alone.",
+            "3. Grace.",
             callback_data="q40_3"
         ),
         types.InlineKeyboardButton(
-            "4. I'd want them to listen patiently and let me talk when I am ready.",
+            "4. Charlotte.",
             callback_data="q40_4"
         )
     )
-
+    IMAGE_URL40 = "https://i.ibb.co/361jJv2/General-1.jpg"
     # --------------------------------------------------------
     # QUESTION 40 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL40,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -7562,8 +7557,7 @@ def send_question_40(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he would want his partner to know "
-        "when he is going through a difficult time.\n\n"
+        "Daniel must choose someone to accompany him to a school event.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -7579,10 +7573,10 @@ def send_question_40(chat_id):
 def question_40_answer(call):
 
     answers = {
-        "q40_1": "I'd want them to know that I will always be honest about how I feel.",
-        "q40_2": "I'd want them to give me some space while still respecting my choices.",
-        "q40_3": "I'd want them to stay by my side and remind me that I am not alone.",
-        "q40_4": "I'd want them to listen patiently and let me talk when I am ready."
+        "q40_1": "Emily.",
+        "q40_2": "Sophie.",
+        "q40_3": "Grace.",
+        "q40_4": "Charlotte."
     }
 
     answer = answers.get(call.data)
@@ -7626,14 +7620,6 @@ def question_40_answer(call):
     # --------------------------------------------------------
     # TEXT AFTER QUESTION 40
     # --------------------------------------------------------
-
-    bot.send_message(
-        call.message.chat.id,
-        "Emily listens quietly and smiles.\n\n"
-        "She feels that Daniel has shared something more personal "
-        "about how he handles difficult moments and what he needs "
-        "from someone close to him."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
