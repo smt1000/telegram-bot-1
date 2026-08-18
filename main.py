@@ -9055,14 +9055,6 @@ def send_question_50(chat_id):
     # TEXT BEFORE QUESTION 50
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily smiles at Daniel as their conversation reaches "
-        "another important moment.\n\n"
-        "She asks him what he thinks is the most important "
-        "quality to have in a long-term relationship."
-    )
-
     # --------------------------------------------------------
     # QUESTION 50 BUTTONS
     # --------------------------------------------------------
@@ -9071,30 +9063,30 @@ def send_question_50(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Honesty, so both people can always trust each other.",
+            "1. The memories.",
             callback_data="q50_1"
         ),
         types.InlineKeyboardButton(
-            "2. Independence, so both people can continue to grow.",
+            "2. The friendships.",
             callback_data="q50_2"
         ),
         types.InlineKeyboardButton(
-            "3. Loyalty, so both people know they can depend on each other.",
+            "3. The lessons.",
             callback_data="q50_3"
         ),
         types.InlineKeyboardButton(
-            "4. Understanding, so both people feel heard and appreciated.",
+            "4. The person he has become.",
             callback_data="q50_4"
         )
     )
-
+    IMAGE_URL50 = "https://i.ibb.co/7m5h3f3/Early-Morning.jpg"
     # --------------------------------------------------------
     # QUESTION 50 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL50,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -9132,8 +9124,8 @@ def send_question_50(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks is the most important "
-        "quality to have in a long-term relationship.\n\n"
+        "Daniel looks back on his first year at Westbridge. "
+        "What matters most? \n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -9149,10 +9141,10 @@ def send_question_50(chat_id):
 def question_50_answer(call):
 
     answers = {
-        "q50_1": "Honesty, so both people can always trust each other.",
-        "q50_2": "Independence, so both people can continue to grow.",
-        "q50_3": "Loyalty, so both people know they can depend on each other.",
-        "q50_4": "Understanding, so both people feel heard and appreciated."
+        "q50_1": "The memories.",
+        "q50_2": "The friendships.",
+        "q50_3": "The lessons.",
+        "q50_4": "The person he has become."
     }
 
     answer = answers.get(call.data)
@@ -9197,12 +9189,6 @@ def question_50_answer(call):
     # TEXT AFTER QUESTION 50
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily smiles after hearing Daniel's answer.\n\n"
-        "She feels that their conversation has revealed more "
-        "about what he truly values in a lasting relationship."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
@@ -9224,9 +9210,18 @@ def send_question_51(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily looks at Daniel with a warm smile.\n\n"
-        "She asks him what he would do if someone he cared about "
-        "was feeling uncertain about their relationship."
+        "The final year begins.\n\n"
+        "University applications arrive.\n"
+        "Graduation becomes real.\n\n"
+        "The four girls begin moving toward completely different futures.\n\n"
+        "Emily wants to study law.\n"
+        "Sophie wants to pursue football.\n"
+        "Grace wants to study literature.\n"
+        "Charlotte wants to study business—but on her own terms.\n\n"
+        "Daniel has his own future to consider.\n\n"
+        "For the first time, he understands that choosing someone doesn't mean "
+        "possessing them.\n"
+        "It means asking whether two people can build something together."
     )
 
     # --------------------------------------------------------
