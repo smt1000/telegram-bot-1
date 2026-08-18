@@ -9851,12 +9851,6 @@ def send_question_55(chat_id):
     # TEXT BEFORE QUESTION 55
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily looks at Daniel and smiles.\n\n"
-        "She asks him what he thinks makes someone feel truly "
-        "appreciated in a relationship."
-    )
 
     # --------------------------------------------------------
     # QUESTION 55 BUTTONS
@@ -9866,30 +9860,30 @@ def send_question_55(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Hearing sincere words that show how much they are valued.",
+            "1. The prestigious one.",
             callback_data="q55_1"
         ),
         types.InlineKeyboardButton(
-            "2. Having their choices, interests, and personal goals respected.",
+            "2. The nearby one.",
             callback_data="q55_2"
         ),
         types.InlineKeyboardButton(
-            "3. Seeing that their partner makes an effort to support them.",
+            "3. The one with the best career prospects.",
             callback_data="q55_3"
         ),
         types.InlineKeyboardButton(
-            "4. Feeling listened to and knowing their thoughts genuinely matter.",
+            "4. The one that feels right for him.",
             callback_data="q55_4"
         )
     )
-
+    IMAGE_URL55 = "https://i.ibb.co/7m5h3f3/Early-Morning.jpg"
     # --------------------------------------------------------
     # QUESTION 55 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL55,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -9927,8 +9921,7 @@ def send_question_55(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks makes someone feel "
-        "truly appreciated in a relationship.\n\n"
+        "Daniel must choose between two universities.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -9944,10 +9937,10 @@ def send_question_55(chat_id):
 def question_55_answer(call):
 
     answers = {
-        "q55_1": "Hearing sincere words that show how much they are valued.",
-        "q55_2": "Having their choices, interests, and personal goals respected.",
-        "q55_3": "Seeing that their partner makes an effort to support them.",
-        "q55_4": "Feeling listened to and knowing their thoughts genuinely matter."
+        "q55_1": "The prestigious one.",
+        "q55_2": "The nearby one.",
+        "q55_3": "The one with the best career prospects.",
+        "q55_4": "The one that feels right for him."
     }
 
     answer = answers.get(call.data)
@@ -9992,13 +9985,6 @@ def question_55_answer(call):
     # TEXT AFTER QUESTION 55
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily smiles warmly.\n\n"
-        "She feels that Daniel understands that appreciation "
-        "is not just about words, but also about respect, support, "
-        "and genuine attention."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
