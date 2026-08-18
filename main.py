@@ -9293,7 +9293,7 @@ def send_question_51(chat_id):
 
     bot.send_message(
         chat_id,
-        "Danial: I was helping Emily with some of her missions in the town.  "
+        "Danial: I was helping Emily with some of her tasks in the town.  "
         "Then she asked..		\n\n"
 		"..."
 		"Emily asks whether Daniel would support her if she chose a difficult university."
@@ -9455,7 +9455,7 @@ def send_question_52(chat_id):
 
     bot.send_message(
         chat_id,
-        "I met Sophie Next day.. \n"
+        "I met Sophie in the school.. \n"
         "She shares some important news with me about her life. \n\n"
 		"Sophie receives an important football offer."
         "Choose Daniel's response:",
@@ -9763,8 +9763,7 @@ def send_question_54(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks helps two people feel "
-        "secure enough to be completely themselves in a relationship.\n\n"
+        "Charlotte asks Daniel whether ambition can damage relationships. \n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
