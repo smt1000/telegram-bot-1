@@ -7659,30 +7659,30 @@ def send_question_41(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Being honest about what each person really wants.",
+            "1. Yes.",
             callback_data="q41_1"
         ),
         types.InlineKeyboardButton(
-            "2. Making sure both people can follow their own dreams.",
+            "2. No.",
             callback_data="q41_2"
         ),
         types.InlineKeyboardButton(
-            "3. Knowing that you can rely on each other through every challenge.",
+            "3. Sometimes.",
             callback_data="q41_3"
         ),
         types.InlineKeyboardButton(
-            "4. Talking openly about plans and making important decisions together.",
+            "4. Sacrifice shouldn’t mean losing yourself.",
             callback_data="q41_4"
         )
     )
-
+    IMAGE_URL41 = "https://i.ibb.co/BKPbsjXF/Emily.jpg"
     # --------------------------------------------------------
     # QUESTION 41 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL41,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -7720,8 +7720,7 @@ def send_question_41(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks is most important "
-        "when two people are planning their future together.\n\n"
+        "Emily asks Daniel whether he believes relationships require sacrifice. \n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -7737,10 +7736,10 @@ def send_question_41(chat_id):
 def question_41_answer(call):
 
     answers = {
-        "q41_1": "Being honest about what each person really wants.",
-        "q41_2": "Making sure both people can follow their own dreams.",
-        "q41_3": "Knowing that you can rely on each other through every challenge.",
-        "q41_4": "Talking openly about plans and making important decisions together."
+        "q41_1": "Yes.",
+        "q41_2": "No.",
+        "q41_3": "Sometimes.",
+        "q41_4": "Sacrifice shouldn’t mean losing yourself."
     }
 
     answer = answers.get(call.data)
@@ -7788,8 +7787,7 @@ def question_41_answer(call):
     bot.send_message(
         call.message.chat.id,
         "Emily nods thoughtfully.\n\n"
-        "She likes hearing how Daniel imagines building a "
-        "future while still keeping both people's needs in mind."
+        "She likes hearing how Daniel thinks about those things "
     )
 
     # --------------------------------------------------------
@@ -7812,10 +7810,7 @@ def send_question_42(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily smiles at Daniel and thinks about everything "
-        "they have discussed.\n\n"
-        "She asks him what he thinks is the best way to show "
-        "someone that they are genuinely important to you."
+        "Afterwards, I met Sophie.."
     )
 
     # --------------------------------------------------------
@@ -7826,30 +7821,30 @@ def send_question_42(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Tell them honestly and openly how much they mean to you.",
+            "1. Yes.",
             callback_data="q42_1"
         ),
         types.InlineKeyboardButton(
-            "2. Respect their independence and support the life they want.",
+            "2. No.",
             callback_data="q42_2"
         ),
         types.InlineKeyboardButton(
-            "3. Be there for them when they need support, no matter what.",
+            "3. I don’t know.",
             callback_data="q42_3"
         ),
         types.InlineKeyboardButton(
-            "4. Listen to them carefully and remember the things that matter to them.",
+            "4. If both people genuinely wanted it.",
             callback_data="q42_4"
         )
     )
-
+    IMAGE_URL42 = "https://i.ibb.co/qM7vXkX3/Sophie-2.jpg"
     # --------------------------------------------------------
     # QUESTION 42 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL42,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -7887,8 +7882,7 @@ def send_question_42(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks is the best way to "
-        "show someone that they are genuinely important to you.\n\n"
+        "Sophie asks whether Daniel would maintain a long-distance relationship. \n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -7904,10 +7898,10 @@ def send_question_42(chat_id):
 def question_42_answer(call):
 
     answers = {
-        "q42_1": "Tell them honestly and openly how much they mean to you.",
-        "q42_2": "Respect their independence and support the life they want.",
-        "q42_3": "Be there for them when they need support, no matter what.",
-        "q42_4": "Listen to them carefully and remember the things that matter to them."
+        "q42_1": "Yes.",
+        "q42_2": "No.",
+        "q42_3": "I don’t know.",
+        "q42_4": "If both people genuinely wanted it."
     }
 
     answer = answers.get(call.data)
@@ -7952,12 +7946,6 @@ def question_42_answer(call):
     # TEXT AFTER QUESTION 42
     # --------------------------------------------------------
 
-    bot.send_message(
-        call.message.chat.id,
-        "Emily smiles warmly at Daniel's answer.\n\n"
-        "She feels that he has a thoughtful understanding "
-        "of the different ways people can show that they care."
-    )
 
     # --------------------------------------------------------
     # NEXT QUESTION
@@ -7977,12 +7965,6 @@ def send_question_43(chat_id):
     # TEXT BEFORE QUESTION 43
     # --------------------------------------------------------
 
-    bot.send_message(
-        chat_id,
-        "Emily looks at Daniel with a curious smile.\n\n"
-        "She asks him what he thinks two people should do "
-        "when they realize they have different priorities."
-    )
 
     # --------------------------------------------------------
     # QUESTION 43 BUTTONS
@@ -7992,30 +7974,30 @@ def send_question_43(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Talk honestly about what each person wants.",
+            "1. Yes.",
             callback_data="q43_1"
         ),
         types.InlineKeyboardButton(
-            "2. Give each other freedom to follow different priorities.",
+            "2. Probably.",
             callback_data="q43_2"
         ),
         types.InlineKeyboardButton(
-            "3. Find a compromise and make sure neither person feels alone.",
+            "3. Only if she keeps practicing.",
             callback_data="q43_3"
         ),
         types.InlineKeyboardButton(
-            "4. Take time to understand each other's reasons before deciding.",
+            "4. She should decide what success means to her.",
             callback_data="q43_4"
         )
     )
-
+    IMAGE_URL43 = "https://i.ibb.co/9Hs8vKZL/Grace.jpg"
     # --------------------------------------------------------
     # QUESTION 43 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL43,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -8053,8 +8035,7 @@ def send_question_43(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks two people should do "
-        "when they realize they have different priorities.\n\n"
+        "Grace asks Daniel whether he believes she can become a successful writer. \n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -8070,10 +8051,10 @@ def send_question_43(chat_id):
 def question_43_answer(call):
 
     answers = {
-        "q43_1": "Talk honestly about what each person wants.",
-        "q43_2": "Give each other freedom to follow different priorities.",
-        "q43_3": "Find a compromise and make sure neither person feels alone.",
-        "q43_4": "Take time to understand each other's reasons before deciding."
+        "q43_1": "Yes.",
+        "q43_2": "Probably.",
+        "q43_3": "Only if she keeps practicing.",
+        "q43_4": "She should decide what success means to her."
     }
 
     answer = answers.get(call.data)
@@ -8120,9 +8101,9 @@ def question_43_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily nods thoughtfully.\n\n"
+        "Grace nods thoughtfully.\n\n"
         "She appreciates Daniel's answer and wonders how "
-        "he would handle other important moments in a future relationship."
+        "he would handle his life."
     )
 
     # --------------------------------------------------------
