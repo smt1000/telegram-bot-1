@@ -8127,9 +8127,7 @@ def send_question_44(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily smiles at Daniel and continues the conversation.\n\n"
-        "She asks him what he thinks is the best way to rebuild "
-        "trust after someone has been hurt."
+        "In the classroom, I meet Charlotte.. \n\n"
     )
 
     # --------------------------------------------------------
@@ -8140,30 +8138,30 @@ def send_question_44(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Be completely honest and admit what happened.",
+            "1. Yes.",
             callback_data="q44_1"
         ),
         types.InlineKeyboardButton(
-            "2. Give the other person time and respect their boundaries.",
+            "2. No.",
             callback_data="q44_2"
         ),
         types.InlineKeyboardButton(
-            "3. Show through actions that they can depend on you again.",
+            "3. Definitely.",
             callback_data="q44_3"
         ),
         types.InlineKeyboardButton(
-            "4. Talk openly about what happened and try to understand each other's feelings.",
+            "4. You seem more like yourself now.",
             callback_data="q44_4"
         )
     )
-
+    IMAGE_URL44 = "https://i.ibb.co/gLmXNcn9/Charlotte-4.jpg"
     # --------------------------------------------------------
     # QUESTION 44 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL44,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -8201,8 +8199,7 @@ def send_question_44(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks is the best way to "
-        "rebuild trust after someone has been hurt.\n\n"
+        "Charlotte asks Daniel whether he thinks she has changed. \n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -8218,10 +8215,10 @@ def send_question_44(chat_id):
 def question_44_answer(call):
 
     answers = {
-        "q44_1": "Be completely honest and admit what happened.",
-        "q44_2": "Give the other person time and respect their boundaries.",
-        "q44_3": "Show through actions that they can depend on you again.",
-        "q44_4": "Talk openly about what happened and try to understand each other's feelings."
+        "q44_1": "Yes.",
+        "q44_2": "No.",
+        "q44_3": "Definitely.",
+        "q44_4": "You seem more like yourself now."
     }
 
     answer = answers.get(call.data)
@@ -8268,9 +8265,8 @@ def question_44_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Emily listens carefully and nods.\n\n"
-        "She feels that Daniel understands that trust is built "
-        "again through honesty, patience, and consistent actions."
+        "She listens carefully and nods.\n\n"
+        "She feels that Daniel understands her more  "
     )
 
     # --------------------------------------------------------
