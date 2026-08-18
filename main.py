@@ -7641,9 +7641,14 @@ def send_question_41(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily looks at Daniel with a thoughtful smile.\n\n"
-        "She asks him what he thinks is most important when "
-        "two people are planning their future together."
+        "Summer changes everything.\n\n"
+        "The four girls begin preparing for their final year.\n\n"
+        "Daniel's relationships have become complicated.\n\n"
+        "There are friendships that might become romance.\n"
+        "There are feelings that were never spoken.\n"
+        "There are dreams that require people to leave.\n\n"
+        "And Daniel realizes that love isn't simply about choosing the person he likes most.\n\n"
+        "It is also about asking whether their lives can genuinely move forward together."
     )
 
     # --------------------------------------------------------
