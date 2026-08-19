@@ -12638,25 +12638,96 @@ def question_70_answer(call):
 
     winner = choose_final_character(user_id)
 
-    # ============================================================
-    # SHOW FINAL WINNER
-    # ============================================================
+IMAGE_URL_EMILY = "https://i.ibb.co/YOUR-EMILY-IMAGE.jpg"
 
-    if winner:
+# ============================================================
+# SHOW FINAL WINNER
+# ============================================================
+
+if winner:
+
+    if winner == "Emily":
+
+        try:
+            response = requests.get(
+                IMAGE_URL_EMILY,
+                timeout=20,
+                headers={
+                    "User-Agent": "Mozilla/5.0"
+                }
+            )
+
+            response.raise_for_status()
+
+            print("Emily image status:", response.status_code)
+            print(
+                "Emily image type:",
+                response.headers.get("Content-Type")
+            )
+
+            photo = BytesIO(response.content)
+            photo.name = "emily.jpg"
+
+            bot.send_photo(
+                chat_id,
+                photo
+            )
+
+        except Exception as e:
+
+            print("EMILY IMAGE ERROR:", e)
+
+        # ----------------------------------------------------
+        # EMILY FINAL STORY
+        # ----------------------------------------------------
 
         bot.send_message(
-            call.message.chat.id,
-            f"🎉 Your final match is {winner}!\n\n"
-            f"Your strongest connection is with {winner}."
+            chat_id,
+            "Several years have passed.\n\n"
+            "Daniel and Emily both attend university.\n\n"
+            "Their relationship survives the distance because neither expects the other "
+            "to give up their ambitions.\n\n"
+            "After graduation, Emily receives a job offer in another city.\n\n"
+            "She meets Daniel at the same café where they once studied.\n\n"
+            "Emily: \"I have something to tell you.\"\n\n"
+            "Daniel smiles.\n\n"
+            "Daniel: \"So do I.\"\n\n"
+            "Emily looks nervous.\n\n"
+            "Daniel: \"Go first.\"\n\n"
+            "Emily: \"I got the job.\"\n\n"
+            "She smiles.\n\n"
+            "Daniel: \"That's wonderful.\"\n\n"
+            "Then Daniel takes a small box from his pocket.\n\n"
+            "Emily becomes completely silent.\n\n"
+            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
+            "He pauses.\n\n"
+            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
+            "She opens the box.\n\n"
+            "Inside is a ring.\n\n"
+            "Emily looks at him.\n\n"
+            "Emily: \"Are you sure?\"\n\n"
+            "Daniel: \"Yes.\"\n\n"
+            "She smiles through tears.\n\n"
+            "Emily: \"Then yes.\"\n\n"
+            "Not long afterwards...\n\n"
+            "Emily and I got married."
         )
 
     else:
 
         bot.send_message(
-            call.message.chat.id,
-            "No character qualified based on the final "
-            "score requirements."
+            chat_id,
+            f"🎉 Your final match is {winner}!\n\n"
+            f"Your strongest connection is with {winner}."
         )
+
+else:
+
+    bot.send_message(
+        chat_id,
+        "No character qualified based on the final "
+        "score requirements."
+    )
 
 
 # ============================================================
