@@ -12649,6 +12649,7 @@ def question_70_answer(call):
             f"🎉 Your final match is {winner}!\n\n"
             f"Your strongest connection is with {winner}."
         )
+		
 
     else:
 
@@ -12658,13 +12659,7 @@ def question_70_answer(call):
             "score requirements."
         )
 
-	if winner == "Emily":
-
-    bot.send_message(
-        call.message.chat.id,
-        "🎉 Emily is the winner!\n\n"
-        "Your strongest connection is with Emily."
-    )
+	
 
 # ============================================================
 # START BOT
