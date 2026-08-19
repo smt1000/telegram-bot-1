@@ -12641,16 +12641,15 @@ def question_70_answer(call):
     # ============================================================
     # SHOW FINAL WINNER
     # ============================================================
+if winner:
 
-    if winner:
+    bot.send_message(
+        call.message.chat.id,
+        f"🎉 Your final match is {winner}!\n\n"
+        f"Your strongest connection is with {winner}."
+    )
 
-        bot.send_message(
-            call.message.chat.id,
-            f"🎉 Your final match is {winner}!\n\n"
-            f"Your strongest connection is with {winner}."
-        )
-		
-        if winner == "Emily":
+    if winner == "Emily":
 
         bot.send_message(
             call.message.chat.id,
@@ -12687,19 +12686,16 @@ def question_70_answer(call):
             "She smiles through tears.\n\n"
             "Emily: \"Then yes.\"\n\n"
             "Not long afterwards...\n\n"
-            "Emily and I got married."
-        )
-		
-		
-
-    else:
-
-        bot.send_message(
-            call.message.chat.id,
-            "No character qualified based on the final "
-            "score requirements."
+            "Emily and Daniel got married."
         )
 
+else:
+
+    bot.send_message(
+        call.message.chat.id,
+        "No character qualified based on the final "
+        "score requirements."
+    )
 	
 
 # ============================================================
