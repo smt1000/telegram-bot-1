@@ -12234,14 +12234,18 @@ def choose_final_character(user_id):
     # MAIN RULES
     # ============================================================
 
-    if (
-        highest_character == "Emily"
-        and scores["ECompatibility"] > 75
-        and scores["Honest"] >= 60
-        and scores["Independence"] > 50
-    ):
+    if highest_score > 60 and difference > 4:
 
-        /*
+        # --------------------------------------------------------
+        # EMILY
+        # --------------------------------------------------------
+
+        if (
+            highest_character == "Emily"
+            and scores["ECompatibility"] > 75
+            and scores["Honest"] >= 60
+            and scores["Independence"] > 50
+        ):
 		bot.send_message(
             chat_id,
             "Several years have passed.\n\n"
@@ -12273,10 +12277,7 @@ def choose_final_character(user_id):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
-		*/
-
-        return "Emily"
-
+            return "Emily"
 
         # --------------------------------------------------------
         # SOPHIE
