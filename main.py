@@ -12682,6 +12682,42 @@ def question_70_answer(call):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
+		IMAGE_URL70 = "https://i.ibb.co/JRfd6S67/Final-1.jpg"
+
+    try:
+
+        response = requests.get(
+            IMAGE_URL70,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 70 image status:", response.status_code)
+        print(
+            "Question 70 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question70.jpg"
+
+        bot.send_photo(
+            call.message.chat.id,
+            photo
+        )
+
+    except Exception as e:
+
+        print("QUESTION 70 IMAGE ERROR:", e)
+
+        bot.send_message(
+            call.message.chat.id,
+            "The ending image could not be loaded."
+        )
         
 
 		
