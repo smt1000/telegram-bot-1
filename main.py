@@ -12681,6 +12681,45 @@ def question_70_answer(call):
             "Emily: \"Then yes.\"\n\n"
             "Not long afterwards...\n\n"
             "Emily and I got married."
+			
+			    IMAGE_URL69 = "https://i.ibb.co/VYt11hfn/General-4.jpg"
+    # --------------------------------------------------------
+    # QUESTION 69 IMAGE
+    # --------------------------------------------------------
+
+    try:
+        response = requests.get(
+            IMAGE_URL69,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
+
+        response.raise_for_status()
+
+        print("Question 69 image status:", response.status_code)
+        print(
+            "Question 69 image type:",
+            response.headers.get("Content-Type")
+        )
+
+        photo = BytesIO(response.content)
+        photo.name = "question69.jpg"
+
+        bot.send_photo(
+            chat_id,
+            photo
+        )
+
+    except Exception as e:
+        print("QUESTION 69 IMAGE ERROR:", e)
+
+        bot.send_message(
+            chat_id,
+            "The question image could not be loaded, "
+            "but you can still continue."
+        )
         )
         
 
