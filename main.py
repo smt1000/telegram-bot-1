@@ -4910,10 +4910,10 @@ def question_23_answer(call):
         call.message.chat.id,
 		"Charlotte is sitting outside the classroom, reviewing her notes, "
         "when he walks over and places a coffee beside her.\n\n"
-        "Danial: “You looked like you needed this.” \n\n"
+        "Daniel: “You looked like you needed this.” \n\n"
         "She looks at the cup, then at him.\n\n"
         "Charlotte: “You bought me coffee?” \n"
-        "Danial: “Don't make it a big deal.”"
+        "Daniel: “Don't make it a big deal.”"
 		"Daniel sets in a nearby chair and they started talking"
         "Charlotte likes that the conversation has become honest "
         "and thoughtful."
@@ -9293,7 +9293,7 @@ def send_question_51(chat_id):
 
     bot.send_message(
         chat_id,
-        "Danial: I was helping Emily with some of her tasks in the town.  "
+        "Daniel: I was helping Emily with some of her tasks in the town.  "
         "Then she asked..		\n\n"
 		"..."
 		"Emily asks whether Daniel would support her if she chose a difficult university."
