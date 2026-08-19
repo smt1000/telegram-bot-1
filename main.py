@@ -12234,12 +12234,6 @@ def choose_final_character(user_id):
     # MAIN RULES
     # ============================================================
 
-if highest_score > 60 and difference > 4:
-
-    # --------------------------------------------------------
-    # EMILY
-    # --------------------------------------------------------
-
     if (
         highest_character == "Emily"
         and scores["ECompatibility"] > 75
@@ -12249,62 +12243,38 @@ if highest_score > 60 and difference > 4:
 
         bot.send_message(
             chat_id,
-            """Several years have passed.
-
-Daniel and Emily both attend university.
-
-Their relationship survives the distance because neither expects the other to give up their ambitions.
-
-After graduation, Emily receives a job offer in another city.
-
-She meets Daniel at the same café where they once studied.
-
-Emily: "I have something to tell you."
-
-Daniel smiles.
-
-Daniel: "So do I."
-
-Emily looks nervous.
-
-Daniel: "Go first."
-
-Emily: "I got the job."
-
-She smiles.
-
-Daniel: "That's wonderful."
-
-Then Daniel takes a small box from his pocket.
-
-Emily becomes completely silent.
-
-Daniel: "Emily, I don't know exactly what the future will look like."
-
-He pauses.
-
-Daniel: "But I know who I want beside me while we find out."
-
-She opens the box.
-
-Inside is a ring.
-
-Emily looks at him.
-
-Emily: "Are you sure?"
-
-Daniel: "Yes."
-
-She smiles through tears.
-
-Emily: "Then yes."
-
-Not long afterwards...
-
-Emily and I got married."""
+            "Several years have passed.\n\n"
+            "Daniel and Emily both attend university.\n\n"
+            "Their relationship survives the distance because neither expects the other "
+            "to give up their ambitions.\n\n"
+            "After graduation, Emily receives a job offer in another city.\n\n"
+            "She meets Daniel at the same café where they once studied.\n\n"
+            "Emily: \"I have something to tell you.\"\n\n"
+            "Daniel smiles.\n\n"
+            "Daniel: \"So do I.\"\n\n"
+            "Emily looks nervous.\n\n"
+            "Daniel: \"Go first.\"\n\n"
+            "Emily: \"I got the job.\"\n\n"
+            "She smiles.\n\n"
+            "Daniel: \"That's wonderful.\"\n\n"
+            "Then Daniel takes a small box from his pocket.\n\n"
+            "Emily becomes completely silent.\n\n"
+            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
+            "He pauses.\n\n"
+            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
+            "She opens the box.\n\n"
+            "Inside is a ring.\n\n"
+            "Emily looks at him.\n\n"
+            "Emily: \"Are you sure?\"\n\n"
+            "Daniel: \"Yes.\"\n\n"
+            "She smiles through tears.\n\n"
+            "Emily: \"Then yes.\"\n\n"
+            "Not long afterwards...\n\n"
+            "Emily and I got married."
         )
 
         return "Emily"
+
 
         # --------------------------------------------------------
         # SOPHIE
