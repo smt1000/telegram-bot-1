@@ -12644,19 +12644,20 @@ def question_70_answer(call):
 
     if winner:
 
-    bot.send_message(
-        call.message.chat.id,
-        f"🎉 Your final match is {winner}!\n\n"
-        f"Your strongest connection is with {winner}."
-    )
-
-    if winner == "Emily":
+        bot.send_message(
+            call.message.chat.id,
+            f"🎉 Your final match is {winner}!\n\n"
+            f"Your strongest connection is with {winner}."
+        )
+		
+		if  winner == "Emily":
 
         bot.send_message(
             call.message.chat.id,
             "🎉 Emily is the winner!\n\n"
             "Your strongest connection is with Emily."
         )
+		
 		
 
     else:
