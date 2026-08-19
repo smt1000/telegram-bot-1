@@ -12682,12 +12682,12 @@ def question_70_answer(call):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
-    IMAGE_URL70 = "https://i.ibb.co/JRfd6S67/Final-1.jpg"
+    IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
 
     try:
 
         response = requests.get(
-            IMAGE_URL70,
+            IMAGE_URLEmilyEND,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -12716,7 +12716,7 @@ def question_70_answer(call):
 
         bot.send_message(
             call.message.chat.id,
-            "The ending image could not be loaded."
+            "The game is finished"
         )
         
 
