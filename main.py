@@ -12653,47 +12653,40 @@ def question_70_answer(call):
 		
     if winner == "Emily":
 
-    # --------------------------------------------------------
-    # EMILY ENDING — TEXT FIRST
-    # --------------------------------------------------------
-
-    bot.send_message(
-        call.message.chat.id,
-        "Several years have passed.\n\n"
-        "Daniel and Emily both attend university.\n\n"
-        "Their relationship survives the distance because neither expects the other "
-        "to give up their ambitions.\n\n"
-        "After graduation, Emily receives a job offer in another city.\n\n"
-        "She meets Daniel at the same café where they once studied.\n\n"
-        "Emily: \"I have something to tell you.\"\n\n"
-        "Daniel smiles.\n\n"
-        "Daniel: \"So do I.\"\n\n"
-        "Emily looks nervous.\n\n"
-        "Daniel: \"Go first.\"\n\n"
-        "Emily: \"I got the job.\"\n\n"
-        "She smiles.\n\n"
-        "Daniel: \"That's wonderful.\"\n\n"
-        "Then Daniel takes a small box from his pocket.\n\n"
-        "Emily becomes completely silent.\n\n"
-        "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
-        "He pauses.\n\n"
-        "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
-        "She opens the box.\n\n"
-        "Inside is a ring.\n\n"
-        "Emily looks at him.\n\n"
-        "Emily: \"Are you sure?\"\n\n"
-        "Daniel: \"Yes.\"\n\n"
-        "She smiles through tears.\n\n"
-        "Emily: \"Then yes.\"\n\n"
-        "Not long afterwards...\n\n"
-        "Emily and I got married."
-    )
-
-    # --------------------------------------------------------
-    # QUESTION 70 IMAGE — AFTER TEXT
-    # --------------------------------------------------------
-
-    IMAGE_URL70 = "https://i.ibb.co/JRfd6S67/Final-1.jpg"
+        bot.send_message(
+            call.message.chat.id,
+            "Several years have passed.\n\n"
+            "Daniel and Emily both attend university.\n\n"
+            "Their relationship survives the distance because neither expects the other "
+            "to give up their ambitions.\n\n"
+            "After graduation, Emily receives a job offer in another city.\n\n"
+            "She meets Daniel at the same café where they once studied.\n\n"
+            "Emily: \"I have something to tell you.\"\n\n"
+            "Daniel smiles.\n\n"
+            "Daniel: \"So do I.\"\n\n"
+            "Emily looks nervous.\n\n"
+            "Daniel: \"Go first.\"\n\n"
+            "Emily: \"I got the job.\"\n\n"
+            "She smiles.\n\n"
+            "Daniel: \"That's wonderful.\"\n\n"
+            "Then Daniel takes a small box from his pocket.\n\n"
+            "Emily becomes completely silent.\n\n"
+            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
+            "He pauses.\n\n"
+            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
+            "She opens the box.\n\n"
+            "Inside is a ring.\n\n"
+            "Emily looks at him.\n\n"
+            "Emily: \"Are you sure?\"\n\n"
+            "Daniel: \"Yes.\"\n\n"
+            "She smiles through tears.\n\n"
+            "Emily: \"Then yes.\"\n\n"
+            "Not long afterwards...\n\n"
+            "Emily and I got married."
+			
+			
+        )
+		IMAGE_URL70 = "https://i.ibb.co/JRfd6S67/Final-1.jpg"
 
     try:
         response = requests.get(
@@ -12723,16 +12716,6 @@ def question_70_answer(call):
     except Exception as e:
 
         print("QUESTION 70 IMAGE ERROR:", e)
-
-        bot.send_message(
-            chat_id,
-            "The question image could not be loaded, "
-            "but you can still continue."
-        )
-        
-
-		
-
 		
 	
 		
