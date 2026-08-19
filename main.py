@@ -12246,7 +12246,6 @@ def choose_final_character(user_id):
             and scores["Honest"] >= 60
             and scores["Independence"] > 50
         ):
-
             return "Emily"
 
         # --------------------------------------------------------
@@ -12636,72 +12635,30 @@ def question_70_answer(call):
     # ============================================================
     # FIND FINAL WINNER
     # ============================================================
-winner = choose_final_character(user_id)
 
-# ============================================================
-# SHOW FINAL WINNER
-# ============================================================
+    winner = choose_final_character(user_id)
 
-if winner:
+    # ============================================================
+    # SHOW FINAL WINNER
+    # ============================================================
 
-    bot.send_message(
-        call.message.chat.id,
-        f"🎉 Your final match is {winner}!\n\n"
-        f"Your strongest connection is with {winner}."
-    )
-
-    # ========================================================
-    # EMILY
-    # ========================================================
-
-    if winner == "Emily":
-	    bot.send_message(
-            call.message.chat.id,
-            "Sophie ending goes here..."
-        )
-
-        
-
-    # ========================================================
-    # SOPHIE
-    # ========================================================
-
-    elif winner == "Sophie":
+    if winner:
 
         bot.send_message(
             call.message.chat.id,
-            "Sophie ending goes here..."
+            f"🎉 Your final match is {winner}!\n\n"
+            f"Your strongest connection is with {winner}."
         )
 
-    # ========================================================
-    # GRACE
-    # ========================================================
-
-    elif winner == "Grace":
+    else:
 
         bot.send_message(
             call.message.chat.id,
-            "Grace ending goes here..."
+            "No character qualified based on the final "
+            "score requirements."
         )
 
-    # ========================================================
-    # CHARLOTTE
-    # ========================================================
 
-    elif winner == "Charlotte":
-
-        bot.send_message(
-            call.message.chat.id,
-            "Charlotte ending goes here..."
-        )
-
-else:
-
-    bot.send_message(
-        call.message.chat.id,
-        "No character qualified based on the final "
-        "score requirements."
-    )
 # ============================================================
 # START BOT
 # ============================================================
