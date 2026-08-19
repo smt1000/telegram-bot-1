@@ -12248,7 +12248,7 @@ if highest_score > 60 and difference > 4:
     ):
 
         bot.send_message(
-			chat_id,
+            chat_id,
             "Several years have passed.\n\n"
             "Daniel and Emily both attend university.\n\n"
             "Their relationship survives the distance because neither expects the other "
@@ -12276,13 +12276,10 @@ if highest_score > 60 and difference > 4:
             "She smiles through tears.\n\n"
             "Emily: \"Then yes.\"\n\n"
             "Not long afterwards...\n\n"
-            "Emily and I got married.",
-           
+            "Emily and I got married."
         )
-		
-		return "Emily"
 
-        
+        return "Emily"
 
         # --------------------------------------------------------
         # SOPHIE
