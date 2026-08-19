@@ -12636,42 +12636,35 @@ def question_70_answer(call):
     # FIND FINAL WINNER
     # ============================================================
 
-    winner = choose_final_character(user_id)
+winner = choose_final_character(user_id)
 
-    # ============================================================
-    # SHOW FINAL WINNER
-    # ============================================================
+# ============================================================
+# SHOW FINAL WINNER
+# ============================================================
 
-    if winner:
+if winner:
+
+    bot.send_message(
+        call.message.chat.id,
+        f"🎉 Your final match is {winner}!\n\n"
+        f"Your strongest connection is with {winner}."
+    )
+
+    if winner == "Emily":
 
         bot.send_message(
             call.message.chat.id,
             f"🎉 Your final match is {winner}!\n\n"
             f"Your strongest connection is with {winner}."
         )
-		if winner == "Emily":
 
-        bot.send_message(
-            call.message.chat.id,
-            f"🎉 Your final match is {winner}!\n\n"
-            f"Your strongest connection is with {winner}."
-        )
-		
+else:
 
-		
-	
-		
-		
-
-    else:
-
-        bot.send_message(
-            call.message.chat.id,
-            "No character qualified based on the final "
-            "score requirements."
-        )
-
-	
+    bot.send_message(
+        call.message.chat.id,
+        "No character qualified based on the final "
+        "score requirements."
+    )
 
 # ============================================================
 # START BOT
