@@ -12658,6 +12658,13 @@ def question_70_answer(call):
             "score requirements."
         )
 
+	if winner == "Emily":
+
+    bot.send_message(
+        call.message.chat.id,
+        "🎉 Emily is the winner!\n\n"
+        "Your strongest connection is with Emily."
+    )
 
 # ============================================================
 # START BOT
