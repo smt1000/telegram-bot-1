@@ -12644,9 +12644,18 @@ IMAGE_URL_EMILY = "https://i.ibb.co/YOUR-EMILY-IMAGE.jpg"
 # SHOW FINAL WINNER
 # ============================================================
 
+chat_id = call.message.chat.id
+
 if winner:
 
-    if winner == "Emily ":
+    # Make comparison safe against "Emily ", "emily", etc.
+    winner_name = str(winner).strip()
+
+    if winner_name.lower() == "emily":
+
+        # ----------------------------------------------------
+        # EMILY IMAGE
+        # ----------------------------------------------------
 
         try:
             response = requests.get(
@@ -12669,64 +12678,70 @@ if winner:
             photo.name = "emily.jpg"
 
             bot.send_photo(
-                chat_id,
-                photo
+                chat_id=chat_id,
+                photo=photo
             )
 
         except Exception as e:
 
-            print("EMILY IMAGE ERROR:", e)
+            print("EMILY IMAGE ERROR:", repr(e))
 
         # ----------------------------------------------------
         # EMILY FINAL STORY
         # ----------------------------------------------------
 
         bot.send_message(
-            chat_id,
-            "Several years have passed.\n\n"
-            "Daniel and Emily both attend university.\n\n"
-            "Their relationship survives the distance because neither expects the other "
-            "to give up their ambitions.\n\n"
-            "After graduation, Emily receives a job offer in another city.\n\n"
-            "She meets Daniel at the same café where they once studied.\n\n"
-            "Emily: \"I have something to tell you.\"\n\n"
-            "Daniel smiles.\n\n"
-            "Daniel: \"So do I.\"\n\n"
-            "Emily looks nervous.\n\n"
-            "Daniel: \"Go first.\"\n\n"
-            "Emily: \"I got the job.\"\n\n"
-            "She smiles.\n\n"
-            "Daniel: \"That's wonderful.\"\n\n"
-            "Then Daniel takes a small box from his pocket.\n\n"
-            "Emily becomes completely silent.\n\n"
-            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
-            "He pauses.\n\n"
-            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
-            "She opens the box.\n\n"
-            "Inside is a ring.\n\n"
-            "Emily looks at him.\n\n"
-            "Emily: \"Are you sure?\"\n\n"
-            "Daniel: \"Yes.\"\n\n"
-            "She smiles through tears.\n\n"
-            "Emily: \"Then yes.\"\n\n"
-            "Not long afterwards...\n\n"
-            "Emily and I got married."
+            chat_id=chat_id,
+            text=(
+                "Several years have passed.\n\n"
+                "Daniel and Emily both attend university.\n\n"
+                "Their relationship survives the distance because neither expects the other "
+                "to give up their ambitions.\n\n"
+                "After graduation, Emily receives a job offer in another city.\n\n"
+                "She meets Daniel at the same café where they once studied.\n\n"
+                "Emily: \"I have something to tell you.\"\n\n"
+                "Daniel smiles.\n\n"
+                "Daniel: \"So do I.\"\n\n"
+                "Emily looks nervous.\n\n"
+                "Daniel: \"Go first.\"\n\n"
+                "Emily: \"I got the job.\"\n\n"
+                "She smiles.\n\n"
+                "Daniel: \"That's wonderful.\"\n\n"
+                "Then Daniel takes a small box from his pocket.\n\n"
+                "Emily becomes completely silent.\n\n"
+                "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
+                "He pauses.\n\n"
+                "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
+                "She opens the box.\n\n"
+                "Inside is a ring.\n\n"
+                "Emily looks at him.\n\n"
+                "Emily: \"Are you sure?\"\n\n"
+                "Daniel: \"Yes.\"\n\n"
+                "She smiles through tears.\n\n"
+                "Emily: \"Then yes.\"\n\n"
+                "Not long afterwards...\n\n"
+                "Emily and I got married."
+            )
         )
 
     else:
 
         bot.send_message(
-            chat_id,
-            f"🎉 Your final match is {winner}!\n\n"
-            f"Your strongest connection is with {winner}."
+            chat_id=chat_id,
+            text=(
+                f"🎉 Your final match is {winner_name}!\n\n"
+                f"Your strongest connection is with {winner_name}."
+            )
         )
 
 else:
 
     bot.send_message(
-        chat_id,
-        "No character qualified based on the final "
-        "score requirements."
+        chat_id=chat_id,
+        text=(
+            "No character qualified based on the final "
+            "score requirements."
+        )
     )
 
 
