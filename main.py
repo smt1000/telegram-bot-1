@@ -12682,7 +12682,7 @@ def question_70_answer(call):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
-		IMAGE_URL70 = "https://i.ibb.co/JRfd6S67/Final-1.jpg"
+    IMAGE_URL70 = "https://i.ibb.co/JRfd6S67/Final-1.jpg"
 
     try:
 
