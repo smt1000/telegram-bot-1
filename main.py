@@ -12246,37 +12246,6 @@ def choose_final_character(user_id):
             and scores["Honest"] >= 60
             and scores["Independence"] > 50
         ):
-            bot.send_message(
-                chat_id,
-                "Several years have passed.\n\n"
-                "Daniel and Emily both attend university.\n\n"
-                "Their relationship survives the distance because neither expects the other "
-                "to give up their ambitions.\n\n"
-                "After graduation, Emily receives a job offer in another city.\n\n"
-                "She meets Daniel at the same café where they once studied.\n\n"
-                "Emily: \"I have something to tell you.\"\n\n"
-                "Daniel smiles.\n\n"
-                "Daniel: \"So do I.\"\n\n"
-                "Emily looks nervous.\n\n"
-                "Daniel: \"Go first.\"\n\n"
-                "Emily: \"I got the job.\"\n\n"
-                "She smiles.\n\n"
-                "Daniel: \"That's wonderful.\"\n\n"
-                "Then Daniel takes a small box from his pocket.\n\n"
-                "Emily becomes completely silent.\n\n"
-                "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
-                "He pauses.\n\n"
-                "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
-                "She opens the box.\n\n"
-                "Inside is a ring.\n\n"
-                "Emily looks at him.\n\n"
-                "Emily: \"Are you sure?\"\n\n"
-                "Daniel: \"Yes.\"\n\n"
-                "She smiles through tears.\n\n"
-                "Emily: \"Then yes.\"\n\n"
-                "Not long afterwards...\n\n"
-                "Emily and I got married."
-            )
 
             return "Emily"
 
@@ -12667,30 +12636,98 @@ def question_70_answer(call):
     # ============================================================
     # FIND FINAL WINNER
     # ============================================================
+winner = choose_final_character(user_id)
 
-    winner = choose_final_character(user_id)
+# ============================================================
+# SHOW FINAL WINNER
+# ============================================================
 
-    # ============================================================
-    # SHOW FINAL WINNER
-    # ============================================================
+if winner:
 
-    if winner:
+    bot.send_message(
+        call.message.chat.id,
+        f"🎉 Your final match is {winner}!\n\n"
+        f"Your strongest connection is with {winner}."
+    )
+
+    # ========================================================
+    # EMILY
+    # ========================================================
+
+    if winner == "Emily":
 
         bot.send_message(
             call.message.chat.id,
-            f"🎉 Your final match is {winner}!\n\n"
-            f"Your strongest connection is with {winner}."
+            "Several years have passed.\n\n"
+            "Daniel and Emily both attend university.\n\n"
+            "Their relationship survives the distance because neither expects the other "
+            "to give up their ambitions.\n\n"
+            "After graduation, Emily receives a job offer in another city.\n\n"
+            "She meets Daniel at the same café where they once studied.\n\n"
+            "Emily: \"I have something to tell you.\"\n\n"
+            "Daniel smiles.\n\n"
+            "Daniel: \"So do I.\"\n\n"
+            "Emily looks nervous.\n\n"
+            "Daniel: \"Go first.\"\n\n"
+            "Emily: \"I got the job.\"\n\n"
+            "She smiles.\n\n"
+            "Daniel: \"That's wonderful.\"\n\n"
+            "Then Daniel takes a small box from his pocket.\n\n"
+            "Emily becomes completely silent.\n\n"
+            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
+            "He pauses.\n\n"
+            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
+            "She opens the box.\n\n"
+            "Inside is a ring.\n\n"
+            "Emily looks at him.\n\n"
+            "Emily: \"Are you sure?\"\n\n"
+            "Daniel: \"Yes.\"\n\n"
+            "She smiles through tears.\n\n"
+            "Emily: \"Then yes.\"\n\n"
+            "Not long afterwards...\n\n"
+            "Emily and I got married."
         )
 
-    else:
+    # ========================================================
+    # SOPHIE
+    # ========================================================
+
+    elif winner == "Sophie":
 
         bot.send_message(
             call.message.chat.id,
-            "No character qualified based on the final "
-            "score requirements."
+            "Sophie ending goes here..."
         )
 
+    # ========================================================
+    # GRACE
+    # ========================================================
 
+    elif winner == "Grace":
+
+        bot.send_message(
+            call.message.chat.id,
+            "Grace ending goes here..."
+        )
+
+    # ========================================================
+    # CHARLOTTE
+    # ========================================================
+
+    elif winner == "Charlotte":
+
+        bot.send_message(
+            call.message.chat.id,
+            "Charlotte ending goes here..."
+        )
+
+else:
+
+    bot.send_message(
+        call.message.chat.id,
+        "No character qualified based on the final "
+        "score requirements."
+    )
 # ============================================================
 # START BOT
 # ============================================================
