@@ -12646,7 +12646,7 @@ IMAGE_URL_EMILY = "https://i.ibb.co/YOUR-EMILY-IMAGE.jpg"
 
 if winner:
 
-    if winner == "Emily":
+    if winner == "Emily ":
 
         try:
             response = requests.get(
