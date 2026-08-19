@@ -10006,7 +10006,7 @@ def send_question_56(chat_id):
     bot.send_message(
         chat_id,
         "Emily looks at Daniel thoughtfully.\n\n"
-        "She asks him what he thinks two people should do "
+        "She asks him what he thinks two people should do."
         "when they want different things from their future."
     )
 
@@ -10018,30 +10018,30 @@ def send_question_56(chat_id):
 
     keyboard.add(
         types.InlineKeyboardButton(
-            "1. Be honest about what each person wants and why.",
+            "1. Yes.",
             callback_data="q56_1"
         ),
         types.InlineKeyboardButton(
-            "2. Respect each person's individual plans and find a way to grow separately.",
+            "2. No.",
             callback_data="q56_2"
         ),
         types.InlineKeyboardButton(
-            "3. Look for a compromise that allows both people to feel supported.",
+            "3. Maybe.",
             callback_data="q56_3"
         ),
         types.InlineKeyboardButton(
-            "4. Have a calm conversation and try to understand both perspectives.",
+            "4. Only if the relationship remained strong as both people changed.",
             callback_data="q56_4"
         )
     )
-
+    IMAGE_URL56 = "https://i.ibb.co/dw9wZM49/Emily-4.jpg"
     # --------------------------------------------------------
     # QUESTION 56 IMAGE
     # --------------------------------------------------------
 
     try:
         response = requests.get(
-            IMAGE_URL,
+            IMAGE_URL56,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
@@ -10079,8 +10079,8 @@ def send_question_56(chat_id):
 
     bot.send_message(
         chat_id,
-        "Emily asks Daniel what he thinks two people should do "
-        "when they want different things from their future.\n\n"
+        "Then , she ask..\n "
+        "She asks whether Daniel could imagine marrying someone someday.\n\n"
         "Choose Daniel's response:",
         reply_markup=keyboard
     )
@@ -10096,10 +10096,10 @@ def send_question_56(chat_id):
 def question_56_answer(call):
 
     answers = {
-        "q56_1": "Be honest about what each person wants and why.",
-        "q56_2": "Respect each person's individual plans and find a way to grow separately.",
-        "q56_3": "Look for a compromise that allows both people to feel supported.",
-        "q56_4": "Have a calm conversation and try to understand both perspectives."
+        "q56_1": "Yes.",
+        "q56_2": "No.",
+        "q56_3": "Maybe.",
+        "q56_4": "Only if the relationship remained strong as both people changed."
     }
 
     answer = answers.get(call.data)
@@ -10147,9 +10147,7 @@ def question_56_answer(call):
     bot.send_message(
         call.message.chat.id,
         "Emily nods thoughtfully.\n\n"
-        "She appreciates Daniel's answer and feels that he "
-        "understands how important it is to respect both people's "
-        "dreams while finding common ground."
+
     )
 
     # --------------------------------------------------------
