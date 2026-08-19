@@ -12241,7 +12241,8 @@ def choose_final_character(user_id):
         and scores["Independence"] > 50
     ):
 
-        bot.send_message(
+        /*
+		bot.send_message(
             chat_id,
             "Several years have passed.\n\n"
             "Daniel and Emily both attend university.\n\n"
@@ -12272,6 +12273,7 @@ def choose_final_character(user_id):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
+		*/
 
         return "Emily"
 
