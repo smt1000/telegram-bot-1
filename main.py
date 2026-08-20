@@ -12718,22 +12718,7 @@ def question_70_answer(call):
             call.message.chat.id,
             "The game is finished"
         )
-        
 
-		
-
-		
-	
-		
-		
-
-    else:
-
-        bot.send_message(
-            call.message.chat.id,
-            "No character qualified based on the final "
-            "score requirements."
-        )
 
 	
 
