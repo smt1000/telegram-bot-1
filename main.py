@@ -12644,12 +12644,11 @@ def question_70_answer(call):
 
     if winner:
 
-    bot.send_message(
-        call.message.chat.id,
-        f"🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉\n\n"
-        f"Your strongest connection is with {winner}."
-    )
-
+        bot.send_message(
+            call.message.chat.id,
+            f"🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉\n\n"
+            f"Your strongest connection is with {winner}."
+        )
     if winner == "Emily":
 
         bot.send_message(
@@ -12683,46 +12682,45 @@ def question_70_answer(call):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
+    IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
 
-        IMAGE_URL_EmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
+    try:
 
-        try:
+        response = requests.get(
+            IMAGE_URLEmilyEND,
+            timeout=20,
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
+        )
 
-            response = requests.get(
-                IMAGE_URL_EmilyEND,
-                timeout=20,
-                headers={
-                    "User-Agent": "Mozilla/5.0"
-                }
-            )
+        response.raise_for_status()
 
-            response.raise_for_status()
+        print("Question 70 image status:", response.status_code)
+        print(
+            "Question 70 image type:",
+            response.headers.get("Content-Type")
+        )
 
-            print("Emily image status:", response.status_code)
-            print(
-                "Emily image type:",
-                response.headers.get("Content-Type")
-            )
+        photo = BytesIO(response.content)
+        photo.name = "question70.jpg"
 
-            photo = BytesIO(response.content)
-            photo.name = "Emily-Final.jpg"
+        bot.send_photo(
+            call.message.chat.id,
+            photo
+        )
 
-            bot.send_photo(
-                call.message.chat.id,
-                photo
-            )
+    except Exception as e:
 
-        except Exception as e:
+        print("QUESTION 70 IMAGE ERROR:", e)
 
-            print("EMILY IMAGE ERROR:", e)
-
-            bot.send_message(
-                call.message.chat.id,
-                "The game is finished."
-            )
+        bot.send_message(
+            call.message.chat.id,
+            "The game is finished"
+        )
 
 
-    
+	
 
 # ============================================================
 # START BOT
