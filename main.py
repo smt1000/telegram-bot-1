@@ -12885,7 +12885,7 @@ def question_70_answer(call):
             "She laughs.\n\n"
             "Daniel: \"I know what you're thinking. Charlotte...\"\n\n"
             "Charlotte: \"You've never been very good at making decisions.\"\n\n"
-            ""She opens the box.\n\n"
+            "She opens the box.\n\n"
             "Inside is a ring.\n\n"
             "Charlotte: \"So I'll make this one.\"\n\n"
             "Daniel laughs.\n\n"
