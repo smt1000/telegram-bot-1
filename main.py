@@ -12835,7 +12835,7 @@ def question_70_answer(call):
         try:
 
             response = requests.get(
-                IMAGE_URL_GraceFinaleFinal,
+                IMAGE_URL_GraceFinal,
                 timeout=20,
                 headers={
                     "User-Agent": "Mozilla/5.0"
@@ -12861,6 +12861,97 @@ def question_70_answer(call):
         except Exception as e:
 
             print("GRACE IMAGE ERROR:", e)
+
+            bot.send_message(
+                call.message.chat.id,
+                "The game is finished"
+            )
+    elif winner == "Sophie":
+
+        bot.send_message(
+            call.message.chat.id,
+            "Sophie eventually becomes a professional footballer.\n\n"
+            "Daniel builds a career of his own.\n\n"
+            "Their relationship isn't easy. There are long-distance months, missed "
+            "celebrations, arguments, and moments when they wonder whether their lives "
+            "are moving in different directions.\n\n"
+            "But they never stop talking.\n\n"
+            "A couple of years later, Daniel watches Sophie play from the stands.\n\n"
+            "After the match, she finds him waiting outside.\n\n"
+            "Sophie: \"You came.\"\n\n"
+            "Daniel: \"Of course.\"\n\n"
+            "She smiles.\n\n"
+            "Sophie: \"I know it hasn't always been easy.\"\n\n"
+            "Daniel: \"No,\" he says. \"It hasn't.\"\n\n"
+            "She looks down for a moment.\n\n"
+            "Sophie: \"Do you ever regret it?\"\n\n"
+            "Daniel: \"Regret what?\"\n\n"
+            "Sophie: \"Choosing this. Choosing us.\"\n\n"
+            "Daniel takes her hand.\n\n"
+            "Daniel: \"Never.\"\n\n"
+            "She smiles.\n\n"
+            "Sophie: \"Good.\"\n\n"
+            "He squeezes her hand.\n\n"
+            "Daniel: \"Because I don't want an easy life, Sophie. I want our life.\"\n\n"
+            "She looks at him, smiling through tears.\n\n"
+            "Sophie understands that loving someone doesn't mean giving up your dreams. "
+            "It means finding someone who wants you to chase them.\n\n"
+            "Daniel takes a breath.\n\n"
+            "Daniel: \"Sophie?\"\n\n"
+            "Sophie: \"Yeah?\"\n\n"
+            "Daniel: \"There's something I want to ask you.\"\n\n"
+            "She looks at him.\n\n"
+            "He reaches into his pocket and takes out a small ring box.\n\n"
+            "Her eyes widen.\n\n"
+            "Sophie: \"Daniel...\"\n\n"
+            "He opens the box.\n\n"
+            "Daniel: \"I've spent years watching you chase your dreams,\" he says. "
+            "\"I don't want to stand beside you for just the next few years. "
+            "I want to be there for all of them.\"\n\n"
+            "Sophie covers her mouth, tears filling her eyes.\n\n"
+            "Daniel: \"Will you marry me?\"\n\n"
+            "She looks at the ring, then at him.\n\n"
+            "A smile slowly appears on her face.\n\n"
+            "Sophie: \"Yes.\"\n\n"
+            "Daniel smiles.\n\n"
+            "She laughs through her tears and throws her arms around him.\n\n"
+            "For all the miles they had traveled, all the time they had spent apart, "
+            "and all the dreams they had chased, they had finally found the same destination.\n\n"
+            "Together."
+        )
+        
+
+        IMAGE_URL_SophieFinal= "https://i.ibb.co/pr0rybD3/Sophie-Final.jpg"
+
+        try:
+
+            response = requests.get(
+                IMAGE_URL_SophieFinal,
+                timeout=20,
+                headers={
+                    "User-Agent": "Mozilla/5.0"
+                }
+            )
+
+            response.raise_for_status()
+
+            print("Sohpie image status:", response.status_code)
+            print(
+                "Sophie image type:",
+                response.headers.get("Content-Type")
+            )
+
+            photo = BytesIO(response.content)
+            photo.name = "Sophie-Final.jpg"
+
+            bot.send_photo(
+                call.message.chat.id,
+                photo
+            )
+
+        except Exception as e:
+
+            print("SOPHIE IMAGE ERROR:", e)
 
             bot.send_message(
                 call.message.chat.id,
