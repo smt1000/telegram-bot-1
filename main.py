@@ -9829,7 +9829,7 @@ def question_54_answer(call):
 
     bot.send_message(
         call.message.chat.id,
-        "Change nods with a warm smile.\n\n"
+        "Charlotte nods with a warm smile.\n\n"
     )
 
     # --------------------------------------------------------
@@ -12751,7 +12751,7 @@ def question_70_answer(call):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
-    IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
+    IMAGE_URLEmilyEND = ""
 
     try:
 
@@ -12822,7 +12822,7 @@ def question_70_answer(call):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
-    IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
+    IMAGE_URLEmilyEND = ""
 
     try:
 
