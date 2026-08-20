@@ -12754,7 +12754,7 @@ def question_70_answer(call):
         )
     IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
 
-    try:
+	    try:
 
         response = requests.get(
             IMAGE_URLEmilyEND,
@@ -12780,7 +12780,7 @@ def question_70_answer(call):
             photo
         )
 
-    except Exception as e:
+        except Exception as e:
 
         print("QUESTION 70 IMAGE ERROR:", e)
 
