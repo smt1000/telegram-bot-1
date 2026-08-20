@@ -12718,8 +12718,8 @@ def question_70_answer(call):
             call.message.chat.id,
             "The game is finished"
         )
-		
-    elif winner == "Sophie":
+	#"""
+     elif winner == "Charlotte":
 
         bot.send_message(
             call.message.chat.id,
@@ -12754,7 +12754,7 @@ def question_70_answer(call):
         )
     IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
 
-	    try:
+    try:
 
         response = requests.get(
             IMAGE_URLEmilyEND,
@@ -12780,7 +12780,7 @@ def question_70_answer(call):
             photo
         )
 
-        except Exception as e:
+    except Exception as e:
 
         print("QUESTION 70 IMAGE ERROR:", e)
 
@@ -12789,9 +12789,8 @@ def question_70_answer(call):
             "The game is finished"
         )
 
-
-
-   
+#""" 
+ 
 
 	
 
