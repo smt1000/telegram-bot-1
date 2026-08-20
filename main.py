@@ -12796,6 +12796,75 @@ def question_70_answer(call):
             )
 
 #""" 
+    elif winner == "Grace":
+
+        bot.send_message(
+            call.message.chat.id,
+            "Grace becomes a published author. \n\n"
+            "Her first novel becomes unexpectedly successful. \n\n"
+            "Daniel remains one of the few people who read the earliest draft. \n "
+            "One evening, Grace gives him a copy of her newest book. \n\n"
+            "Inside the cover is a handwritten message. \n\n"
+            "“For the person who taught me that being understood begins with allowing someone to listen.”\n\n"
+            "Daniel looks at her.\n\n"
+            "Daniel: “Is this book about us?” \n\n"
+            "Grace smiles. \n\n"
+            "Grace:“Only partly.”"\n\n"
+            "Daniel:“And the rest?”\n\n"
+            "Grace: “That’s for the next book.”\n\n"
+            "Daniel laughs.\n\n"
+            "Grace takes her hand. \n\n"
+            "Daniel:“I don’t know what the next chapter will be.”\n\n"
+            "Daniel:“Neither do I.” \n\n"
+            "Grace: “Good.”\n\n"
+            "She smiles. \n\n"
+            "Grace: “Then we can write it together.”\n\n"
+            "Years later, after both have established their careers, Daniel asks her to marry him.\n\n"
+            "Grace doesn't answer immediately. \n\n"
+            "She looks at the ring, then at Daniel. \n\n"
+            "She smiles."\n\n"
+            "Grace: “Yes.”\n\n"
+            "Daniel smiles and takes her hand.\n\n"
+            "Grace looks at him, then at the ring on her finger. \n\n"
+            "For the first time, she isn't afraid of what the next chapter will bring.\n\n"
+        )
+
+        IMAGE_URL_GraceFinal= "https://i.ibb.co/1GPsbCRx/Grace-Final.jpg"
+
+        try:
+
+            response = requests.get(
+                IMAGE_URL_GraceFinaleFinal,
+                timeout=20,
+                headers={
+                    "User-Agent": "Mozilla/5.0"
+                }
+            )
+
+            response.raise_for_status()
+
+            print("Charlotte image status:", response.status_code)
+            print(
+                "Charlotte image type:",
+                response.headers.get("Content-Type")
+            )
+
+            photo = BytesIO(response.content)
+            photo.name = "Charlotte-Final.jpg"
+
+            bot.send_photo(
+                call.message.chat.id,
+                photo
+            )
+
+        except Exception as e:
+
+            print("CHARLOTTE IMAGE ERROR:", e)
+
+            bot.send_message(
+                call.message.chat.id,
+                "The game is finished"
+            )
  
 
 	
