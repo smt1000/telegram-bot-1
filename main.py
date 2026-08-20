@@ -12718,7 +12718,7 @@ def question_70_answer(call):
             call.message.chat.id,
             "The game is finished"
         )
-    if winner == "Sophie":
+    elif winner == "Sophie":
 
         bot.send_message(
             call.message.chat.id,
@@ -12789,7 +12789,7 @@ def question_70_answer(call):
         )
 
 
-    if winner == "Grace":
+    elif winner == "Grace":
 
         bot.send_message(
             call.message.chat.id,
@@ -12860,7 +12860,7 @@ def question_70_answer(call):
         )
 
 
-    if winner == "Charlotte":
+    elif winner == "Charlotte":
 
         bot.send_message(
             call.message.chat.id,
