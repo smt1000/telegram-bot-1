@@ -12718,6 +12718,10 @@ def question_70_answer(call):
             call.message.chat.id,
             "The game is finished"
         )
+    
+    elif winner == "Sophie":
+    # Sophia ending
+
 
 
 	
