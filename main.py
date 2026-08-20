@@ -12636,74 +12636,72 @@ def question_70_answer(call):
     # FIND FINAL WINNER
     # ============================================================
 
-    winner = choose_final_character(user_id)
+winner = choose_final_character(user_id)
 
-    # ============================================================
-    # SHOW FINAL WINNER
-    # ============================================================
+# ============================================================
+# SHOW FINAL WINNER
+# ============================================================
 
-    if winner:
+if winner:
 
-        bot.send_message(
-            call.message.chat.id,
-            f"🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉\n\n"
-            f"Your strongest connection is with {winner}."
-        )
-    if winner == "Emily":
+    bot.send_message(
+        call.message.chat.id,
+        f"🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉\n\n"
+        f"Your strongest connection is with {winner}."
+    )
 
-        bot.send_message(
-            call.message.chat.id,
-            "Several years have passed.\n\n"
-            "Daniel and Emily both attend university.\n\n"
-            "Their relationship survives the distance because neither expects the other "
-            "to give up their ambitions.\n\n"
-            "After graduation, Emily receives a job offer in another city.\n\n"
-            "She meets Daniel at the same café where they once studied.\n\n"
-            "Emily: \"I have something to tell you.\"\n\n"
-            "Daniel smiles.\n\n"
-            "Daniel: \"So do I.\"\n\n"
-            "Emily looks nervous.\n\n"
-            "Daniel: \"Go first.\"\n\n"
-            "Emily: \"I got the job.\"\n\n"
-            "She smiles.\n\n"
-            "Daniel: \"That's wonderful.\"\n\n"
-            "Then Daniel takes a small box from his pocket.\n\n"
-            "Emily becomes completely silent.\n\n"
-            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
-            "He pauses.\n\n"
-            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
-            "She opens the box.\n\n"
-            "Inside is a ring.\n\n"
-            "Emily looks at him.\n\n"
-            "Emily: \"Are you sure?\"\n\n"
-            "Daniel: \"Yes.\"\n\n"
-            "She smiles through tears.\n\n"
-            "Emily: \"Then yes.\"\n\n"
-            "Not long afterwards...\n\n"
-            "Emily and I got married."
-        )
+
+# ============================================================
+# EMILY
+# ============================================================
+
+if winner == "Emily":
+
+    bot.send_message(
+        call.message.chat.id,
+        "Several years have passed.\n\n"
+        "Daniel and Emily both attend university.\n\n"
+        "Their relationship survives the distance because neither expects the other "
+        "to give up their ambitions.\n\n"
+        "After graduation, Emily receives a job offer in another city.\n\n"
+        "She meets Daniel at the same café where they once studied.\n\n"
+        "Emily: \"I have something to tell you.\"\n\n"
+        "Daniel smiles.\n\n"
+        "Daniel: \"So do I.\"\n\n"
+        "Emily looks nervous.\n\n"
+        "Daniel: \"Go first.\"\n\n"
+        "Emily: \"I got the job.\"\n\n"
+        "She smiles.\n\n"
+        "Daniel: \"That's wonderful.\"\n\n"
+        "Then Daniel takes a small box from his pocket.\n\n"
+        "Emily becomes completely silent.\n\n"
+        "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
+        "He pauses.\n\n"
+        "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
+        "She opens the box.\n\n"
+        "Inside is a ring.\n\n"
+        "Emily looks at him.\n\n"
+        "Emily: \"Are you sure?\"\n\n"
+        "Daniel: \"Yes.\"\n\n"
+        "She smiles through tears.\n\n"
+        "Emily: \"Then yes.\"\n\n"
+        "Not long afterwards...\n\n"
+        "Emily and I got married."
+    )
+
     IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
 
     try:
-
         response = requests.get(
             IMAGE_URLEmilyEND,
             timeout=20,
-            headers={
-                "User-Agent": "Mozilla/5.0"
-            }
+            headers={"User-Agent": "Mozilla/5.0"}
         )
 
         response.raise_for_status()
 
-        print("Question 70 image status:", response.status_code)
-        print(
-            "Question 70 image type:",
-            response.headers.get("Content-Type")
-        )
-
         photo = BytesIO(response.content)
-        photo.name = "question70.jpg"
+        photo.name = "Emily-Final.jpg"
 
         bot.send_photo(
             call.message.chat.id,
@@ -12712,67 +12710,39 @@ def question_70_answer(call):
 
     except Exception as e:
 
-        print("QUESTION 70 IMAGE ERROR:", e)
+        print("EMILY IMAGE ERROR:", e)
 
         bot.send_message(
             call.message.chat.id,
-            "The game is finished"
+            "The game is finished."
         )
-    elif winner == "Sophie":
 
-        bot.send_message(
-            call.message.chat.id,
-            "Several years have passed.\n\n"
-            "Daniel and Emily both attend university.\n\n"
-            "Their relationship survives the distance because neither expects the other "
-            "to give up their ambitions.\n\n"
-            "After graduation, Emily receives a job offer in another city.\n\n"
-            "She meets Daniel at the same café where they once studied.\n\n"
-            "Emily: \"I have something to tell you.\"\n\n"
-            "Daniel smiles.\n\n"
-            "Daniel: \"So do I.\"\n\n"
-            "Emily looks nervous.\n\n"
-            "Daniel: \"Go first.\"\n\n"
-            "Emily: \"I got the job.\"\n\n"
-            "She smiles.\n\n"
-            "Daniel: \"That's wonderful.\"\n\n"
-            "Then Daniel takes a small box from his pocket.\n\n"
-            "Emily becomes completely silent.\n\n"
-            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
-            "He pauses.\n\n"
-            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
-            "She opens the box.\n\n"
-            "Inside is a ring.\n\n"
-            "Emily looks at him.\n\n"
-            "Emily: \"Are you sure?\"\n\n"
-            "Daniel: \"Yes.\"\n\n"
-            "She smiles through tears.\n\n"
-            "Emily: \"Then yes.\"\n\n"
-            "Not long afterwards...\n\n"
-            "Emily and I got married."
-        )
-    IMAGE_URLEmilyEND = ""
+
+# ============================================================
+# SOPHIE
+# ============================================================
+
+elif winner == "Sophie":
+
+    bot.send_message(
+        call.message.chat.id,
+        "Sophie ending goes here."
+    )
+
+    # Put Sophie's actual image URL here
+    IMAGE_URLSophie = "YOUR_SOPHIE_IMAGE_URL"
 
     try:
-
         response = requests.get(
-            IMAGE_URLEmilyEND,
+            IMAGE_URLSophie,
             timeout=20,
-            headers={
-                "User-Agent": "Mozilla/5.0"
-            }
+            headers={"User-Agent": "Mozilla/5.0"}
         )
 
         response.raise_for_status()
 
-        print("Question 70 image status:", response.status_code)
-        print(
-            "Question 70 image type:",
-            response.headers.get("Content-Type")
-        )
-
         photo = BytesIO(response.content)
-        photo.name = "question70.jpg"
+        photo.name = "Sophie-Final.jpg"
 
         bot.send_photo(
             call.message.chat.id,
@@ -12781,69 +12751,39 @@ def question_70_answer(call):
 
     except Exception as e:
 
-        print("QUESTION 70 IMAGE ERROR:", e)
+        print("SOPHIE IMAGE ERROR:", e)
 
         bot.send_message(
             call.message.chat.id,
-            "The game is finished"
+            "The game is finished."
         )
 
 
-    elif winner == "Grace":
+# ============================================================
+# GRACE
+# ============================================================
 
-        bot.send_message(
-            call.message.chat.id,
-            "Several years have passed.\n\n"
-            "Daniel and Emily both attend university.\n\n"
-            "Their relationship survives the distance because neither expects the other "
-            "to give up their ambitions.\n\n"
-            "After graduation, Emily receives a job offer in another city.\n\n"
-            "She meets Daniel at the same café where they once studied.\n\n"
-            "Emily: \"I have something to tell you.\"\n\n"
-            "Daniel smiles.\n\n"
-            "Daniel: \"So do I.\"\n\n"
-            "Emily looks nervous.\n\n"
-            "Daniel: \"Go first.\"\n\n"
-            "Emily: \"I got the job.\"\n\n"
-            "She smiles.\n\n"
-            "Daniel: \"That's wonderful.\"\n\n"
-            "Then Daniel takes a small box from his pocket.\n\n"
-            "Emily becomes completely silent.\n\n"
-            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
-            "He pauses.\n\n"
-            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
-            "She opens the box.\n\n"
-            "Inside is a ring.\n\n"
-            "Emily looks at him.\n\n"
-            "Emily: \"Are you sure?\"\n\n"
-            "Daniel: \"Yes.\"\n\n"
-            "She smiles through tears.\n\n"
-            "Emily: \"Then yes.\"\n\n"
-            "Not long afterwards...\n\n"
-            "Emily and I got married."
-        )
-    IMAGE_URLEmilyEND = ""
+elif winner == "Grace":
+
+    bot.send_message(
+        call.message.chat.id,
+        "Grace ending goes here."
+    )
+
+    # Put Grace's actual image URL here
+    IMAGE_URLGrace = "YOUR_GRACE_IMAGE_URL"
 
     try:
-
         response = requests.get(
-            IMAGE_URLEmilyEND,
+            IMAGE_URLGrace,
             timeout=20,
-            headers={
-                "User-Agent": "Mozilla/5.0"
-            }
+            headers={"User-Agent": "Mozilla/5.0"}
         )
 
         response.raise_for_status()
 
-        print("Question 70 image status:", response.status_code)
-        print(
-            "Question 70 image type:",
-            response.headers.get("Content-Type")
-        )
-
         photo = BytesIO(response.content)
-        photo.name = "question70.jpg"
+        photo.name = "Grace-Final.jpg"
 
         bot.send_photo(
             call.message.chat.id,
@@ -12852,72 +12792,68 @@ def question_70_answer(call):
 
     except Exception as e:
 
-        print("QUESTION 70 IMAGE ERROR:", e)
+        print("GRACE IMAGE ERROR:", e)
 
         bot.send_message(
             call.message.chat.id,
-            "The game is finished"
+            "The game is finished."
         )
 
 
-    elif winner == "Charlotte":
+# ============================================================
+# CHARLOTTE
+# ============================================================
 
-        bot.send_message(
-            call.message.chat.id,
-			
-            "Charlotte rejects the career her parents planned for her. \n\n"
-            "She builds her own company. \n\n"
-            "Daniel pursues his own career.\n "
-            "They become partners not because they need each other to succeed,\n\n"
-            "but because they respect each other's ambitions. \n\n"
-            "One evening, Charlotte asks Daniel to meet her at the place where they first spoke.\n\n"
-            "Charlotte: \"You remember?\"\n\n"
-            "Daniel: \"Of course.\"\n\n"
-            "She looks toward the school.\n\n"
-            "Charlotte: \"I used to think success meant proving everyone wrong.\"\n\n"
-            "Daniel: \"And now?\"\n\n"
-            "Charlotte: \"Now I think it's choosing the life I actually want.\"\n\n"
-            "Daniel smiles.\n\n"
-            "Charlotte reaches into her coat.\n\n"
-            "She pulls out a small box.\n\n"
-            "Daniel stares.\n\n"
-            "Daniel: \"Wait.\"\n\n"
-            "She laughs.\n\n"
-            "Daniel: \"I know what you're thinking. Charlotte...\"\n\n"
-            "Charlotte: \"You've never been very good at making decisions.\"\n\n"
-            "She opens the box.\n\n"
-            "Inside is a ring.\n\n"
-            "Charlotte: \"So I'll make this one.\"\n\n"
-            "Daniel laughs.\n\n"
-            "Daniel: \"Are you proposing to me?\"\n\n"
-            "Charlotte: \"Apparently.\"\n\n"
-            "He smiles.\n\n"
-            "Daniel: \"Then yes.\"\n\n"
-			"Charlotte starts laughing. Daniel takes her hand, and together they look toward the school where their story began.\n\n"
-			"Some time later, we got married. Charlotte became my wife."
-        )
+elif winner == "Charlotte":
+
+    bot.send_message(
+        call.message.chat.id,
+        "Charlotte rejects the career her parents planned for her.\n\n"
+        "She builds her own company.\n\n"
+        "Daniel pursues his own career.\n\n"
+        "They become partners not because they need each other to succeed, "
+        "but because they respect each other's ambitions.\n\n"
+        "One evening, Charlotte asks Daniel to meet her at the place where they first spoke.\n\n"
+        "Charlotte: \"You remember?\"\n\n"
+        "Daniel: \"Of course.\"\n\n"
+        "She looks toward the school.\n\n"
+        "Charlotte: \"I used to think success meant proving everyone wrong.\"\n\n"
+        "Daniel: \"And now?\"\n\n"
+        "Charlotte: \"Now I think it's choosing the life I actually want.\"\n\n"
+        "Daniel smiles.\n\n"
+        "Charlotte reaches into her coat.\n\n"
+        "She pulls out a small box.\n\n"
+        "Daniel stares.\n\n"
+        "Daniel: \"Wait.\"\n\n"
+        "She laughs.\n\n"
+        "Daniel: \"I know what you're thinking. Charlotte...\"\n\n"
+        "Charlotte: \"You've never been very good at making decisions.\"\n\n"
+        "She opens the box.\n\n"
+        "Inside is a ring.\n\n"
+        "Charlotte: \"So I'll make this one.\"\n\n"
+        "Daniel laughs.\n\n"
+        "Daniel: \"Are you proposing to me?\"\n\n"
+        "Charlotte: \"Apparently.\"\n\n"
+        "He smiles.\n\n"
+        "Daniel: \"Then yes.\"\n\n"
+        "Charlotte starts laughing. Daniel takes her hand, and together they "
+        "look toward the school where their story began.\n\n"
+        "Some time later, we got married. Charlotte became my wife."
+    )
+
     IMAGE_URLCharlotte = "https://i.ibb.co/q3D64c7W/Charlotte-Final.jpg"
 
     try:
-
         response = requests.get(
             IMAGE_URLCharlotte,
             timeout=20,
-            headers={
-                "User-Agent": "Mozilla/5.0"
-            }
+            headers={"User-Agent": "Mozilla/5.0"}
         )
 
         response.raise_for_status()
 
-        print("Question 70 image status:", response.status_code)
-        print(
-            "Question 70 image type:",
-            response.headers.get("Content-Type")
-        )
-
         photo = BytesIO(response.content)
-        photo.name = "question70.jpg"
+        photo.name = "Charlotte-Final.jpg"
 
         bot.send_photo(
             call.message.chat.id,
@@ -12926,13 +12862,25 @@ def question_70_answer(call):
 
     except Exception as e:
 
-        print("QUESTION 70 IMAGE ERROR:", e)
+        print("CHARLOTTE IMAGE ERROR:", e)
 
         bot.send_message(
             call.message.chat.id,
-            "The game is finished"
+            "The game is finished."
         )
 
+
+# ============================================================
+# NO WINNER
+# ============================================================
+
+elif not winner:
+
+    bot.send_message(
+        call.message.chat.id,
+        "No character qualified based on the final "
+        "score requirements."
+    )
 
 
 	
