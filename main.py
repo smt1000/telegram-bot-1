@@ -12718,6 +12718,72 @@ def question_70_answer(call):
             call.message.chat.id,
             "The game is finished"
         )
+		
+    elif winner == "Charlotte":
+
+    bot.send_message(
+        call.message.chat.id,
+        "Charlotte rejects the career her parents planned for her.\n\n"
+        "She builds her own company.\n\n"
+        "Daniel pursues his own career.\n\n"
+        "They become partners not because they need each other to succeed, "
+        "but because they respect each other's ambitions.\n\n"
+        "One evening, Charlotte asks Daniel to meet her at the place where they first spoke.\n\n"
+        "Charlotte: \"You remember?\"\n\n"
+        "Daniel: \"Of course.\"\n\n"
+        "She looks toward the school.\n\n"
+        "Charlotte: \"I used to think success meant proving everyone wrong.\"\n\n"
+        "Daniel: \"And now?\"\n\n"
+        "Charlotte: \"Now I think it's choosing the life I actually want.\"\n\n"
+        "Daniel smiles.\n\n"
+        "Charlotte reaches into her coat.\n\n"
+        "She pulls out a small box.\n\n"
+        "Daniel stares.\n\n"
+        "Daniel: \"Wait.\"\n\n"
+        "She laughs.\n\n"
+        "Daniel: \"I know what you're thinking. Charlotte...\"\n\n"
+        "Charlotte: \"You've never been very good at making decisions.\"\n\n"
+        "She opens the box.\n\n"
+        "Inside is a ring.\n\n"
+        "Charlotte: \"So I'll make this one.\"\n\n"
+        "Daniel laughs.\n\n"
+        "Daniel: \"Are you proposing to me?\"\n\n"
+        "Charlotte: \"Apparently.\"\n\n"
+        "He smiles.\n\n"
+        "Daniel: \"Then yes.\"\n\n"
+        "Charlotte starts laughing. Daniel takes her hand, and together they "
+        "look toward the school where their story began.\n\n"
+        "Some time later, we got married. Charlotte became my wife."
+    )
+
+    IMAGE_URLCharlotte = "https://i.ibb.co/q3D64c7W/Charlotte-Final.jpg"
+
+    try:
+        response = requests.get(
+            IMAGE_URLCharlotte,
+            timeout=20,
+            headers={"User-Agent": "Mozilla/5.0"}
+        )
+
+        response.raise_for_status()
+
+        photo = BytesIO(response.content)
+        photo.name = "Charlotte-Final.jpg"
+
+        bot.send_photo(
+            call.message.chat.id,
+            photo
+        )
+
+    except Exception as e:
+
+        print("CHARLOTTE IMAGE ERROR:", e)
+
+        bot.send_message(
+            call.message.chat.id,
+            "The game is finished."
+        )
+
 
 
 	
