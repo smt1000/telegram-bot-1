@@ -12860,18 +12860,19 @@ def question_70_answer(call):
         )
 
 
-    if winner == "Emily":
+    if winner == "Charlotte":
 
         bot.send_message(
             call.message.chat.id,
-            "Several years have passed.\n\n"
-            "Daniel and Emily both attend university.\n\n"
-            "Their relationship survives the distance because neither expects the other "
-            "to give up their ambitions.\n\n"
-            "After graduation, Emily receives a job offer in another city.\n\n"
-            "She meets Daniel at the same café where they once studied.\n\n"
-            "Emily: \"I have something to tell you.\"\n\n"
-            "Daniel smiles.\n\n"
+			
+            "Charlotte rejects the career her parents planned for her. \n\n"
+            "She builds her own company. \n\n"
+            "Daniel pursues his own career.\n "
+            "They become partners not because they need each other to succeed,\n\n"
+            "but because they respect each other's ambitions. \n\n"
+            "One evening, Charlotte asks Daniel to meet her at the place where they first spoke.\n\n"
+            "Charlotte: \"You remember?\"\n\n"
+            "Daniel: \"Of course.\"\n\n"
             "Daniel: \"So do I.\"\n\n"
             "Emily looks nervous.\n\n"
             "Daniel: \"Go first.\"\n\n"
@@ -12893,12 +12894,12 @@ def question_70_answer(call):
             "Not long afterwards...\n\n"
             "Emily and I got married."
         )
-    IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
+    IMAGE_URLCharlotte = "https://i.ibb.co/q3D64c7W/Charlotte-Final.jpg"
 
     try:
 
         response = requests.get(
-            IMAGE_URLEmilyEND,
+            IMAGE_URLCharlotte,
             timeout=20,
             headers={
                 "User-Agent": "Mozilla/5.0"
