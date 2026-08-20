@@ -12644,44 +12644,47 @@ def question_70_answer(call):
 
     if winner:
 
-        bot.send_message(
-            call.message.chat.id,
-            f"🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉\n\n"
-            f"Your strongest connection is with {winner}."
-        )
+    bot.send_message(
+        call.message.chat.id,
+        f"🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉\n\n"
+        f"Your strongest connection is with {winner}."
+    )
+
+
     if winner == "Emily":
 
-        bot.send_message(
-            call.message.chat.id,
-            "Several years have passed.\n\n"
-            "Daniel and Emily both attend university.\n\n"
-            "Their relationship survives the distance because neither expects the other "
-            "to give up their ambitions.\n\n"
-            "After graduation, Emily receives a job offer in another city.\n\n"
-            "She meets Daniel at the same café where they once studied.\n\n"
-            "Emily: \"I have something to tell you.\"\n\n"
-            "Daniel smiles.\n\n"
-            "Daniel: \"So do I.\"\n\n"
-            "Emily looks nervous.\n\n"
-            "Daniel: \"Go first.\"\n\n"
-            "Emily: \"I got the job.\"\n\n"
-            "She smiles.\n\n"
-            "Daniel: \"That's wonderful.\"\n\n"
-            "Then Daniel takes a small box from his pocket.\n\n"
-            "Emily becomes completely silent.\n\n"
-            "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
-            "He pauses.\n\n"
-            "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
-            "She opens the box.\n\n"
-            "Inside is a ring.\n\n"
-            "Emily looks at him.\n\n"
-            "Emily: \"Are you sure?\"\n\n"
-            "Daniel: \"Yes.\"\n\n"
-            "She smiles through tears.\n\n"
-            "Emily: \"Then yes.\"\n\n"
-            "Not long afterwards...\n\n"
-            "Emily and I got married."
-        )
+    bot.send_message(
+        call.message.chat.id,
+        "Several years have passed.\n\n"
+        "Daniel and Emily both attend university.\n\n"
+        "Their relationship survives the distance because neither expects the other "
+        "to give up their ambitions.\n\n"
+        "After graduation, Emily receives a job offer in another city.\n\n"
+        "She meets Daniel at the same café where they once studied.\n\n"
+        "Emily: \"I have something to tell you.\"\n\n"
+        "Daniel smiles.\n\n"
+        "Daniel: \"So do I.\"\n\n"
+        "Emily looks nervous.\n\n"
+        "Daniel: \"Go first.\"\n\n"
+        "Emily: \"I got the job.\"\n\n"
+        "She smiles.\n\n"
+        "Daniel: \"That's wonderful.\"\n\n"
+        "Then Daniel takes a small box from his pocket.\n\n"
+        "Emily becomes completely silent.\n\n"
+        "Daniel: \"Emily, I don't know exactly what the future will look like.\"\n\n"
+        "He pauses.\n\n"
+        "Daniel: \"But I know who I want beside me while we find out.\"\n\n"
+        "She opens the box.\n\n"
+        "Inside is a ring.\n\n"
+        "Emily looks at him.\n\n"
+        "Emily: \"Are you sure?\"\n\n"
+        "Daniel: \"Yes.\"\n\n"
+        "She smiles through tears.\n\n"
+        "Emily: \"Then yes.\"\n\n"
+        "Not long afterwards...\n\n"
+        "Emily and I got married."
+    )
+
     IMAGE_URLEmilyEND = "https://i.ibb.co/BKtdGk4p/Emily-Final.jpg"
 
     try:
@@ -12696,14 +12699,14 @@ def question_70_answer(call):
 
         response.raise_for_status()
 
-        print("Question 70 image status:", response.status_code)
+        print("Emily image status:", response.status_code)
         print(
-            "Question 70 image type:",
+            "Emily image type:",
             response.headers.get("Content-Type")
         )
 
         photo = BytesIO(response.content)
-        photo.name = "question70.jpg"
+        photo.name = "Emily-Final.jpg"
 
         bot.send_photo(
             call.message.chat.id,
@@ -12712,13 +12715,14 @@ def question_70_answer(call):
 
     except Exception as e:
 
-        print("QUESTION 70 IMAGE ERROR:", e)
+        print("EMILY IMAGE ERROR:", e)
 
         bot.send_message(
             call.message.chat.id,
-            "The game is finished"
+            "The game is finished."
         )
-		
+
+
     elif winner == "Charlotte":
 
     bot.send_message(
@@ -12759,13 +12763,22 @@ def question_70_answer(call):
     IMAGE_URLCharlotte = "https://i.ibb.co/q3D64c7W/Charlotte-Final.jpg"
 
     try:
+
         response = requests.get(
             IMAGE_URLCharlotte,
             timeout=20,
-            headers={"User-Agent": "Mozilla/5.0"}
+            headers={
+                "User-Agent": "Mozilla/5.0"
+            }
         )
 
         response.raise_for_status()
+
+        print("Charlotte image status:", response.status_code)
+        print(
+            "Charlotte image type:",
+            response.headers.get("Content-Type")
+        )
 
         photo = BytesIO(response.content)
         photo.name = "Charlotte-Final.jpg"
