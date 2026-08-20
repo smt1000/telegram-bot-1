@@ -12719,7 +12719,7 @@ def question_70_answer(call):
             "The game is finished"
         )
 	#"""
-     elif winner == "Charlotte":
+elif winner == "Charlotte":
 
         bot.send_message(
             call.message.chat.id,
