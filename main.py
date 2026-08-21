@@ -13035,7 +13035,7 @@ def question_70_answer(call):
                 call.message.chat.id,
                 "The game is finished"
             )
-"""
+
     elif winner == "No Friends or New Beginning" :
 
         bot.send_message(
@@ -13085,8 +13085,55 @@ def question_70_answer(call):
             )
 			
 			
-"""		
+	
 			
+    elif winner == "Independent- Positive" :
+
+        bot.send_message(
+            call.message.chat.id,
+            "Daniel chooses his own future.  \n\n"
+			"He doesn't persue a serious relationshp, and \n "
+			"leaves school feeling confident and happy.  "
+            
+        )
+        
+
+        IMAGE_URL_Final3= "https://i.ibb.co/DfZf9g8F/Final-2.jpg"
+
+        try:
+
+            response = requests.get(
+                IMAGE_URL_Final3,
+                timeout=20,
+                headers={
+                    "User-Agent": "Mozilla/5.0"
+                }
+            )
+
+            response.raise_for_status()
+
+            print("Final3 image status:", response.status_code)
+            print(
+                "Final3 image type:",
+                response.headers.get("Content-Type")
+            )
+
+            photo = BytesIO(response.content)
+            photo.name = "Final3.jpg"
+
+            bot.send_photo(
+                call.message.chat.id,
+                photo
+            )
+
+        except Exception as e:
+
+            print("FINAL3 IMAGE ERROR:", e)
+
+            bot.send_message(
+                call.message.chat.id,
+                "The game is finished"
+            )
 			
 			
 			
