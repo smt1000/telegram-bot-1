@@ -12990,7 +12990,52 @@ def question_70_answer(call):
 			######################################################
 
 
-    
+    elif winner == "Emily + Sophie + Grace + Charlotte Close Friends" or winner == "Four Friends":
+
+        bot.send_message(
+            call.message.chat.id,
+            "Daniel doesn't become engaged, but maintains especially strong friendships with the girls. \n\n"
+            
+        )
+        
+
+        IMAGE_URL_4friends= "https://i.ibb.co/tMtWZRRG/General-3.jpg"
+
+        try:
+
+            response = requests.get(
+                IMAGE_URL_4friends,
+                timeout=20,
+                headers={
+                    "User-Agent": "Mozilla/5.0"
+                }
+            )
+
+            response.raise_for_status()
+
+            print("4friends image status:", response.status_code)
+            print(
+                "4friends image type:",
+                response.headers.get("Content-Type")
+            )
+
+            photo = BytesIO(response.content)
+            photo.name = "4friends.jpg"
+
+            bot.send_photo(
+                call.message.chat.id,
+                photo
+            )
+
+        except Exception as e:
+
+            print("4FRIENDS IMAGE ERROR:", e)
+
+            bot.send_message(
+                call.message.chat.id,
+                "The game is finished"
+            )
+			
 			
 			
 			
