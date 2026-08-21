@@ -1290,17 +1290,7 @@ def question_1_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -1461,17 +1451,7 @@ def question_2_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -1626,17 +1606,7 @@ def question_3_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+ 
     )
 
     # --------------------------------------------------------
@@ -1792,17 +1762,7 @@ def question_4_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -1956,17 +1916,7 @@ def question_5_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -2126,17 +2076,7 @@ def question_6_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -2289,17 +2229,7 @@ def question_7_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -2453,17 +2383,7 @@ def question_8_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -2621,17 +2541,7 @@ def question_9_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -2780,17 +2690,7 @@ def question_10_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -2953,17 +2853,7 @@ def question_11_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -3115,17 +3005,7 @@ def question_12_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -3279,17 +3159,7 @@ def question_13_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -3441,17 +3311,7 @@ def question_14_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -3598,17 +3458,7 @@ def question_15_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -3762,17 +3612,7 @@ def question_16_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -3925,17 +3765,7 @@ def question_17_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -4086,17 +3916,7 @@ def question_18_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -4246,17 +4066,7 @@ def question_19_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -4402,17 +4212,7 @@ def question_20_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -4568,17 +4368,7 @@ def question_21_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -4729,17 +4519,7 @@ def question_22_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -4889,17 +4669,7 @@ def question_23_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -5054,17 +4824,7 @@ def question_24_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -5211,17 +4971,7 @@ def question_25_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -5368,17 +5118,7 @@ def question_26_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -5531,17 +5271,7 @@ def question_27_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -5688,17 +5418,7 @@ def question_28_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -5841,17 +5561,7 @@ def question_29_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -6000,17 +5710,7 @@ def question_30_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -6165,17 +5865,7 @@ def question_31_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -6327,17 +6017,7 @@ def question_32_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -6484,17 +6164,7 @@ def question_33_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -6642,17 +6312,7 @@ def question_34_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -6805,17 +6465,7 @@ def question_35_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -6967,17 +6617,7 @@ def question_36_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -7131,17 +6771,7 @@ def question_37_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -7288,17 +6918,7 @@ def question_38_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -7451,17 +7071,7 @@ def question_39_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -7604,17 +7214,7 @@ def question_40_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -7767,17 +7367,7 @@ def question_41_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -7929,17 +7519,7 @@ def question_42_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -8082,17 +7662,7 @@ def question_43_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -8246,17 +7816,7 @@ def question_44_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -8405,17 +7965,7 @@ def question_45_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -8557,17 +8107,7 @@ def question_46_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -8710,17 +8250,7 @@ def question_47_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -8863,17 +8393,7 @@ def question_48_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -9017,17 +8537,7 @@ def question_49_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -9172,17 +8682,7 @@ def question_50_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -9343,17 +8843,7 @@ def question_51_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -9504,17 +8994,7 @@ def question_52_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -9658,17 +9138,7 @@ def question_53_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -9810,17 +9280,7 @@ def question_54_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -9967,17 +9427,7 @@ def question_55_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -10127,17 +9577,7 @@ def question_56_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -10286,17 +9726,7 @@ def question_57_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -10439,17 +9869,7 @@ def question_58_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -10591,17 +10011,7 @@ def question_59_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -10745,17 +10155,7 @@ def question_60_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -10911,17 +10311,7 @@ def question_61_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -11063,17 +10453,7 @@ def question_62_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -11216,17 +10596,7 @@ def question_63_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -11375,17 +10745,7 @@ def question_64_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -11538,17 +10898,7 @@ def question_65_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -11697,17 +11047,7 @@ def question_66_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -11852,17 +11192,7 @@ def question_67_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -12005,17 +11335,7 @@ def question_68_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -12160,17 +11480,7 @@ def question_69_answer(call):
         call.message.chat.id,
         f"You selected:\n\n"
         f"{answer}\n\n"
-        f"Current scores:\n\n"
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
+
     )
 
     # --------------------------------------------------------
@@ -12605,20 +11915,7 @@ def question_70_answer(call):
         f"You selected:\n\n"
         f"{answer}\n\n"
 
-        f"Current scores:\n\n"
 
-        f"Emily: {user_scores[user_id]['Emily']}\n"
-        f"Sophie: {user_scores[user_id]['Sophie']}\n"
-        f"Grace: {user_scores[user_id]['Grace']}\n"
-        f"Charlotte: {user_scores[user_id]['Charlotte']}\n\n"
-
-        f"Honest: {user_scores[user_id]['Honest']}\n"
-        f"Independence: {user_scores[user_id]['Independence']}\n\n"
-
-        f"ECompatibility: {user_scores[user_id]['ECompatibility']}\n"
-        f"SCompatibility: {user_scores[user_id]['SCompatibility']}\n"
-        f"GCompatibility: {user_scores[user_id]['GCompatibility']}\n"
-        f"CCompatibility: {user_scores[user_id]['CCompatibility']}"
     )
 
         # --------------------------------------------------------
