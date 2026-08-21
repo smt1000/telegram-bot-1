@@ -13035,9 +13035,57 @@ def question_70_answer(call):
                 call.message.chat.id,
                 "The game is finished"
             )
+"""
+    elif winner == "No Friends or New Beginning" :
+
+        bot.send_message(
+            call.message.chat.id,
+            "Daniel doesn’t end up with anyone. \n\n"
+			"He doesn’t make any lasting friendships at Westbridge High.\n\n "
+			"He deliberately chooses his own future and begins a completely new chapter of his life. "
+            
+        )
+        
+
+        IMAGE_URL_newbigin= "https://i.ibb.co/DfZf9g8F/Final-2.jpg"
+
+        try:
+
+            response = requests.get(
+                IMAGE_URL_newbigin,
+                timeout=20,
+                headers={
+                    "User-Agent": "Mozilla/5.0"
+                }
+            )
+
+            response.raise_for_status()
+
+            print("newbigin image status:", response.status_code)
+            print(
+                "newbigin image type:",
+                response.headers.get("Content-Type")
+            )
+
+            photo = BytesIO(response.content)
+            photo.name = "newbigin.jpg"
+
+            bot.send_photo(
+                call.message.chat.id,
+                photo
+            )
+
+        except Exception as e:
+
+            print("NEWBIGIN IMAGE ERROR:", e)
+
+            bot.send_message(
+                call.message.chat.id,
+                "The game is finished"
+            )
 			
 			
-			
+"""		
 			
 			
 			
