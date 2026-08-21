@@ -13183,24 +13183,26 @@ def question_70_answer(call):
                 call.message.chat.id,
                 "The game is finished"
             )
-"""		
-    elif winner == "Independent- Positive" :
+	
+    elif winner == "Solo End" :
 
         bot.send_message(
             call.message.chat.id,
-            "Daniel chooses his own future.  \n\n"
-			"He doesn't persue a serious relationshp, and \n "
-			"leaves school feeling confident and happy.  "
+            "Daniel doesn’t end up with anyone. \n\n"
+			"He never manages to form a truly lasting friendship at Westbridge High, nor does he find a relationship that feels real. \n "
+			"In the end, he accepts that some things didn’t work out the way he had hoped. \n"
+			"He chooses his own future and begins a completely new chapter of his life, carrying with him the memories he had to leave behind."
             
         )
         
 
-        IMAGE_URL_Final3= "https://i.ibb.co/DfZf9g8F/Final-2.jpg"
+        
+        IMAGE_URL_Final4= "https://i.ibb.co/G4SvFgw1/Final-4.jpg"
 
         try:
 
             response = requests.get(
-                IMAGE_URL_Final3,
+                IMAGE_URL_Final4,
                 timeout=20,
                 headers={
                     "User-Agent": "Mozilla/5.0"
@@ -13209,14 +13211,14 @@ def question_70_answer(call):
 
             response.raise_for_status()
 
-            print("Final3 image status:", response.status_code)
+            print("Final4 image status:", response.status_code)
             print(
-                "Final3 image type:",
+                "Final4 image type:",
                 response.headers.get("Content-Type")
             )
 
             photo = BytesIO(response.content)
-            photo.name = "Final3.jpg"
+            photo.name = "FINAL4.jpg"
 
             bot.send_photo(
                 call.message.chat.id,
@@ -13232,7 +13234,7 @@ def question_70_answer(call):
                 "The game is finished"
             )
 			
-"""	
+
 			
 			
 			
